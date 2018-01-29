@@ -1,5 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+/* CSS VARIABLES */
+:root {
+  --dark: rgb(19, 18, 18);
+  --light: #fff;
 }
+
+/* GLOBAL STYLES */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* HELPERS */
