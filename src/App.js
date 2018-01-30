@@ -1,17 +1,22 @@
 import React, { Component, Fragment } from 'react';
 import injectSheet from 'react-jss'
-import { MED_SM } from '../src/constants/media-screens';
+import { MED_SM, XL } from '../src/constants/media-screens';
 
 const styles = {
+  // ensure appContainer div stays centered when it reaches it's max width
+  wrapper: {
+    composes: 'flex flex-col justify-center align-items-center full-height'
+  },
   appContainer: {
     composes: 'flex flex-col flex-between full-height align-content-center',
     padding: '0 1em',
+    maxWidth: XL
   },
   navList: {
     listStyle: "none"
   },
   header: {
-    composes: 'flex justify-end',
+    composes: 'flex justify-end pd-r--lg',
     position: 'fixed',
     width: '100%',
     top: 0
@@ -34,6 +39,7 @@ const styles = {
 class App extends Component {
   render() {
     const {
+      wrapper,
       logo,
       appContainer,
       navList,
@@ -42,7 +48,7 @@ class App extends Component {
     } = this.props.classes;
 
     return (
-      <Fragment>
+      <div className={wrapper}>
         {/* HEADER   */}
         <header className={header}>
           <ul className={navList}>
@@ -69,7 +75,7 @@ class App extends Component {
         
           {/* RESTAURANTS */}
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

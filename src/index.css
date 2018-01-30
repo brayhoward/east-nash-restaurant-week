@@ -17,6 +17,7 @@ html, body, #root {
 }
 
 body {
+  font-size: 17px;
   color: var(--dark);
 }
 
@@ -35,6 +36,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .justify-between { justify-content: space-between; }
 .justify-evenly { justify-content: space-evenly; }
 /* vertical alignments */
+.align-items-center { align-items: center; }
 .align-items-start { align-items: flex-start; }
 .align-items-end { align-items: flex-end; }
 .align-content-start { align-content: flex-start; }
