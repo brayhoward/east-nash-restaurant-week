@@ -10,9 +10,10 @@
 
 
 /* GLOBAL STYLES */
-/* give myself some canvas to work with */
+/* normalize my workspace */
 html, body, #root {
   height: 100%;
+  margin: 0;
 }
 
 body {

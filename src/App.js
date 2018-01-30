@@ -1,17 +1,23 @@
 import React, { Component, Fragment } from 'react';
 import injectSheet from 'react-jss'
-import { MED_SM } from 'constants/media-screens';
+import { MED_SM } from '../src/constants/media-screens';
 
 const styles = {
   appContainer: {
     composes: 'flex flex-col flex-between full-height align-content-center',
-    margin: '1em'
+    padding: '0 1em',
   },
   navList: {
     listStyle: "none"
   },
+  header: {
+    composes: 'flex justify-end',
+    position: 'fixed',
+    width: '100%',
+    top: 0
+  },
   branding: {
-    composes: 'bd flex flex-col flex-between justify-center align-content-center',
+    composes: 'flex flex-col flex-between justify-center align-content-center',
     marginTop: '2rem',
     height: '80%',
     padding: '0 20%',
@@ -27,34 +33,42 @@ const styles = {
 @injectSheet(styles)
 class App extends Component {
   render() {
-    const { logo, appContainer, navList, branding } = this.props.classes;
+    const {
+      logo,
+      appContainer,
+      navList,
+      branding,
+      header
+    } = this.props.classes;
 
     return (
-      <div className={appContainer}>
+      <Fragment>
         {/* HEADER   */}
-        <header className="flex justify-end">
+        <header className={header}>
           <ul className={navList}>
             <li>Nav item?</li>
           </ul>
         </header>
-
-        {/* BRANDING */}
-        <div className={branding}>
-          <div>
-            <h1 className="txt-center">
-              East Nashville Restaurant Week
-            </h1>
-
-            <p className="mg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, iste. Quibusdam, praesentium minus!
-              Accusantium, vero minima voluptatibus reprehenderit nisi, suscipit quibusdam molestiae necessitatibus
-              tempora deserunt debitis eaque tempore officia id.  
-            </p>
+        
+        <div className={appContainer}>
+          {/* BRANDING */}
+          <div className={branding}>
+            <div>
+              <h1 className="txt-center">
+                East Nashville Restaurant Week
+              </h1>
+        
+              <p className="mg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, iste. Quibusdam, praesentium minus!
+                Accusantium, vero minima voluptatibus reprehenderit nisi, suscipit quibusdam molestiae necessitatibus
+                tempora deserunt debitis eaque tempore officia id.  
+              </p>
+            </div>
           </div>
+        
+          {/* RESTAURANTS */}
         </div>
-
-        {/* RESTAURANTS */}
-      </div>
+      </Fragment>
     );
   }
 }
