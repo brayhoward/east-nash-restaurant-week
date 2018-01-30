@@ -55,10 +55,11 @@ class App extends Component {
           <div className={branding}>
             <div>
               <h1 className="txt-center">
-                East Nashville Restaurant Week
+                East Nashville <br />
+                Restaurant Week
               </h1>
-        
-              <p className="mg">
+
+              <p className="mg--xl">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, iste. Quibusdam, praesentium minus!
                 Accusantium, vero minima voluptatibus reprehenderit nisi, suscipit quibusdam molestiae necessitatibus
                 tempora deserunt debitis eaque tempore officia id.  
