@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import injectSheet from 'react-jss'
-import { MED_SM, XL } from '../src/constants/media-screens';
+import { MED_SM, XL } from 'constants/media-screens';
+import BrandingSection from 'layout-cmpts/BrandingSection';
 
 const styles = {
   // ensure appContainer div stays centered when it reaches it's max width
@@ -20,17 +21,6 @@ const styles = {
     position: 'fixed',
     width: '100%',
     top: 0
-  },
-  branding: {
-    composes: 'flex flex-col flex-between justify-center align-content-center',
-    marginTop: '2rem',
-    height: '80%',
-    padding: '0 20%',
-    // Animate the breakpoint transition... b/c why not?
-    transition: 'padding 0.75s',
-    [`@media (max-width: ${MED_SM})`]: {
-      padding: '0 2%'
-    }
   }
 }
 
@@ -57,21 +47,7 @@ class App extends Component {
         </header>
         
         <div className={appContainer}>
-          {/* BRANDING */}
-          <div className={branding}>
-            <div>
-              <h1 className="txt-center">
-                East Nashville <br />
-                Restaurant Week
-              </h1>
-
-              <p className="mg--xl">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, iste. Quibusdam, praesentium minus!
-                Accusantium, vero minima voluptatibus reprehenderit nisi, suscipit quibusdam molestiae necessitatibus
-                tempora deserunt debitis eaque tempore officia id.  
-              </p>
-            </div>
-          </div>
+          <BrandingSection />
         
           {/* RESTAURANTS */}
         </div>
