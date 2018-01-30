@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import injectSheet from 'react-jss'
-import { MED_SM, XL } from 'constants/media-screens';
+import { XL } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
+import PartnersSection from 'layout-cmpts/PartnersSection';
 
 const styles = {
   // ensure appContainer div stays centered when it reaches it's max width
@@ -11,7 +12,8 @@ const styles = {
   appContainer: {
     composes: 'flex flex-col flex-between full-height align-content-center',
     padding: '0 1em',
-    maxWidth: XL
+    // calc(${XL} - 100px) === 1200
+    maxWidth: `calc(${XL} - 100px)` 
   },
   navList: {
     listStyle: "none"
@@ -30,10 +32,8 @@ class App extends Component {
   render() {
     const {
       wrapper,
-      logo,
       appContainer,
       navList,
-      branding,
       header
     } = this.props.classes;
 
@@ -49,7 +49,7 @@ class App extends Component {
         <div className={appContainer}>
           <BrandingSection />
         
-          {/* RESTAURANTS */}
+          <PartnersSection />
         </div>
       </div>
     );
