@@ -5,8 +5,7 @@ import { MED_SM } from 'constants/media-screens';
 const styles = {
 main: {
   composes: 'flex flex-col flex-between justify-center align-content-center',
-  marginTop: '2rem',
-  height: '80%',
+  minHeight: '100vh',
   padding: '0 20%',
   // Animate the breakpoint transition... b/c why not?
   transition: 'padding 0.75s',

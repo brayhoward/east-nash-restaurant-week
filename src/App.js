@@ -7,13 +7,13 @@ import PartnersSection from 'layout-cmpts/PartnersSection';
 const styles = {
   // ensure appContainer div stays centered when it reaches it's max width
   wrapper: {
-    composes: 'flex flex-col justify-center align-items-center full-height'
+    composes: 'flex flex-col justify-center align-items-center'
   },
   appContainer: {
-    composes: 'flex flex-col flex-between full-height align-content-center',
+    composes: 'flex flex-col flex-between align-content-center',
     padding: '0 1em',
-    // calc(${XL} - 100px) === 1200
-    maxWidth: `calc(${XL} - 100px)` 
+    // paddingTop: `calc(${height} * 3)`,
+    maxWidth: `calc(${XL} - 100px)`  
   },
   navList: {
     listStyle: "none"
@@ -22,6 +22,7 @@ const styles = {
     composes: 'flex justify-end pd-r--lg',
     position: 'fixed',
     width: '100%',
+    height: '3em',
     top: 0
   }
 }
@@ -46,7 +47,7 @@ class App extends Component {
           </ul>
         </header>
         
-        <div className={appContainer}>
+        <div className={appContainer}>  
           <BrandingSection />
         
           <PartnersSection />
