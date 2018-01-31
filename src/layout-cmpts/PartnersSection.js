@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import FivePointsLogo from 'assets/five-points.jpg';
 import FivePointsDarkLogo from 'assets/five-points-dark.jpg';
 import FivePointsImg from 'assets/five-points-streetview.jpg';
+import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
 
 const styles = {
@@ -116,11 +117,19 @@ export default class extends Component {
           </ul>
         </div>
       
-        <div className={showDetail ? fadeIn : fadeOut}>
-          <DetailCard info={detailCardInfo} />
-        </div>
+          
+        <Swipeable onSwipedUp={this.flickedUp} >
+          <div className={showDetail ? fadeIn : fadeOut}>
+            <DetailCard info={detailCardInfo} />
+          </div>
+        </Swipeable>
       </div>
     );
+  }
+
+  @bind
+  flickedUp(_e, _deltaY, isFlick) {
+    if (isFlick) this.setState({ showDetail: false })
   }
 
   showDetail(info) {
