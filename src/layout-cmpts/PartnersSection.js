@@ -10,7 +10,7 @@ import DetailCard from './DetailCard';
 
 const styles = {
   wrapper: {
-    composes: 'flex justify-between align-items-center',
+    composes: 'flex justify-between',
     minHeight: '100vh'
   },
   listWrapper: {
@@ -104,21 +104,23 @@ export default class extends Component {
       <div className={wrapper}>
 
         <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
-          <ul className={classnames([ partnersList])}>
-            {
-              partners.map(
-                ({ logo, name, ...rest }, i) => (
-                  <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
-                    <img src={logo} alt={`${name} logo`} style={{maxWidth: '9em'}}/>
-                  </li>
+          <div>
+            <ul className={classnames([ partnersList])}>
+              {
+                partners.map(
+                  ({ logo, name, ...rest }, i) => (
+                    <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
+                      <img src={logo} alt={`${name} logo`} style={{maxWidth: '9em'}}/>
+                    </li>
+                  )
                 )
-              )
-            }
-          </ul>
+              }
+            </ul>
+          </div>
         </div>
       
           
-        <Swipeable onSwipedUp={this.flickedUp} >
+        <Swipeable onSwipedUp={this.flickedUp} className="pd-t--xl">
           <div className={showDetail ? fadeIn : fadeOut}>
             <DetailCard info={detailCardInfo} />
           </div>
