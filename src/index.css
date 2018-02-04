@@ -12,7 +12,7 @@
 /* GLOBAL STYLES */
 /* normalize my workspace */
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
 }
 
@@ -48,6 +48,7 @@ ul {
 .align-content-start { align-content: flex-start; }
 .align-contnet-end { align-content: flex-end; }
 .align-content-center { align-content: center; }
+.align-content-space-between { align-content: space-between; }
 
 .bg-light { background-color: var(--light); }
 .bold { font-weight: bold; }
@@ -120,3 +121,6 @@ ul {
 
 /* for deveopment purposes */
 .bd { border: 1px solid lime; }
+
+/* Uncomment for x-ray vission */
+* { border: 1px solid red !important; }

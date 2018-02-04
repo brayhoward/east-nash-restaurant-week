@@ -4,6 +4,7 @@ import { XL } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
 import PartnersSection from 'layout-cmpts/PartnersSection';
 
+const headerHeight = '3em';
 const styles = {
   // ensure appContainer div stays centered when it reaches it's max width
   wrapper: {
@@ -12,7 +13,7 @@ const styles = {
   appContainer: {
     composes: 'flex flex-col flex-between align-content-center',
     padding: '0 1em',
-    // paddingTop: `calc(${height} * 3)`,
+    paddingTop: headerHeight,
     maxWidth: `calc(${XL} - 100px)`  
   },
   navList: {
@@ -22,7 +23,7 @@ const styles = {
     composes: 'flex justify-end pd-r--lg',
     position: 'fixed',
     width: '100%',
-    height: '3em',
+    height: headerHeight,
     top: 0
   }
 }

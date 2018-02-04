@@ -1,8 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss'
 import capitalize from 'lodash.capitalize'
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Typography from 'material-ui/Typography';
+import Card, { CardContent } from 'material-ui/Card';
 
 const styles = {
   main: {
@@ -10,7 +9,8 @@ const styles = {
   },
   card: {
     maxWidth: '59%',
-    margin: 'auto'
+    margin: 'auto',
+    position: 'relative'
   },
   img: {
     composes: 'full-width',
@@ -21,17 +21,24 @@ const styles = {
     composes: 'mg-t--xl'
   },
   about: {
-    composes: '.mg-t'
+    composes: 'mg-t'
+  },
+  closeBtn: {
+    position: 'absolute',
+    right: '.2em',
+    top: '.2em',
+    cursor: 'pointer'
   }
 };
 
-const DetailCard = ({ classes, info }) => {
-  const { main, card, about, img } = classes;
+const DetailCard = ({ classes, info, handleClose }) => {
+  const { main, card, about, img, closeBtn } = classes;
   const { name, blurb, deals, image, logo } = info;
   const formatedName = capitalize(name);
 
   return (
     <Card className={card}>
+      <h1 onClick={handleClose} className={closeBtn}>X</h1>  
       <div className={img} />  
       
       <CardContent>  

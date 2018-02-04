@@ -24,6 +24,7 @@ const styles = {
   },
   partnersList: {
     composes: 'flex flex-wrap justify-center pd-0',
+    margin: 'auto',
     listStyle: 'none',
     minWidth: '80%',
     maxWidth: '80%'
@@ -105,7 +106,7 @@ export default class extends Component {
 
         <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
           <div>
-            <ul className={classnames([ partnersList])}>
+            <ul className={partnersList}>
               {
                 partners.map(
                   ({ logo, name, ...rest }, i) => (
@@ -119,10 +120,10 @@ export default class extends Component {
           </div>
         </div>
       
-          
+        {/* TODO: Make swipe right work */}
         <Swipeable onSwipedUp={this.flickedUp} className="pd-t--xl">
           <div className={showDetail ? fadeIn : fadeOut}>
-            <DetailCard info={detailCardInfo} />
+            <DetailCard info={detailCardInfo} handleClose={this.hideDetail} />
           </div>
         </Swipeable>
       </div>
@@ -131,7 +132,7 @@ export default class extends Component {
 
   @bind
   flickedUp(_e, _deltaY, isFlick) {
-    if (isFlick) this.setState({ showDetail: false })
+    if (isFlick) this.hideDetail()
   }
 
   showDetail(info) {
@@ -140,6 +141,8 @@ export default class extends Component {
       showDetail: true
     });
   }
+
+  @bind
   hideDetail(info) {
     this.setState({ showDetail: false });
   }
