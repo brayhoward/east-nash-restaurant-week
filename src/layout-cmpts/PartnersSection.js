@@ -46,7 +46,7 @@ const styles = {
     visibility: 'hidden',
     transition: 'opacity',
     transitionDelay: '0s',
-    transitionDuration: '.1s'
+    transitionDuration: '.7s'
   }
 }
 
@@ -104,8 +104,8 @@ export default class extends Component {
 
 
     return (
+      
       <div className={wrapper}>
-
         <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
           <div>
             <ul className={partnersList}>
