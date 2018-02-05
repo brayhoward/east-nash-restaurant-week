@@ -5,6 +5,8 @@ import classnames from 'classnames';
 import FivePointsLogo from 'assets/five-points.jpg';
 import FivePointsDarkLogo from 'assets/five-points-dark.jpg';
 import FivePointsImg from 'assets/five-points-streetview.jpg';
+import FortLogo from 'assets/fort-louise-monogram-black.jpg';
+import FortImg from 'assets/fort-exterior.jpg';
 import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
 
@@ -17,7 +19,7 @@ const styles = {
     composes: 'flex justify-center',
     minWidth: '100%',
     maxWidth: '100%',
-    transition: 'margin-left .5s',
+    transition: 'margin-left .75s ease-in-out',
   },
   marginLeft: {
     marginLeft: '-100%',
@@ -36,7 +38,7 @@ const styles = {
     opacity: '1',
     visibility: 'visible',
     transition: 'opacity',
-    transitionDelay: '.4s',
+    transitionDelay: '.7s',
     transitionDuration: '.3s'
   },
   fadeOut: {
@@ -150,9 +152,9 @@ export default class extends Component {
 
 const partners = [
   {
-    name: 'five points',
-    logo: FivePointsLogo,
-    image: FivePointsImg,
+    name: 'fort louise',
+    logo: FortLogo,
+    image: FortImg,
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,

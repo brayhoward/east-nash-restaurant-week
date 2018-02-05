@@ -3,6 +3,7 @@ import injectSheet from 'react-jss'
 import { MED_SM } from 'constants/media-screens';
 import Jumpers from 'assets/halsman-jump.png';
 import Soup from 'assets/soup.jpg'
+import Logo from 'assets/enrw-logo-circle-test.svg'
 
 const styles = {
   main: {
@@ -26,7 +27,7 @@ const styles = {
     /////////////////////////
   },
   jumpersAbsolute: {
-    maxWidth: '11em',
+    maxWidth: '16em',
     bottom: '-12%',
     position: 'absolute',
     // Center horizontally //
@@ -50,11 +51,11 @@ const BrandingSection = ({ classes: { main, jumpersFixed, jumpersAbsolute, delic
     />
 
     <div className={main}>
-      <div>
-        <h1 className="txt-center">
-          East Nashville <br />
-          Restaurant Week
-        </h1>
+      <div className="flex flex-col align-items-center">
+        <img
+          src={Logo}
+          alt="East Nashville Restaurant Week"
+        />
 
         <p className="mg--xl">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, iste. Quibusdam, praesentium minus!

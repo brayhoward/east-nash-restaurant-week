@@ -19,6 +19,7 @@ html, body, #root {
 body {
   font-size: 17px;
   color: var(--dark);
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 /* squash browser defualts */

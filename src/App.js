@@ -3,6 +3,7 @@ import injectSheet from 'react-jss'
 import { XL } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
 import PartnersSection from 'layout-cmpts/PartnersSection';
+import footerImage from 'assets/footer-collage-fpo.png';
 
 const headerHeight = '3em';
 const styles = {
@@ -15,6 +16,11 @@ const styles = {
     padding: '0 1em',
     paddingTop: headerHeight,
     maxWidth: `calc(${XL} - 100px)`  
+  },
+  footer: {
+    composes: 'full-width',
+    height: '700px',
+    background: `url(${footerImage}) no-repeat center/cover`
   },
   navList: {
     listStyle: "none"
@@ -36,7 +42,8 @@ class App extends Component {
       wrapper,
       appContainer,
       navList,
-      header
+      header,
+      footer
     } = this.props.classes;
 
     return (
@@ -52,6 +59,8 @@ class App extends Component {
           <BrandingSection />
         
           <PartnersSection />
+        </div>
+        <div className={footer}>
         </div>
       </div>
     );
