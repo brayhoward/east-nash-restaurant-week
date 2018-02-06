@@ -4,7 +4,8 @@ function runScene() {
   const controller = new ScrollMagic.Controller();
 
   new ScrollMagic.Scene({
-    offset: '500%',  // start this scene after scrolling for 50%
+    triggerElement: '#jumpers',
+    triggerHook: 0.30
   })
   .setPin("#jumpers", {pushfollowers: false})
   .addTo(controller);

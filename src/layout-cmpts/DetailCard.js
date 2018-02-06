@@ -56,7 +56,7 @@ const DetailCard = ({ classes, info, handleClose }) => {
           <title>
             close [#1511]
           </title>
-          <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fill-rule="evenodd"/>
+          <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fillRule="evenodd"/>
         </svg>
         </span>
       </div>
@@ -80,8 +80,8 @@ const DetailCard = ({ classes, info, handleClose }) => {
 
           <div style={{fontSize: '14px', paddingLeft: '10px'}}>
             <img src={logo} alt={`${name} logo`} style={{maxWidth: '3em'}}/>
-            <a class="btn">View Menu</a>
-            <a class="btn">Make a Reservation</a>
+            <a className="btn">View Menu</a>
+            <a className="btn">Make a Reservation</a>
             
             <h3>Specials</h3>
 

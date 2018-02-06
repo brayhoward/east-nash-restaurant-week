@@ -45,9 +45,12 @@ const styles = {
     opacity: '0',
     visibility: 'hidden',
     width: 0,
+    height: 0,
     transition: 'opacity',
     transitionDelay: '0s',
-    transitionDuration: '.7s'
+    transitionDuration: '.7s',
+    position: 'fixed',
+    zIndex: 1000
   }
 }
 
