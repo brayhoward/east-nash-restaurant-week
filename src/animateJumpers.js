@@ -12,7 +12,7 @@ function runScene() {
   // When #jumpers reach the #deliciousFood apply css animation class
   new ScrollMagic.Scene({
     triggerElement: '#deliciousFood',
-    triggerHook: 0.39
+    triggerHook: 0.15
   })
   .setClassToggle('#jumpers', 'faded')
   .addTo(controller);
@@ -22,7 +22,7 @@ function runScene() {
   // everything will look like shite.
   new ScrollMagic.Scene({
     triggerElement: '#deliciousFood',
-    triggerHook: 0.26
+    triggerHook: 0.01
   })
   .setClassToggle('#jumpers', 'hidden')
   .addTo(controller);

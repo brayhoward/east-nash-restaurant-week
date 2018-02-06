@@ -1,10 +1,7 @@
 .faded {
   opacity: 0;
-  transform: scale(.3);
-  /* transform: rotate(360deg); */
-  transition: all;
-  transition-duration: 1.25s;
-  transition-timing-function: ease-in;
+  /* transform: scale(.3); */
+  transition: all ease-in-out;
 }
 
 .fadedIn {
