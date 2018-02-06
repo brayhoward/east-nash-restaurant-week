@@ -8,13 +8,13 @@ const styles = {
     composes: 'flex justify-center'
   },
   card: {
-    maxWidth: '59%',
+    maxWidth: '60%',
     margin: 'auto',
     position: 'relative'
   },
   img: {
     composes: 'full-width',
-    height: '45vh',
+    height: '33vh',
     background: ({ info: { image } }) => `url('${image}') no-repeat center/cover`
   },
   blurb: {
@@ -30,9 +30,7 @@ const styles = {
     cursor: 'pointer',
     backgroundColor: 'var(--light)',
     textAlign: 'center',
-    minWidth: '1.35em',
-    fontSize: '2em',
-    fontWeight: 'bold'
+    padding: '15px 15px 10px 15px'
   },
   backArrow: {
     color: 'var(--light)',
@@ -54,7 +52,12 @@ const DetailCard = ({ classes, info, handleClose }) => {
       {/* <h1 onClick={handleClose} className={backArrow}>&larr;</h1> */}
       <div className={closeBtn}>
         <span onClick={handleClose}>
-          X
+        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>
+            close [#1511]
+          </title>
+          <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fill-rule="evenodd"/>
+        </svg>
         </span>
       </div>
 
@@ -65,7 +68,7 @@ const DetailCard = ({ classes, info, handleClose }) => {
         
         <div className="flex justify-between">
 
-          <div style={{width: '60%'}}>
+          <div style={{width: '60%', paddingRight: '10px'}}>
             <h2 className="mg-b--sm">
               {formatedName}
             </h2>
@@ -75,10 +78,12 @@ const DetailCard = ({ classes, info, handleClose }) => {
             </p>
           </div>
 
-          <div>
+          <div style={{fontSize: '14px', paddingLeft: '10px'}}>
             <img src={logo} alt={`${name} logo`} style={{maxWidth: '3em'}}/>
+            <a class="btn">View Menu</a>
+            <a class="btn">Make a Reservation</a>
             
-            <h3>Deals</h3>
+            <h3>Specials</h3>
 
             <ul>
               {deals.map((deal, i) => <li key={i}>{deal}</li>)}

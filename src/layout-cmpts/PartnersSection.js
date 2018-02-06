@@ -152,12 +152,11 @@ export default class extends Component {
 
 const partners = [
   {
-    name: 'fort louise',
+    name: 'Fort Louise',
     logo: FortLogo,
     image: FortImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    phone: `A chef-driven neighborhood restaurant with a casual dinner party atmosphere`,
     deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
 
   },
