@@ -4,19 +4,27 @@ function runScene() {
   const controller = new ScrollMagic.Controller();
 
   new ScrollMagic.Scene({
-    // duration: '100%',    // the scene should last for a scroll distance of 100px
-    offset: '500px',      // start this scene after scrolling for 50px
-    // triggerHook: 0.2,
+    offset: '500%',  // start this scene after scrolling for 50%
   })
-  .setPin("#jumpers", {pushfollowers: false}) // pins the element for the the scene's duration
+  .setPin("#jumpers", {pushfollowers: false})
   .addTo(controller);
   
+  // When #jumpers reach the #deliciousFood apply css animation class
   new ScrollMagic.Scene({
-    duration: 0,
     triggerElement: '#deliciousFood',
-    triggerHook: 0.1
+    triggerHook: 0.39
   })
   .setClassToggle('#jumpers', 'faded')
+  .addTo(controller);
+  
+  // If user scrolls past the #deliciousFood apply hidden class
+  // b/c if they are scrolling to fast the animation wont be done and 
+  // everything will look like shite.
+  new ScrollMagic.Scene({
+    triggerElement: '#deliciousFood',
+    triggerHook: 0.26
+  })
+  .setClassToggle('#jumpers', 'hidden')
   .addTo(controller);
 }
 

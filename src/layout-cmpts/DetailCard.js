@@ -15,7 +15,7 @@ const styles = {
   img: {
     composes: 'full-width',
     height: '45vh',
-    background: ({ info: { image } }) => `url('${image}') scroll no-repeat center/cover`
+    background: ({ info: { image } }) => `url('${image}') no-repeat center/cover`
   },
   blurb: {
     composes: 'mg-t--xl'
@@ -25,20 +25,40 @@ const styles = {
   },
   closeBtn: {
     position: 'absolute',
-    right: '.2em',
-    top: '.2em',
+    right: '.4em',
+    top: '.4em',
+    cursor: 'pointer',
+    backgroundColor: 'var(--light)',
+    textAlign: 'center',
+    minWidth: '1.35em',
+    fontSize: '2em',
+    fontWeight: 'bold'
+  },
+  backArrow: {
+    color: 'var(--light)',
+    position: 'absolute',
+    left: '.4em',
+    top: '.4em',
     cursor: 'pointer'
   }
 };
 
 const DetailCard = ({ classes, info, handleClose }) => {
-  const { main, card, about, img, closeBtn } = classes;
-  const { name, blurb, deals, image, logo } = info;
+  const {card, img, closeBtn, backArrow } = classes;
+  const { name, blurb, deals, logo } = info;
   const formatedName = capitalize(name);
 
   return (
     <Card className={card}>
-      <h1 onClick={handleClose} className={closeBtn}>X</h1>  
+      {/* CLOSE DETAIL ACTIONS */}  
+      {/* <h1 onClick={handleClose} className={backArrow}>&larr;</h1> */}
+      <div className={closeBtn}>
+        <span onClick={handleClose}>
+          X
+        </span>
+      </div>
+
+      {/* BACKGROUND IMAGE*/}
       <div className={img} />  
       
       <CardContent>  
