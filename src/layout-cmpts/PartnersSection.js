@@ -134,7 +134,7 @@ export default class extends Component {
       
         {/* TODO: Make swipe right work */}
         <Swipeable onSwipedUp={this.flickedUp} className={classnames(['pd-t--xl', showDetail ? fadeIn : fadeOut])}>
-          <DetailCard info={detailCardInfo} handleClose={this.hideDetail} />
+          <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
         </Swipeable>
       </div>
     );

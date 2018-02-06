@@ -46,35 +46,31 @@ const styles = {
     backgroundColor: 'var(--light)',
     textAlign: 'center',
     padding: '15px 15px 10px 15px'
-  },
-  backArrow: {
-    color: 'var(--light)',
-    position: 'absolute',
-    left: '.4em',
-    top: '.4em',
-    cursor: 'pointer'
   }
 };
 
 @injectSheet(styles)
 class DetailCard extends Component {
 
-  componentDidMount() {
-    const foo = this.refs['detailView'].scrollIntoView({ behavior: 'smooth' });
-    this.refs['detailView']
-    // debugger
-  }
 
   render() {
-    const { classes, info, handleClose, ref } = this.props;
-    const {card, contentWrapper, contentLeftWrapper, img, closeBtn, backArrow } = classes;
+    const { classes, info, handleClose, showDetail } = this.props;
+    const {card, contentWrapper, contentLeftWrapper, img, closeBtn } = classes;
     const { name, blurb, contacts, logo } = info;
     const formatedName = capitalize(name);
 
+    if (showDetail) {
+      window.setTimeout(
+        () => {
+          this.refs['detailView'].scrollIntoView({block: "start", behavior: 'smooth' });
+        },
+        500
+      );
+    }
+
     return (
       <Card className={card}>
-        {/* CLOSE DETAIL ACTIONS */}
-        {/* <h1 onClick={handleClose} className={backArrow}>&larr;</h1> */}
+        {/* CLOSE DETAIL BUTTON */}
         <div className={closeBtn} ref="detailView">
           <span onClick={handleClose}>
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
