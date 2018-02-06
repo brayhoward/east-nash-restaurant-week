@@ -16,25 +16,9 @@ const styles = {
       padding: '0 2%'
     }
   },
-  jumpersFixed: {
-    maxWidth: '11em',
-    bottom: '50%%',
-    position: 'fixed',
-    // Center horizontally //
-    margin: '0 auto',
-    left: 0,
-    right: 0
-    /////////////////////////
-  },
-  jumpersAbsolute: {
+  jumpers: {
     maxWidth: '16em',
-    bottom: '-12%',
-    position: 'absolute',
-    // Center horizontally //
-    margin: '0 auto',
-    left: 0,
-    right: 0
-    /////////////////////////
+    transition: 'opacity .3s ease-in, transform .3s ease-in'
   },
   deliciousFood: {
     maxWidth: '95vw',
@@ -42,14 +26,8 @@ const styles = {
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpersFixed, jumpersAbsolute, deliciousFood } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood } }) => (
   <Fragment>
-    <img
-      src={Jumpers}
-      className={true ? jumpersAbsolute : jumpersFixed}
-      alt="couple jumping"
-    />
-
     <div className={main}>
       <div className="flex flex-col align-items-center">
         <img
@@ -63,11 +41,19 @@ const BrandingSection = ({ classes: { main, jumpersFixed, jumpersAbsolute, delic
           tempora deserunt debitis eaque tempore officia id.  
         </p>
       </div>
+
+      <img
+        src={Jumpers}
+        className={jumpers}
+        alt="couple jumping"
+        id="jumpers"
+      />
       
       <img
         className={deliciousFood}  
         src={Soup}
         alt="bowl of delicious food!"
+        id="deliciousFood"
       />
     </div>
   </Fragment>  
