@@ -68,7 +68,7 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose, ref } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn, backArrow } = classes;
-    const { name, blurb, deals, logo } = info;
+    const { name, blurb, contacts, logo } = info;
     const formatedName = capitalize(name);
 
     return (
@@ -106,14 +106,11 @@ class DetailCard extends Component {
                 </div>
 
               <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
-                <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} />
+                {/* <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} /> */}
                 <a className="btn">View Menu</a>
                 <a className="btn">Make a Reservation</a>
-                
-                <h3>Specials</h3>
-
                 <ul>
-                  {deals.map((deal, i) => <li key={i}>{deal}</li>)}
+                  {contacts.map((contact, i) => <li key={i}>{contact}</li>)}
                 </ul>
               </div>
             </div>

@@ -31,6 +31,7 @@ const styles = {
     height: '500px',
     width: '100%',
     background: `url(${SoupBack}) no-repeat top/contain`,
+    marginTop: '250px',
     position: 'relative'
   },
   deliciousFoodFront: {
@@ -60,16 +61,12 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       />
 
       <h2 className="mg-t--xl mg-b--xl">
-        Special menus and cheap eats at some of East Nashville's best restaurants.
+        Special menus and discounts at some of East Nashville's best restaurants.
       </h2>
     </div>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div id="deliciousFood" className={deliciousFoodFront}/>
-      {/* <img
-          src={SoupFront}
-          className={jumpers}
-        /> */}
     </div>
 
     <h2 className="mg--sm txt-center txt-upper">

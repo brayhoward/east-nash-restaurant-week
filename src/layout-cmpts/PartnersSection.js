@@ -5,8 +5,14 @@ import classnames from 'classnames';
 import FivePointsLogo from 'assets/five-points.jpg';
 import FivePointsDarkLogo from 'assets/five-points-dark.jpg';
 import FivePointsImg from 'assets/five-points-streetview.jpg';
-import FortLogo from 'assets/fort-louise-monogram-black.jpg';
+import FortLogo from 'assets/logo-fort-louise.jpg';
 import FortImg from 'assets/fort-exterior.jpg';
+import ButcherLogo from 'assets/logo-butcher-bee.jpg';
+import ButcherImg from 'assets/fort-exterior.jpg';
+import LockelandLogo from 'assets/logo-lockleand-table.jpg';
+import LockelandImg from 'assets/fort-exterior.jpg';
+import JackLogo from 'assets/logo-two-ten-jack.jpg';
+// import JackImg from 'assets/fort-exterior.jpg';
 import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
 
@@ -60,14 +66,14 @@ export default class extends Component {
   constructor(props) { 
     super(props);
     // Init state
-    const { name, blurb, deals, image, logo } = partners[0];
+    const { name, blurb, contacts, image, logo } = partners[0];
 
     this.state = {
       showDetail: false,
       detailCardInfo: {
         name,
         blurb,
-        deals,
+        contacts,
         image,
         logo
       }
@@ -154,102 +160,89 @@ export default class extends Component {
 
 const partners = [
   {
+    name: 'Butcher & Bee',
+    logo: ButcherLogo ,
+    image: 'https://cdn.vox-cdn.com/thumbor/Q2obxdebiyaKNOpEFJN6WL2wQEg=/633x0:5753x3840/1200x800/filters:focal(633x0:5753x3840)/cdn.vox-cdn.com/uploads/chorus_image/image/47819659/BUTCHER___BEE-1163.0.0.jpg',
+    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
+      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
+      vero eligendi quae!`,
+    contacts: ['(615) 226-3322', 'butcherandbee.com' ]
+
+  },
+  {
     name: 'Fort Louise',
     logo: FortLogo,
     image: FortImg,
     blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-    phone: `A chef-driven neighborhood restaurant with a casual dinner party atmosphere`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsDarkLogo ,
-    image: FivePointsImg,
+    name: 'Lockeland Table',
+    logo: LockelandLogo,
+    image: 'http://cdn.onlyinyourstate.com/wp-content/uploads/2016/07/159.-Lockeland-Table-700x457.jpg',
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    contacts: ['(615) 228-4864', 'lockelandtable.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsLogo,
-    image: FivePointsImg,
+    name: 'Two Ten Jack',
+    logo: JackLogo ,
+    image: 'http://twotenjack.com/nashville/wp-content/themes/twotenjack/img/web-bg-3.jpg',
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    contacts: ['(615) 454-2731', 'twotenjack.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsDarkLogo ,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsLogo,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsDarkLogo ,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsLogo,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsDarkLogo,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
   },
   {
-    name: 'five points',
-    logo: FivePointsLogo,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
+    name: 'Fort Louise',
+    logo: FortLogo,
+    image: FortImg,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
 
-  },
-  {
-    name: 'five points',
-    logo: FivePointsDarkLogo,
-    image: FivePointsImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    deals: ['1/2 off appitizers', '1/2 well drinks', '25% off entrées' ]
-
-   }
+  }
 ]

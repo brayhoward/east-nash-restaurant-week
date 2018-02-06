@@ -52,7 +52,7 @@ class App extends Component {
         {/* HEADER   */}
         <header className={header}>
           <ul className={navList}>
-            <li>Nav item?</li>
+            <li>Social Share?</li>
           </ul>
         </header>
         
