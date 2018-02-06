@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import injectSheet from 'react-jss'
 import capitalize from 'lodash.capitalize'
 import Card, { CardContent } from 'material-ui/Card';
@@ -41,58 +41,69 @@ const styles = {
   }
 };
 
-const DetailCard = ({ classes, info, handleClose }) => {
-  const {card, img, closeBtn, backArrow } = classes;
-  const { name, blurb, deals, logo } = info;
-  const formatedName = capitalize(name);
+@injectSheet(styles)
+class DetailCard extends Component {
 
-  return (
-    <Card className={card}>
-      {/* CLOSE DETAIL ACTIONS */}  
-      {/* <h1 onClick={handleClose} className={backArrow}>&larr;</h1> */}
-      <div className={closeBtn}>
-        <span onClick={handleClose}>
-        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>
-            close [#1511]
-          </title>
-          <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fillRule="evenodd"/>
-        </svg>
-        </span>
-      </div>
+  componentDidMount() {
+    const foo = this.refs['detailView'].scrollIntoView({ behavior: 'smooth' });
+    this.refs['detailView']
+    debugger
+  }
 
-      {/* BACKGROUND IMAGE*/}
-      <div className={img} />  
-      
-      <CardContent>  
-        
-        <div className="flex justify-between">
+  render() {
+    const { classes, info, handleClose, ref } = this.props;
+    const { card, img, closeBtn, backArrow } = classes;
+    const { name, blurb, deals, logo } = info;
+    const formatedName = capitalize(name);
 
-          <div style={{width: '60%', paddingRight: '10px'}}>
-            <h2 className="mg-b--sm">
-              {formatedName}
-            </h2>
-
-            <p>
-              {blurb}
-            </p>
-          </div>
-
-          <div style={{fontSize: '14px', paddingLeft: '10px'}}>
-            <img src={logo} alt={`${name} logo`} style={{maxWidth: '3em'}}/>
-            <a className="btn">View Menu</a>
-            <a className="btn">Make a Reservation</a>
-            
-            <h3>Specials</h3>
-
-            <ul>
-              {deals.map((deal, i) => <li key={i}>{deal}</li>)}
-            </ul>
-          </div>
+    return (
+      <Card className={card}>
+        {/* CLOSE DETAIL ACTIONS */}
+        {/* <h1 onClick={handleClose} className={backArrow}>&larr;</h1> */}
+        <div className={closeBtn} ref="detailView">
+          <span onClick={handleClose}>
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>
+                close [#1511]
+            </title>
+              <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fillRule="evenodd" />
+            </svg>
+          </span>
         </div>
-      </CardContent>
-    </Card>  
-  );
-};
 
-export default injectSheet(styles)(DetailCard)
+        {/* BACKGROUND IMAGE*/}
+        <div className={img} />
+        
+        <CardContent>
+          
+          <div className="flex justify-between" ref="detail">
+
+            <div style={{ width: '60%', paddingRight: '10px' }}>
+              <h2 className="mg-b--sm">
+                {formatedName}
+              </h2>
+
+              <p>
+                {blurb}
+              </p>
+            </div>
+
+            <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
+              <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} />
+              <a className="btn">View Menu</a>
+              <a className="btn">Make a Reservation</a>
+              
+              <h3>Specials</h3>
+
+              <ul>
+                {deals.map((deal, i) => <li key={i}>{deal}</li>)}
+              </ul>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+}
+
+export default DetailCard;
