@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
 import capitalize from 'lodash.capitalize'
+import { MED_SM } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
 
 const styles = {
   main: {
     composes: 'flex justify-center'
+  },
+  contentWrapper: {
+    composes: 'flex justify-between',
+    padding: '20px',
+    [`@media (max-width: ${MED_SM})`]: {
+      flexFlow: 'column'
+    }
+  },
+  contentLeftWrapper: {
+    width: '60%', 
+    paddingRight: '10px',
+    [`@media (max-width: ${MED_SM})`]: {
+      width: '100%'
+    }
   },
   card: {
     maxWidth: '60%',
@@ -47,12 +62,12 @@ class DetailCard extends Component {
   componentDidMount() {
     const foo = this.refs['detailView'].scrollIntoView({ behavior: 'smooth' });
     this.refs['detailView']
-    debugger
+    // debugger
   }
 
   render() {
     const { classes, info, handleClose, ref } = this.props;
-    const { card, img, closeBtn, backArrow } = classes;
+    const {card, contentWrapper, contentLeftWrapper, img, closeBtn, backArrow } = classes;
     const { name, blurb, deals, logo } = info;
     const formatedName = capitalize(name);
 
@@ -73,31 +88,34 @@ class DetailCard extends Component {
 
         {/* BACKGROUND IMAGE*/}
         <div className={img} />
-        
+
         <CardContent>
           
           <div className="flex justify-between" ref="detail">
 
-            <div style={{ width: '60%', paddingRight: '10px' }}>
-              <h2 className="mg-b--sm">
-                {formatedName}
-              </h2>
+            <div className={contentWrapper}>
 
-              <p>
-                {blurb}
-              </p>
-            </div>
+              <div className={contentLeftWrapper}>
+                <h2 className="mg-b--sm">
+                  {formatedName}
+                </h2>
 
-            <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
-              <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} />
-              <a className="btn">View Menu</a>
-              <a className="btn">Make a Reservation</a>
-              
-              <h3>Specials</h3>
+                  <p>
+                    {blurb}
+                  </p>
+                </div>
 
-              <ul>
-                {deals.map((deal, i) => <li key={i}>{deal}</li>)}
-              </ul>
+              <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
+                <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} />
+                <a className="btn">View Menu</a>
+                <a className="btn">Make a Reservation</a>
+                
+                <h3>Specials</h3>
+
+                <ul>
+                  {deals.map((deal, i) => <li key={i}>{deal}</li>)}
+                </ul>
+              </div>
             </div>
           </div>
         </CardContent>
