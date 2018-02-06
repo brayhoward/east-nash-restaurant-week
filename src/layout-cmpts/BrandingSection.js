@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import injectSheet from 'react-jss'
 import { MED_SM } from 'constants/media-screens';
 import Jumpers from 'assets/halsman-jump.png';
-import Soup from 'assets/soup2.jpg'
+import SoupFront from 'assets/soup-front.png'
+import SoupBack from 'assets/soup-back.jpg'
 import Logo from 'assets/enrw-logo-bigeast-color.svg'
 
 const styles = {
@@ -19,20 +20,29 @@ const styles = {
   },
   jumpers: {
     maxWidth: '16em',
-    transition: 'opacity .3s ease-in, transform .3s ease-in'
+    transition: 'opacity .3s ease-in, transform .3s ease-in',
+    zIndex: '1'
   },
   deliciousFood: {
     maxWidth: '95vw',
     marginBottom: '15vh'
   },
-  deliciousFoodBg: {
+  deliciousFoodBack: {
     height: '500px',
     width: '100%',
-    background: `url(${Soup}) no-repeat top/contain`
+    background: `url(${SoupBack}) no-repeat top/contain`,
+    position: 'relative'
+  },
+  deliciousFoodFront: {
+    height: '500px',
+    width: '100%',
+    background: `url(${SoupFront}) no-repeat top/contain`,
+    position: 'relative',
+    zIndex: '2'
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBg } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -54,7 +64,13 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       </h2>
     </div>
 
-    <div id="deliciousFood" className={deliciousFoodBg}></div>
+    <div id="deliciousFood" className={deliciousFoodBack}>
+      <div id="deliciousFood" className={deliciousFoodFront}/>
+      {/* <img
+          src={SoupFront}
+          className={jumpers}
+        /> */}
+    </div>
 
     <h2 className="mg--sm txt-center txt-upper">
       Visit these Participating Restaurants
