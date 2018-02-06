@@ -44,6 +44,7 @@ const styles = {
   fadeOut: {
     opacity: '0',
     visibility: 'hidden',
+    width: 0,
     transition: 'opacity',
     transitionDelay: '0s',
     transitionDuration: '.7s'
@@ -123,10 +124,8 @@ export default class extends Component {
         </div>
       
         {/* TODO: Make swipe right work */}
-        <Swipeable onSwipedUp={this.flickedUp} className="pd-t--xl">
-          <div className={showDetail ? fadeIn : fadeOut}>
-            <DetailCard info={detailCardInfo} handleClose={this.hideDetail} />
-          </div>
+        <Swipeable onSwipedUp={this.flickedUp} className={classnames(['pd-t--xl', showDetail ? fadeIn : fadeOut])}>
+          <DetailCard info={detailCardInfo} handleClose={this.hideDetail} />
         </Swipeable>
       </div>
     );

@@ -49,7 +49,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         id="jumpers"
       />
 
-      <h2 className="mg--xl">
+      <h2 className="mg-t--xl mg-b--xl">
         Special menus and cheap eats at some of East Nashville's best restaurants.
       </h2>
     </div>
