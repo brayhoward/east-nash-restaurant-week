@@ -17,25 +17,9 @@ const styles = {
       padding: '0 2%'
     }
   },
-  jumpersFixed: {
-    maxWidth: '11em',
-    bottom: '50%%',
-    position: 'fixed',
-    // Center horizontally //
-    margin: '0 auto',
-    left: 0,
-    right: 0
-    /////////////////////////
-  },
-  jumpersAbsolute: {
+  jumpers: {
     maxWidth: '16em',
-    bottom: '-12%',
-    position: 'absolute',
-    // Center horizontally //
-    margin: '0 auto',
-    left: 0,
-    right: 0
-    /////////////////////////
+    transition: 'opacity .3s ease-in, transform .3s ease-in'
   },
   deliciousFood: {
     maxWidth: '95vw',
@@ -48,14 +32,8 @@ const styles = {
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpersFixed, jumpersAbsolute, deliciousFood, deliciousFoodBg } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBg } }) => (
   <Fragment>
-    <img
-      src={Jumpers}
-      className={true ? jumpersAbsolute : jumpersFixed}
-      alt="couple jumping"
-    />
-
     <div className={main}>
       <div className="flex flex-col align-items-center">
         <img
@@ -67,14 +45,17 @@ const BrandingSection = ({ classes: { main, jumpersFixed, jumpersAbsolute, delic
       <h2 className="mg--xl">
         Special menus and cheap eats at some of East Nashville's best restaurants.
       </h2>
-      
-      {/* <img
-        className={deliciousFood}  
-        src={Soup}
-        alt="bowl of delicious food!"
-      /> */}
+
+      <img
+        src={Jumpers}
+        className={jumpers}
+        alt="couple jumping"
+        id="jumpers"
+      />
     </div>
-    <div className={deliciousFoodBg}></div>
+
+    <div id="deliciousFood" className={deliciousFoodBg}></div>
+
     <h2 className="mg--sm txt-center txt-upper">
       Visit these Participating Restaurants
     </h2>

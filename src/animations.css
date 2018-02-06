@@ -1,0 +1,11 @@
+.faded {
+  opacity: 0;
+  transform: scale(.2);
+  transition: all;
+  transition-duration: .7s;
+  transition-timing-function: ease-in-out;
+}
+
+.fadedIn {
+  transition: opacity .2s ease-out, transform .2s ease-out
+}
