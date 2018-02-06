@@ -1,11 +1,26 @@
 import React from 'react';
-import injectSheet from 'react-jss'
-import capitalize from 'lodash.capitalize'
+import injectSheet from 'react-jss';
+import capitalize from 'lodash.capitalize';
+import { MED_SM } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
 
 const styles = {
   main: {
     composes: 'flex justify-center'
+  },
+  contentWrapper: {
+    composes: 'flex justify-between',
+    padding: '20px',
+    [`@media (max-width: ${MED_SM})`]: {
+      flexFlow: 'column'
+    }
+  },
+  contentLeftWrapper: {
+    width: '60%', 
+    paddingRight: '10px',
+    [`@media (max-width: ${MED_SM})`]: {
+      width: '100%'
+    }
   },
   card: {
     maxWidth: '60%',
@@ -42,7 +57,7 @@ const styles = {
 };
 
 const DetailCard = ({ classes, info, handleClose }) => {
-  const {card, img, closeBtn, backArrow } = classes;
+  const {card, contentWrapper, contentLeftWrapper, img, closeBtn, backArrow } = classes;
   const { name, blurb, deals, logo } = info;
   const formatedName = capitalize(name);
 
@@ -66,9 +81,9 @@ const DetailCard = ({ classes, info, handleClose }) => {
       
       <CardContent>  
         
-        <div className="flex justify-between">
+        <div className={contentWrapper}>
 
-          <div style={{width: '60%', paddingRight: '10px'}}>
+          <div className={contentLeftWrapper}>
             <h2 className="mg-b--sm">
               {formatedName}
             </h2>
@@ -80,8 +95,8 @@ const DetailCard = ({ classes, info, handleClose }) => {
 
           <div style={{fontSize: '14px', paddingLeft: '10px'}}>
             <img src={logo} alt={`${name} logo`} style={{maxWidth: '3em'}}/>
-            <a class="btn">View Menu</a>
-            <a class="btn">Make a Reservation</a>
+            <a className="btn">View Menu</a>
+            <a className="btn">Make a Reservation</a>
             
             <h3>Specials</h3>
 
