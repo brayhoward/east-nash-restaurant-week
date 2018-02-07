@@ -102,7 +102,7 @@ class DetailCard extends Component {
                 </div>
 
               <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
-                {/* <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} /> */}
+                <img src={logo} alt={`${name} logo`} style={{ maxWidth: '3em' }} />
                 <a className="btn">View Menu</a>
                 <a className="btn">Make a Reservation</a>
                 <ul>

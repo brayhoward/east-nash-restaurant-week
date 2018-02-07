@@ -28,14 +28,14 @@ const styles = {
     marginBottom: '15vh'
   },
   deliciousFoodBack: {
-    height: '500px',
+    height: '650px',
     width: '100%',
     background: `url(${SoupBack}) no-repeat top/contain`,
     marginTop: '250px',
     position: 'relative'
   },
   deliciousFoodFront: {
-    height: '500px',
+    height: '650px',
     width: '100%',
     background: `url(${SoupFront}) no-repeat top/contain`,
     position: 'relative',
