@@ -8,9 +8,9 @@ import FivePointsImg from 'assets/five-points-streetview.jpg';
 import FortLogo from 'assets/logo-fort-louise.jpg';
 import FortImg from 'assets/fort-exterior.jpg';
 import ButcherLogo from 'assets/logo-butcher-bee.jpg';
-import ButcherImg from 'assets/fort-exterior.jpg';
-import LockelandLogo from 'assets/logo-lockleand-table.jpg';
-import LockelandImg from 'assets/fort-exterior.jpg';
+import ButcherImg from 'assets/Cebulka-B+B-4869.jpg';
+import MargotLogo from 'assets/logo-margot.jpg';
+import MargotImg from 'assets/ext-margot.jpg';
 import JackLogo from 'assets/logo-two-ten-jack.jpg';
 // import JackImg from 'assets/fort-exterior.jpg';
 import Swipeable from 'react-swipeable'
@@ -162,7 +162,7 @@ const partners = [
   {
     name: 'Butcher & Bee',
     logo: ButcherLogo ,
-    image: 'https://cdn.vox-cdn.com/thumbor/Q2obxdebiyaKNOpEFJN6WL2wQEg=/633x0:5753x3840/1200x800/filters:focal(633x0:5753x3840)/cdn.vox-cdn.com/uploads/chorus_image/image/47819659/BUTCHER___BEE-1163.0.0.jpg',
+    image: ButcherImg,
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,
@@ -178,13 +178,11 @@ const partners = [
 
   },
   {
-    name: 'Lockeland Table',
-    logo: LockelandLogo,
-    image: 'http://cdn.onlyinyourstate.com/wp-content/uploads/2016/07/159.-Lockeland-Table-700x457.jpg',
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
-    contacts: ['(615) 228-4864', 'lockelandtable.com' ]
+    name: 'Margot',
+    logo: MargotLogo,
+    image: MargotImg,
+    blurb: `Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.`,
+    contacts: ['(615) 228-4864', 'margotcafe.com', '1017 Woodland Street' ]
 
   },
   {

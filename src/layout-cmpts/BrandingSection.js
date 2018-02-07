@@ -61,7 +61,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       />
 
       <h2 className="mg-t--xl mg-b--xl">
-        Special menus and discounts at some of East Nashville's best restaurants.
+      First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
       </h2>
     </div>
 
