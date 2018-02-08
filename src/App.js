@@ -13,7 +13,6 @@ const styles = {
   },
   appContainer: {
     composes: 'flex flex-col flex-between align-content-center',
-    padding: '0 1em',
     paddingTop: headerHeight,
     width: '100vw',
     maxWidth: `calc(${XL} - 100px)`  

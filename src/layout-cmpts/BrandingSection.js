@@ -29,7 +29,7 @@ const styles = {
   },
   deliciousFoodBack: {
     height: '650px',
-    width: '100%',
+    width: '99%',
     background: `url(${SoupBack}) no-repeat top/contain`,
     marginTop: '250px',
     position: 'relative'
@@ -50,6 +50,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         <img
           src={Logo}
           alt="East Nashville Restaurant Week"
+          style={{maxWidth: '100%'}}
         />
       </div>
 
@@ -66,7 +67,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
     </div>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
-      <div id="deliciousFood" className={deliciousFoodFront}/>
+      <div className={deliciousFoodFront}/>
     </div>
 
     <h2 className="mg--sm txt-center txt-upper">
