@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
+import bind from 'bind-decorator';
+import classnames from 'classnames';
 import { XL } from 'constants/media-screens';
 import { MED_SM } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
@@ -50,15 +52,17 @@ const styles = {
   },
   birdImg: {
     width: '560px',
-    transition: 'all .5s ease-in',
+    transition: 'all .3s ease-in',
     [`@media (max-width: ${MED_SM})`]: {
-      width: '165px'
+      width: '145px'
     },
     '&:hover': {
-      transform: 'translate(50%, 0)'
+      transform: 'translate(50%, 0)',
+      animationPlayState: 'paused'
     },
     '&:active': {
-      transform: 'translate(50%, 0)'
+      transform: 'translate(50%, 0)',
+       animationPlayState: 'paused'
     }
   }
 }
@@ -66,6 +70,47 @@ const styles = {
 
 @injectSheet(styles)
 class App extends Component {
+  state = {
+    intervalId: null,
+    shakeIt: false
+  }
+
+  constructor(props) {
+    super(props);
+
+    setTimeout(() => {
+      this.setState({ shakeIt: true })
+    }, 2000);
+  }
+
+  componentDidMount() {
+    var intervalId = setInterval(this.triggerBirdAnimation, 7000);
+
+    this.setState({intervalId: intervalId});
+  }
+
+  componentWillUnmount() {
+    this.clearAnimationInterval()
+  }
+
+  @bind
+  clearAnimationInterval() {
+    clearInterval(this.state.intervalId);
+  }  
+
+  @bind
+  triggerBirdAnimation() {
+    const mostlyTrue = (Math.random() >= 0.25);
+    
+    if (mostlyTrue) {
+      this.setState({ shakeIt: true })
+
+      setTimeout(() => {
+        this.setState({ shakeIt: false })
+      }, 5000);
+    }
+  }
+
   render() {
     const {
       wrapper,
@@ -76,6 +121,8 @@ class App extends Component {
       bird,
       birdImg
     } = this.props.classes;
+
+    const { shakeIt } = this.state;
 
     return (
       <div className={wrapper}>
@@ -94,7 +141,25 @@ class App extends Component {
 
         <div className={collage}>
           <span className="footer-links" style={{margin: '20px'}}>site by <a href="http://adamswebpage.com/" target="_blank" rel="noopener noreferrer">Howard</a> &amp; <a href="http://www.brandonrhoward.com/" target="_blank" rel="noopener noreferrer">Howard</a></span>
-          <a href="http://theeastnashvillian.com/article/the-lonely-bird-in-shelby-bottoms" className={bird} target="_blank"><img className={birdImg} src={birdImage} alt=""/></a>
+          <a
+            href="http://theeastnashvillian.com/article/the-lonely-bird-in-shelby-bottoms"
+            className={bird}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={
+                classnames(
+                  shakeIt ? 'shake' : null,
+                  birdImg
+                )
+              }
+              src={birdImage}
+              alt="the shelby bottoms golden phesant"
+              onClick={this.clearAnimationInterval}
+              onMouseOver={this.clearAnimationInterval}
+            />
+          </a>
         </div>
       </div>
     );
