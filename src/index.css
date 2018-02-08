@@ -22,6 +22,12 @@ body {
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
+a {color: #929a0e;}
+a:hover {
+  background-color: #929a0e;
+  color: white;
+}
+
 /* squash browser defualts */
 h1, h2, h3, h4, p { margin: 0; }
 
@@ -127,12 +133,14 @@ ul {
   color: black;
   border: 1px solid black;
   cursor: pointer;
+  text-decoration: none;
 }
 .btn:hover,
 .btn:active,
 .btn:focus {
   border-color: transparent;
   background-color: #e6f948;
+  color: black;
 }
 
 .box-shadow {
@@ -146,3 +154,14 @@ ul {
 
 /* Uncomment for x-ray vission */
 /* * { border: 1px solid red !important; } */
+
+.partners li{ 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.partners li:hover{ 
+  cursor: pointer;
+  border: 1px solid black;
+}

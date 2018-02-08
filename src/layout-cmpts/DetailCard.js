@@ -56,8 +56,9 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose, showDetail } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn } = classes;
-    const { name, blurb, contacts, logo } = info;
+    const { name, blurb, contacts, logo, phone, web, res, map, menu } = info;
     const formatedName = capitalize(name);
+    const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
     if (showDetail) {
       window.setTimeout(
@@ -83,7 +84,7 @@ class DetailCard extends Component {
         </div>
 
         {/* BACKGROUND IMAGE*/}
-        <div className={img} />
+        <div className={img} style={{ borderBottom: '5px solid rgb(205, 212, 82)' }}/>
 
         <CardContent>
           
@@ -102,12 +103,14 @@ class DetailCard extends Component {
                   </p>
                 </div>
 
-              <div style={{ fontSize: '14px', paddingLeft: '10px' }}>
-                <a className="btn">View Menu</a>
-                <a className="btn">Make a Reservation</a>
-                <ul>
+              <div style={{ fontSize: '1em', paddingLeft: '10px' }}>
+                {menu ? <a className="btn" href={`${menu}`}>View Menu</a> : null}
+                {res ? <a className="btn" href={`${res}`}>Make a Reservation</a> : null}
+                {/* <ul>
                   {contacts.map((contact, i) => <li key={i}>{contact}</li>)}
-                </ul>
+                </ul> */}
+                <address><a href={`http://maps.google.com?q=${mapQuery}`}>{map}</a></address>
+                <a href={`http://${web}`} target='blank'>{web}</a>
               </div>
             </div>
           </div>
