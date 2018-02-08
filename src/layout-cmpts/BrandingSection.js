@@ -24,7 +24,7 @@ const styles = {
     transition: 'opacity .3s ease-in, transform .3s ease-in',
     zIndex: '1',
     [`@media (max-width: ${MED_SM})`]: {
-      maxWidth: '9em'
+      maxWidth: '7em'
     }
   },
   deliciousFood: {
@@ -79,7 +79,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       />
 
       <h2 className="mg-l--lg mg-r--lg">
-      First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
+        First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
       </h2>
     </div>
 

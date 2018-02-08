@@ -19,7 +19,7 @@ import DetailCard from './DetailCard';
 
 const styles = {
   wrapper: {
-    composes: 'flex justify-between',
+    composes: 'flex justify-between pd-t--lg',
     minHeight: '60vh'
   },
   listWrapper: {
@@ -140,7 +140,7 @@ export default class extends Component {
         </div>
       
         {/* TODO: Make swipe right work */}
-        <Swipeable onSwipedUp={this.flickedUp} className={classnames(['pd-t--xl', showDetail ? fadeIn : fadeOut])}>
+        <Swipeable onSwipedUp={this.flickedUp} className={showDetail ? fadeIn : fadeOut}>
           <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
         </Swipeable>
       </div>
