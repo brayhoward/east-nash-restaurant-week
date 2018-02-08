@@ -58,6 +58,12 @@ const styles = {
     transitionDuration: '.7s',
     position: 'fixed',
     zIndex: 1000
+  },
+  h3: {
+    composes: "mg--sm txt-center txt-upper",
+    [`@media (max-width: ${MED_SM})`]: {
+      fontSize: '.9em'
+    }
   }
 }
 
@@ -84,13 +90,6 @@ export default class extends Component {
     }
   }
 
-  @bind 
-  escFunction({ keyCode }){
-    if(keyCode === 27) {
-      this.setState({ showDetail: false });
-    }
-  }
-
   componentDidMount(){
     document.addEventListener("keyup", this.escFunction, false);
   }
@@ -98,6 +97,22 @@ export default class extends Component {
   componentWillUnmount(){
     document.removeEventListener("keyup", this.escFunction, false);
   }
+
+  shouldComponentUpdate(_props, { showDetail: nextShowDetail }) {
+    const { showDetail } = this.state;
+    const shouldUpdate = nextShowDetail && (nextShowDetail !== showDetail);
+
+    if (shouldUpdate) {
+      window.setTimeout(
+        () => {
+          this.refs['heading'].scrollIntoView({block: "start", behavior: 'smooth' });
+        },
+        500
+      );
+    }
+
+    return shouldUpdate;
+  } 
 
   render() {
     const {
@@ -107,7 +122,8 @@ export default class extends Component {
       listItems,
       marginLeft,
       fadeIn,
-      fadeOut
+      fadeOut,
+      h3
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -116,32 +132,43 @@ export default class extends Component {
       showDetail ? this.hideDetail() : this.showDetail(info)
     );
 
-
     return (
-      
-      <div className={wrapper}>
-        <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
-          <div>
-            <ul className={partnersList}>
-              {
-                partners.map(
-                  ({ logo, name, ...rest }, i) => (
-                    <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
-                      <img src={logo} alt={`${name} logo`} style={{maxWidth: '9em'}}/>
-                    </li>
+      <Fragment>
+        <h3 className={h3} ref="heading">
+          Visit these Participating Restaurants
+        </h3>
+
+        <div className={wrapper}>
+          <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
+            <div>
+              <ul className={partnersList}>
+                {
+                  partners.map(
+                    ({ logo, name, ...rest }, i) => (
+                      <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
+                        <img src={logo} alt={`${name} logo`} style={{maxWidth: '9em'}}/>
+                      </li>
+                    )
                   )
-                )
-              }
-            </ul>
+                }
+              </ul>
+            </div>
           </div>
+        
+          {/* TODO: Make swipe right work */}
+          <Swipeable onSwipedUp={this.flickedUp} className={showDetail ? fadeIn : fadeOut}>
+            <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
+          </Swipeable>
         </div>
-      
-        {/* TODO: Make swipe right work */}
-        <Swipeable onSwipedUp={this.flickedUp} className={showDetail ? fadeIn : fadeOut}>
-          <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
-        </Swipeable>
-      </div>
+      </Fragment>
     );
+  }
+
+  @bind 
+  escFunction({ keyCode }){
+    if(keyCode === 27) {
+      this.setState({ showDetail: false });
+    }
   }
 
   @bind

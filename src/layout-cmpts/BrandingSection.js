@@ -62,16 +62,10 @@ const styles = {
     [`@media (max-width: ${MED_SM})`]: {
       maxWidth: '95%',
     }
-  },
-  h3: {
-    composes: "mg--sm txt-center txt-upper",
-    [`@media (max-width: ${MED_SM})`]: {
-      fontSize: '.9em'
-    }
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2, h3 } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -97,10 +91,6 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div className={deliciousFoodFront}/>
     </div>
-
-    <h3 className={h3}>
-      Visit these Participating Restaurants
-    </h3>
   </Fragment>  
 );
 
