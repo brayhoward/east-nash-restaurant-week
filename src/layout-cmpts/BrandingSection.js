@@ -9,7 +9,7 @@ import Logo from 'assets/enrw-logo-bigeast-color.svg'
 const styles = {
   main: {
     composes: 'flex justify-center flex-col justify-between align-items-center',
-    minHeight: '175vh',
+    minHeight: '151vh',
     padding: '0 20%',
     textAlign: 'center',
     // Animate the breakpoint transition... b/c why not?
@@ -78,7 +78,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         id="jumpers"
       />
 
-      <h2 className="mg-l--lg mg-r--lg">
+      <h2 className="mg-l--lg mg-r--lg mg-t--xl">
         First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
       </h2>
     </div>
