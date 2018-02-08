@@ -23,7 +23,7 @@ function runScene() {
   // everything will look like shite.
   new ScrollMagic.Scene({
     triggerElement: '#deliciousFood',
-    triggerHook: 0.01
+    triggerHook: 0.05
   })
   .setClassToggle('#jumpers', 'hidden')
   .addTo(controller);

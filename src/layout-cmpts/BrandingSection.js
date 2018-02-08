@@ -23,7 +23,7 @@ const styles = {
     transition: 'opacity .3s ease-in, transform .3s ease-in',
     zIndex: '1',
     [`@media (max-width: ${MED_SM})`]: {
-      maxWidth: '9em'
+      maxWidth: '7em'
     }
   },
   deliciousFood: {
@@ -45,7 +45,10 @@ const styles = {
     width: '100%',
     background: `url(${SoupFront}) no-repeat top/contain`,
     position: 'relative',
-    zIndex: '2'
+    zIndex: '2',
+    [`@media (max-width: ${MED_SM})`]: {
+      height: '350px'
+    }
   },
   h2: {
     composes: "mg--sm txt-center txt-upper",
@@ -74,7 +77,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       />
 
       <h2 className="mg-t--xl mg-b--xl">
-      First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
+        First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
       </h2>
     </div>
 
