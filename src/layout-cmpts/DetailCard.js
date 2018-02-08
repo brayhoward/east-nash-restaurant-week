@@ -46,7 +46,6 @@ const styles = {
     right: '.4em',
     top: '.4em',
     cursor: 'pointer',
-    backgroundColor: 'var(--light)',
     textAlign: 'center',
     padding: '15px 15px 10px 15px'
   }
@@ -76,7 +75,7 @@ class DetailCard extends Component {
       <div>
         <Card className={card}>
           {/* CLOSE DETAIL BUTTON */}
-          <div className={closeBtn}>
+          <div className={closeBtn} style={{backgroundColor: '#fff'}}>
             <span onClick={handleClose}>
               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>
