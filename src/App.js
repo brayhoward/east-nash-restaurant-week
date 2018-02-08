@@ -49,7 +49,17 @@ const styles = {
     bottom: '5%'
   },
   birdImg: {
-    width: '560px'
+    width: '560px',
+    transition: 'all .5s ease-in',
+    [`@media (max-width: ${MED_SM})`]: {
+      width: '165px'
+    },
+    '&:hover': {
+      transform: 'translate(50%, 0)'
+    },
+    '&:active': {
+      transform: 'translate(50%, 0)'
+    }
   }
 }
 
