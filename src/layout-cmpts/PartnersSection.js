@@ -156,7 +156,13 @@ export default class extends Component {
           </div>
         
           {/* TODO: Make swipe right work */}
-          <Swipeable onSwipedUp={this.flickedUp} className={showDetail ? fadeIn : fadeOut}>
+          <Swipeable
+            className={showDetail ? fadeIn : fadeOut}
+            onSwipedUp={this.flickedUp}
+            onSwipedRight={() => this.hideDetail()}
+            onSwipedLeft={() => this.hideDetail()}
+            delta={70}
+          >
             <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
           </Swipeable>
         </div>
@@ -173,8 +179,10 @@ export default class extends Component {
 
   @bind
   flickedUp(_e, _deltaY, isFlick) {
+
     if (isFlick) this.hideDetail()
   }
+
 
   showDetail(info) {
     this.setState({
