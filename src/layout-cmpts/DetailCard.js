@@ -25,7 +25,10 @@ const styles = {
   card: {
     maxWidth: '60%',
     margin: 'auto',
-    position: 'relative'
+    position: 'relative',
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: '95%'
+    }
   },
   img: {
     composes: 'full-width',

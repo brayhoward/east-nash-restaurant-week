@@ -15,7 +15,8 @@ const styles = {
     // Animate the breakpoint transition... b/c why not?
     transition: 'padding 0.75s',
     [`@media (max-width: ${MED_SM})`]: {
-      padding: '0 2%'
+      padding: '0 2%',
+      minHeight: '145vh'
     }
   },
   jumpers: {
@@ -37,7 +38,8 @@ const styles = {
     marginTop: '250px',
     position: 'relative',
     [`@media (max-width: ${MED_SM})`]: {
-      height: '350px'
+      height: '350px',
+      marginTop: '0'
     }
   },
   deliciousFoodFront: {
@@ -76,7 +78,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         id="jumpers"
       />
 
-      <h2 className="mg-t--xl mg-b--xl">
+      <h2 className="mg-l--lg mg-r--lg">
         First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
       </h2>
     </div>
