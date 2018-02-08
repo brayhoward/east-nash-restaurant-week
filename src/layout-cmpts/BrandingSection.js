@@ -9,14 +9,14 @@ import Logo from 'assets/enrw-logo-bigeast-color.svg'
 const styles = {
   main: {
     composes: 'flex justify-center flex-col justify-between align-items-center',
-    minHeight: '151vh',
+    minHeight: '104vh',
     padding: '0 20%',
-    textAlign: 'center',
+
     // Animate the breakpoint transition... b/c why not?
     transition: 'padding 0.75s',
     [`@media (max-width: ${MED_SM})`]: {
+      minHeight: '98vh',
       padding: '0 2%',
-      minHeight: '145vh'
     }
   },
   jumpers: {
@@ -53,6 +53,17 @@ const styles = {
     }
   },
   h2: {
+    composes: ['mg-t--xl txt-center'],
+    maxWidth: '75%',
+    marginTop: '15em',
+    marginBottom: '18em',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: '95%',
+    }
+  },
+  h3: {
     composes: "mg--sm txt-center txt-upper",
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.9em'
@@ -60,7 +71,7 @@ const styles = {
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2, h3 } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -77,19 +88,19 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         alt="couple jumping"
         id="jumpers"
       />
-
-      <h2 className="mg-l--lg mg-r--lg mg-t--xl">
-        First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
-      </h2>
     </div>
+
+    <h2 className={h2}>
+      First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
+    </h2>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div className={deliciousFoodFront}/>
     </div>
 
-    <h2 className={h2}>
+    <h3 className={h3}>
       Visit these Participating Restaurants
-    </h2>
+    </h3>
   </Fragment>  
 );
 

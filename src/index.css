@@ -175,9 +175,6 @@ ul {
 /* for deveopment purposes */
 .bd { border: 1px solid lime; }
 
-/* Uncomment for x-ray vission */
-/* * { border: 1px solid red !important; } */
-
 .partners li{ 
   display: flex;
   align-items: center;
@@ -188,3 +185,6 @@ ul {
   cursor: pointer;
   border: 1px solid black;
 }
+
+/* Uncomment for x-ray vission */
+/* * { border: 1px solid red !important; } */
