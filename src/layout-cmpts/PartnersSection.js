@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import injectSheet from 'react-jss';
 import bind from 'bind-decorator';
 import classnames from 'classnames';
+import { MED_SM } from 'constants/media-screens';
 import FivePointsLogo from 'assets/five-points.jpg';
 import FivePointsDarkLogo from 'assets/five-points-dark.jpg';
 import FivePointsImg from 'assets/five-points-streetview.jpg';
@@ -31,11 +32,14 @@ const styles = {
     marginLeft: '-100%',
   },
   partnersList: {
-    composes: 'flex flex-wrap justify-center pd-0',
+    composes: 'partners flex flex-wrap justify-center pd-0',
     margin: 'auto',
     listStyle: 'none',
     minWidth: '80%',
-    maxWidth: '80%'
+    maxWidth: '80%',
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: '100%'
+    }
   },
   listItems: {
     padding: '2em'

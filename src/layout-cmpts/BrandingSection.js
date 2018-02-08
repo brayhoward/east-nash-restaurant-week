@@ -21,7 +21,10 @@ const styles = {
   jumpers: {
     maxWidth: '16em',
     transition: 'opacity .3s ease-in, transform .3s ease-in',
-    zIndex: '1'
+    zIndex: '1',
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: '9em'
+    }
   },
   deliciousFood: {
     maxWidth: '95vw',
@@ -32,7 +35,10 @@ const styles = {
     width: '99%',
     background: `url(${SoupBack}) no-repeat top/contain`,
     marginTop: '250px',
-    position: 'relative'
+    position: 'relative',
+    [`@media (max-width: ${MED_SM})`]: {
+      height: '350px'
+    }
   },
   deliciousFoodFront: {
     height: '650px',
@@ -40,10 +46,16 @@ const styles = {
     background: `url(${SoupFront}) no-repeat top/contain`,
     position: 'relative',
     zIndex: '2'
+  },
+  h2: {
+    composes: "mg--sm txt-center txt-upper",
+    [`@media (max-width: ${MED_SM})`]: {
+      fontSize: '.9em'
+    }
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -70,7 +82,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
       <div className={deliciousFoodFront}/>
     </div>
 
-    <h2 className="mg--sm txt-center txt-upper">
+    <h2 className={h2}>
       Visit these Participating Restaurants
     </h2>
   </Fragment>  
