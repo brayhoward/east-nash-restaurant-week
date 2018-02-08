@@ -23,13 +23,27 @@ body {
 }
 
 a {color: #929a0e;}
-a:hover {
+a:hover,
+a:active,
+a:focus {
   background-color: #929a0e;
+  color: white;
+}
+.footer-links a {
+  color: #cdd452;
+}
+.footer-links a:hover,
+.footer-links a:active,
+.footer-links a:focus {
   color: white;
 }
 
 /* squash browser defualts */
 h1, h2, h3, h4, p { margin: 0; }
+
+h2 {
+  font-size: 1.2em;
+}
 
 ul {
   list-style: none;

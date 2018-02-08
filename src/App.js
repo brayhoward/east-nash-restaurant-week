@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
 import { XL } from 'constants/media-screens';
+import { MED_SM } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
 import PartnersSection from 'layout-cmpts/PartnersSection';
 import footerImage from 'assets/footer-collage-fpo.png';
@@ -17,10 +18,16 @@ const styles = {
     width: '100vw',
     maxWidth: `calc(${XL} - 100px)`  
   },
-  footer: {
-    composes: 'full-width',
+  collage: {
+    composes: 'full-width flex justify-between align-items-end',
     height: '700px',
-    background: `url(${footerImage}) no-repeat center/cover`
+    background: `url(${footerImage}) no-repeat center/cover`,
+    color: '#cdd452',
+    fontSize: '12px',
+    [`@media (max-width: ${MED_SM})`]: {
+      background: `url(${footerImage}) no-repeat bottom/contain`,
+      height: '40vh'
+    }
   },
   navList: {
     listStyle: "none"
@@ -31,6 +38,12 @@ const styles = {
     width: '100%',
     height: headerHeight,
     top: 0
+  },
+  footer: {
+    composes: 'flex justify-between pd',
+    backgroundColor: '#cdd452',
+    width: '98%',
+    fontSize: '12px'
   }
 }
 
@@ -43,7 +56,8 @@ class App extends Component {
       appContainer,
       navList,
       header,
-      footer
+      footer,
+      collage
     } = this.props.classes;
 
     return (
@@ -51,7 +65,7 @@ class App extends Component {
         {/* HEADER   */}
         <header className={header}>
           <ul className={navList}>
-            <li>Social Share?</li>
+            <li></li>
           </ul>
         </header>
         
@@ -60,8 +74,13 @@ class App extends Component {
         
           <PartnersSection />
         </div>
-        <div className={footer}>
+        <div className={collage}>
+        <span className="footer-links" style={{margin: '20px'}}>site by <a href="#">Howard</a> &amp; <a href="#">Howard</a></span>
         </div>
+        {/* <div className={footer}>
+        <span>site by Howard &amp; Howard</span>
+        <span>test</span>
+        </div> */}
       </div>
     );
   }
