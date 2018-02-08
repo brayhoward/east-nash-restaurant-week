@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import injectSheet from 'react-jss'
 import bind from 'bind-decorator';
 import classnames from 'classnames';
-import { XL } from 'constants/media-screens';
-import { MED_SM } from 'constants/media-screens';
+import { MED_SM, LG, XL, MED } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
 import PartnersSection from 'layout-cmpts/PartnersSection';
 import footerImage from 'assets/footer-collage-fpo.png';
@@ -53,16 +52,22 @@ const styles = {
   birdImg: {
     width: '560px',
     transition: 'all .3s ease-in',
-    [`@media (max-width: ${MED_SM})`]: {
-      width: '145px'
-    },
     '&:hover': {
       transform: 'translate(50%, 0)',
       animationPlayState: 'paused'
     },
     '&:active': {
       transform: 'translate(50%, 0)',
-       animationPlayState: 'paused'
+      animationPlayState: 'paused'
+    },
+    [`@media (max-width: ${LG})`]: {
+      width: '450px'
+    },
+    [`@media (max-width: ${MED})`]: {
+      width: '370px'
+    },
+    [`@media (max-width: ${MED_SM})`]: {
+      width: '145px'
     }
   }
 }

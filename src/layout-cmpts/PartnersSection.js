@@ -100,9 +100,9 @@ export default class extends Component {
 
   shouldComponentUpdate(_props, { showDetail: nextShowDetail }) {
     const { showDetail } = this.state;
-    const shouldUpdate = nextShowDetail && (nextShowDetail !== showDetail);
-
-    if (shouldUpdate) {
+    const scrollIntoView = nextShowDetail && (nextShowDetail !== showDetail);
+    // Only scroll into view it show detail state has change from false to true
+    if (scrollIntoView) {
       window.setTimeout(
         () => {
           this.refs['heading'].scrollIntoView({block: "start", behavior: 'smooth' });
@@ -111,7 +111,7 @@ export default class extends Component {
       );
     }
 
-    return shouldUpdate;
+    return true;
   } 
 
   render() {

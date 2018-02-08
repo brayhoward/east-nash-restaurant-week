@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
 import capitalize from 'lodash.capitalize'
-import { MED_SM } from 'constants/media-screens';
+import { MED } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
 
 const styles = {
@@ -11,14 +11,14 @@ const styles = {
   contentWrapper: {
     composes: 'flex justify-between',
     padding: '20px',
-    [`@media (max-width: ${MED_SM})`]: {
+    [`@media (max-width: ${MED})`]: {
       flexFlow: 'column'
     }
   },
   contentLeftWrapper: {
     width: '60%', 
     paddingRight: '10px',
-    [`@media (max-width: ${MED_SM})`]: {
+    [`@media (max-width: ${MED})`]: {
       width: '100%'
     }
   },
@@ -26,7 +26,7 @@ const styles = {
     maxWidth: '60%',
     margin: 'auto',
     position: 'relative',
-    [`@media (max-width: ${MED_SM})`]: {
+    [`@media (max-width: ${MED})`]: {
       maxWidth: '95%'
     }
   },
