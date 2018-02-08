@@ -5,6 +5,7 @@ import { MED_SM } from 'constants/media-screens';
 import BrandingSection from 'layout-cmpts/BrandingSection';
 import PartnersSection from 'layout-cmpts/PartnersSection';
 import footerImage from 'assets/footer-collage-fpo.png';
+import birdImage from 'assets/golden-pheasant-lives.png';
 
 const headerHeight = '3em';
 const styles = {
@@ -24,9 +25,10 @@ const styles = {
     background: `url(${footerImage}) no-repeat center/cover`,
     color: '#cdd452',
     fontSize: '12px',
+    position: 'relative',
     [`@media (max-width: ${MED_SM})`]: {
       background: `url(${footerImage}) no-repeat bottom/contain`,
-      height: '40vh'
+      height: '45vh'
     }
   },
   navList: {
@@ -39,11 +41,15 @@ const styles = {
     height: headerHeight,
     top: 0
   },
-  footer: {
-    composes: 'flex justify-between pd',
-    backgroundColor: '#cdd452',
-    width: '98%',
-    fontSize: '12px'
+  bird: {
+    composes: 'bird',
+    display: 'block',
+    position: 'absolute',
+    right: '10%',
+    bottom: '5%'
+  },
+  birdImg: {
+    width: '560px'
   }
 }
 
@@ -57,7 +63,9 @@ class App extends Component {
       navList,
       header,
       footer,
-      collage
+      collage,
+      bird,
+      birdImg
     } = this.props.classes;
 
     return (
@@ -76,11 +84,8 @@ class App extends Component {
         </div>
         <div className={collage}>
         <span className="footer-links" style={{margin: '20px'}}>site by <a href="#">Howard</a> &amp; <a href="#">Howard</a></span>
+        <a href="http://theeastnashvillian.com/article/the-lonely-bird-in-shelby-bottoms" className={bird} target="_blank"><img className={birdImg} src={birdImage} alt=""/></a>
         </div>
-        {/* <div className={footer}>
-        <span>site by Howard &amp; Howard</span>
-        <span>test</span>
-        </div> */}
       </div>
     );
   }

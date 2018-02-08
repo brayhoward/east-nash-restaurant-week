@@ -22,7 +22,10 @@ body {
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
-a {color: #929a0e;}
+a {
+  color: #929a0e;
+  cursor: pointer;
+}
 a:hover,
 a:active,
 a:focus {
@@ -36,6 +39,12 @@ a:focus {
 .footer-links a:active,
 .footer-links a:focus {
   color: white;
+}
+.bird:hover,
+.bird:active,
+.bird:focus {
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* squash browser defualts */
