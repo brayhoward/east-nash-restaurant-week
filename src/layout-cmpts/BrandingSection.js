@@ -62,7 +62,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoo
         <img
           src={Logo}
           alt="East Nashville Restaurant Week"
-          style={{maxWidth: '100%'}}
+          stye={{width: '90%'}}
         />
       </div>
 

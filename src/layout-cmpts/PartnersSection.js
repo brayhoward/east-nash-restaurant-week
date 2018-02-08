@@ -70,16 +70,19 @@ export default class extends Component {
   constructor(props) { 
     super(props);
     // Init state
-    const { name, blurb, contacts, image, logo } = partners[0];
+    const { name, blurb, image, logo, phone, web, res, map } = partners[0];
 
     this.state = {
       showDetail: false,
       detailCardInfo: {
         name,
         blurb,
-        contacts,
         image,
-        logo
+        logo,
+        phone,
+        web,
+        res,
+        map
       }
     }
   }
@@ -170,7 +173,11 @@ const partners = [
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,
-    contacts: ['(615) 226-3322', 'butcherandbee.com' ]
+    phone: '(615) 226-3322',
+    web: 'butcherandbee.com',
+    map: '902 Main St',
+    menu:'#',
+    res:'#'
 
   },
   {
@@ -178,7 +185,11 @@ const partners = [
     logo: FortLogo,
     image: FortImg,
     blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-    contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
+    phone: '(615) 730-6273',
+    web: 'hungrylikeafort.com',
+    map: '1304 McGavock Pike',
+    menu:'#',
+    res:'https://resy.com/cities/bna/fort-louise'
 
   },
   {
@@ -186,8 +197,12 @@ const partners = [
     logo: MargotLogo,
     image: MargotImg,
     blurb: `Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.`,
-    contacts: ['(615) 228-4864', 'margotcafe.com', '1017 Woodland Street' ]
-
+    phone: '(615) 228-4864',
+    web: 'margotcafe.com',
+    map: '1017 Woodland Street',
+    menu:'',
+    res:''
+    
   },
   {
     name: 'Two Ten Jack',
@@ -196,7 +211,11 @@ const partners = [
     blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
       nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
       vero eligendi quae!`,
-    contacts: ['(615) 454-2731', 'twotenjack.com' ]
+    phone: '615) 454-2731',
+    web: 'twotenjack.com',
+    map: '1900 Eastland Ave #105',
+    menu:'',
+    res:''
 
    }
   //,
@@ -205,7 +224,10 @@ const partners = [
   //   logo: TreehouseLogo,
   //   image: TreehouseImg,
   //   blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-  //   contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
+  //   phone: '',
+  //   web: '',
+  //   map: '',
+  //   menu:''
 
   // },
   // {
@@ -213,7 +235,10 @@ const partners = [
   //   logo: RozeLogo,
   //   image: RozeImg,
   //   blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-  //   contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
+  //   phone: '',
+  //   web: '',
+  //   map: '',
+  //   menu:''
 
   // },
   // {
@@ -221,7 +246,10 @@ const partners = [
   //   logo: PeninsulaLogo,
   //   image: PeninsulaImg,
   //   blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-  //   contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
+  //   phone: '',
+  //   web: '',
+  //   map: '',
+  //   menu:''
 
   // },
   // {
@@ -229,7 +257,10 @@ const partners = [
   //   logo: PomodoroLogo,
   //   image: PomodoroImg,
   //   blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
-  //   contacts: ['(615) 730-6273', 'hungrylikeafort.com' ]
+  //   phone: '',
+  //   web: '',
+  //   map: '',
+  //   menu:''
 
   // }
 ]
