@@ -56,7 +56,6 @@ class App extends Component {
       appContainer,
       navList,
       header,
-      footer,
       collage
     } = this.props.classes;
 
@@ -74,13 +73,12 @@ class App extends Component {
         
           <PartnersSection />
         </div>
+
         <div className={collage}>
-        <span className="footer-links" style={{margin: '20px'}}>site by <a href="#">Howard</a> &amp; <a href="#">Howard</a></span>
+          <span className="footer-links" style={{ margin: '20px' }}>
+            site by <a href="http://adamswebpage.com/" target="_blank" rel="noopener noreferrer">Howard</a> &amp; <a href="http://www.brandonrhoward.com/" target="_blank" rel="noopener noreferrer">Howard</a>
+          </span>
         </div>
-        {/* <div className={footer}>
-        <span>site by Howard &amp; Howard</span>
-        <span>test</span>
-        </div> */}
       </div>
     );
   }
