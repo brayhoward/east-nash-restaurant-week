@@ -273,12 +273,7 @@ const partners = [
     name: 'Treehouse',
     logo: 'http://www.glutenfreegeek.com/wp-content/uploads/2015/03/the-Treehouse.jpg',
     image: 'https://pbs.twimg.com/media/CwX5zAIWgAAFeyY.jpg',
-    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local
-      entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering
-      a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and
-      intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads,
-      and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and
-      a shareable ewer of punch called "The Test."`,
+    blurb: `Rustic American eatery & bar featuring an ever-changing menu, outdoor seating & late-night hours`,
     phone: '(615) 454-4201',
     web: 'treehousenashville.com',
     map: '1011 Clearview Ave',
