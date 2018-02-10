@@ -57,7 +57,7 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn } = classes;
-    const { name, blurb, logo, web, res, map, menu } = info;
+    const { name, blurb, logo, web, res, phone, map, menu } = info;
     const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
     return (
@@ -85,7 +85,6 @@ class DetailCard extends Component {
       
               <div className={contentLeftWrapper}>
                 <img src={logo} alt={`${name} logo`} style={{ maxWidth: '200px' }} />
-      
                 <p>
                   {blurb}
                 </p>
@@ -94,9 +93,12 @@ class DetailCard extends Component {
               <div style={{ fontSize: '1em', paddingLeft: '10px' }}>
                 {menu ? <a className="btn" href={`${menu}`}>View Menu</a> : null}
                 {res ? <a className="btn" href={`${res}`}>Make a Reservation</a> : null}
-
+                <span style={{ fontSize: '.75em'}}>Directions:</span><br/>
                 <address><a href={`http://maps.google.com?q=${mapQuery}`}>{map}</a></address>
-                <a href={`http://${web}`} target='blank'>{web}</a>
+                <span style={{ fontSize: '.75em'}}>Website:</span><br/>
+                <a href={`http://${web}`} target='blank'>{web}</a><br/>
+                <span style={{ fontSize: '.75em'}}>Phone:</span><br/>
+                <a href={`tel:${phone}`}>{phone}</a><br/>
               </div>
             </div>
           </div>
