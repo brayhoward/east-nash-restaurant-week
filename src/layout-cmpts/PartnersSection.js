@@ -140,12 +140,7 @@ export default class extends Component {
           Visit these Participating Restaurants
         </h3>
 
-        <div
-          className={wrapper}
-          style={{
-            maxHeight: showDetail ? '130vh' : 'inherit'
-          }}
-        >
+        <div className={wrapper}>
           <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
             <div>
               <ul className={partnersList}>
@@ -165,10 +160,9 @@ export default class extends Component {
           {/* TODO: Make swipe right work */}
           <Swipeable
             className={showDetail ? fadeIn : fadeOut}
-            onSwipedUp={this.flickedUp}
             onSwipedRight={() => this.hideDetail()}
             onSwipedLeft={() => this.hideDetail()}
-            delta={70}
+            delta={80}
           >  
             <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
           </Swipeable>
