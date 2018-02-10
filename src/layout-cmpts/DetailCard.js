@@ -58,8 +58,7 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn } = classes;
-    const { name, blurb, contacts, logo, phone, web, res, map, menu } = info;
-    const formatedName = capitalize(name);
+    const { name, blurb, logo, web, res, map, menu } = info;
     const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
     return (

@@ -280,6 +280,5 @@ const partners = [
     map: '1035 W Eastland Ave',
     menu:'',
     res: 'https://resy.com/cities/bna/peninsula'
-
   }
 ]
