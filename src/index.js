@@ -4,10 +4,12 @@ import './index.css';
 import './animations.css'
 import App from './App';
 import animateJumpers from './animateJumpers'
+import ReactLogo from './assets/react-branding.png'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 animateJumpers();
 
+consoleMsg('Created  By:');
 console.log(`
   _    _                            _           _    _                            _ 
  | |  | |                          | |  ___    | |  | |                          | |
@@ -22,5 +24,30 @@ console.log(`
 
   Brandon Howard
   brandonrhoward@gmail.com
-  http://www.brandonrhoward.com/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  http://www.brandonrhoward.com/
+
+
+
 `)
+
+consoleMsg('_Built With_');
+console.log(
+  '%c   ',
+  `
+  font-size: 100px;
+  color: white;
+  background: url(https://cdn-images-1.medium.com/max/1600/1*oi8WLwC2u0EEI1j9uKmwWg.png) no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  `
+);
+
+function consoleMsg(msg) {
+  console.log(
+  `%c ${msg}`,
+  `
+  font-size: 20px;
+  font-weight: bold;
+  `
+)
+}
