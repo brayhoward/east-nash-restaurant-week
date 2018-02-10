@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
-import { MED } from 'constants/media-screens';
+import { MED, LG } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
 
 const styles = {
@@ -12,13 +12,27 @@ const styles = {
     padding: '20px',
     [`@media (max-width: ${MED})`]: {
       flexFlow: 'column'
+    },
+    [`@media (max-width: ${LG})`]: {
+      padding: 0
     }
   },
   contentLeftWrapper: {
     width: '60%', 
     paddingRight: '10px',
+    marginBottom: '.5em',
     [`@media (max-width: ${MED})`]: {
       width: '100%'
+    },
+    [`@media (max-width: ${LG})`]: {
+      fontSize: '.9em'
+    }
+  },
+  contactInfo: {  
+    fontSize: '1em',
+    paddingLeft: '10px',
+    [`@media (max-width: ${MED})`]: {
+      paddingLeft: 0
     }
   },
   card: {
@@ -56,7 +70,7 @@ class DetailCard extends Component {
 
   render() {
     const { classes, info, handleClose } = this.props;
-    const {card, contentWrapper, contentLeftWrapper, img, closeBtn } = classes;
+    const {card, contentWrapper, contentLeftWrapper, img, closeBtn, contactInfo } = classes;
     const { name, blurb, logo, web, res, phone, map, menu } = info;
     const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
@@ -84,21 +98,38 @@ class DetailCard extends Component {
             <div className={contentWrapper}>
       
               <div className={contentLeftWrapper}>
-                <img src={logo} alt={`${name} logo`} style={{ maxWidth: '200px' }} />
+                <img
+                  src={logo}
+                  alt={`${name} logo`}
+                  style={{
+                    maxWidth: '200px',
+                    marginBottom: '.5em'
+                  }}
+                />
                 <p>
                   {blurb}
                 </p>
               </div>
       
-              <div style={{ fontSize: '1em', paddingLeft: '10px' }}>
+              <div className={contactInfo}>
                 {menu ? <a className="btn" href={`${menu}`}>View Menu</a> : null}
+
                 {res ? <a className="btn" href={`${res}`}>Make a Reservation</a> : null}
-                <span style={{ fontSize: '.75em'}}>Directions:</span><br/>
-                <address><a href={`http://maps.google.com?q=${mapQuery}`}>{map}</a></address>
-                <span style={{ fontSize: '.75em'}}>Website:</span><br/>
-                <a href={`http://${web}`} target='blank'>{web}</a><br/>
-                <span style={{ fontSize: '.75em'}}>Phone:</span><br/>
-                <a href={`tel:${phone}`}>{phone}</a><br/>
+
+                <span style={{ fontSize: '.75em' }}>Directions:</span><br />
+                
+                <address>
+                  <a href={`http://maps.google.com?q=${mapQuery}`}>{map}</a>
+                </address>
+
+                <span style={{ fontSize: '.75em' }}>Website:</span>
+                <br />
+
+                <a href={`http://${web}`} target='blank'>{web}</a>
+                <br />
+
+                <span style={{ fontSize: '.75em' }}>Phone:</span>
+                <br /><a href={`tel:${phone}`}>{phone}</a><br/>
               </div>
             </div>
           </div>

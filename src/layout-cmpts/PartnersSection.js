@@ -143,7 +143,7 @@ export default class extends Component {
         <div
           className={wrapper}
           style={{
-            maxHeight: showDetail ? '110vh' : 'inherit'
+            maxHeight: showDetail ? '130vh' : 'inherit'
           }}
         >
           <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
