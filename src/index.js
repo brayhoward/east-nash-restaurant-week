@@ -4,7 +4,7 @@ import './index.css';
 import './animations.css'
 import App from './App';
 import animateJumpers from './animateJumpers'
-import ReactLogo from './assets/react-branding.png'
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 animateJumpers();
@@ -36,7 +36,7 @@ console.log(
   `
   font-size: 100px;
   color: white;
-  background: url(https://cdn-images-1.medium.com/max/1600/1*oi8WLwC2u0EEI1j9uKmwWg.png) no-repeat;
+  background: url(http://eastnashvillerestaurantweek.com/react-branding.png) no-repeat;
   background-size: contain;
   background-size: 100% 100%;
   `
