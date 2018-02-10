@@ -81,7 +81,7 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciou
     </div>
 
     <h2 className={h2}>
-      First annual dining event supporting local restaurants in East Nashville through a week of dining deals for customers.
+      Support local restaurants in East Nashville with a week of dining deals.
     </h2>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
