@@ -18,7 +18,7 @@ import DetailCard from './DetailCard';
 
 const styles = {
   wrapper: {
-    composes: 'flex justify-between pd-t--lg',
+    composes: 'flex justify-between pd-t--lg mg-b',
     minHeight: '60vh'
   },
   listWrapper: {

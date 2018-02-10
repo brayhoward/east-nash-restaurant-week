@@ -27,10 +27,6 @@ const styles = {
       maxWidth: '7em'
     }
   },
-  deliciousFood: {
-    maxWidth: '95vw',
-    marginBottom: '15vh'
-  },
   deliciousFoodBack: {
     height: '650px',
     width: '99%',
@@ -65,7 +61,7 @@ const styles = {
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFood, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
