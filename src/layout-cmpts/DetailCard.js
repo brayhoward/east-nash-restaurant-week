@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
-import capitalize from 'lodash.capitalize'
 import { MED } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
 
