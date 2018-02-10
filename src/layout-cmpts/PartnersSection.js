@@ -107,7 +107,7 @@ export default class extends Component {
     if (scrollIntoView) {
       window.setTimeout(
         () => {
-          this.refs['heading'].scrollIntoView({block: "start", behavior: 'smooth' });
+          this.refs['heading'].scrollIntoView({ block: "start", behavior: 'smooth' });
         },
         500
       );
@@ -140,7 +140,12 @@ export default class extends Component {
           Visit these Participating Restaurants
         </h3>
 
-        <div className={wrapper}>
+        <div
+          className={wrapper}
+          style={{
+            maxHeight: showDetail ? '110vh' : 'inherit'
+          }}
+        >
           <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
             <div>
               <ul className={partnersList}>
@@ -164,7 +169,7 @@ export default class extends Component {
             onSwipedRight={() => this.hideDetail()}
             onSwipedLeft={() => this.hideDetail()}
             delta={70}
-          >
+          >  
             <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
           </Swipeable>
         </div>
@@ -173,7 +178,7 @@ export default class extends Component {
   }
 
   @bind 
-  escFunction({ keyCode }){
+  escFunction({ keyCode }) {
     if(keyCode === 27) {
       this.setState({ showDetail: false });
     }
@@ -204,81 +209,108 @@ const partners = [
     name: 'Butcher & Bee',
     logo: ButcherLogo ,
     image: ButcherImg,
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
+    blurb: `It all started with a vision... of sandwiches. The notion was simple. Perfect all the ingredients - proteins, cheeses, veggies, bread - and craft sandwiches with flavor combinations and food quality usually reserved for fine dining. A gourmet meal between two pieces of bread.
+
+      Now the dream has grown beyond sandwiches to all types of foods. And we bring them to you from local farmers who produce spectacular flavors. Supporting local and sustainable is not a slogan. It’s the right thing to do, and the food tastes better for it.`,
     phone: '(615) 226-3322',
     web: 'butcherandbee.com',
     map: '902 Main St',
-    menu:'#',
-    res:'#'
+    menu: null,
+    res: null
   },
   {
     name: 'Fort Louise',
     logo: FortLogo,
     image: FortImg,
-    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local
+      entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering
+      a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate,
+      and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates,
+      the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable
+      ewer of punch called "The Test."`,
     phone: '(615) 730-6273',
     web: 'hungrylikeafort.com',
     map: '1304 McGavock Pike',
-    menu:'#',
+    menu: null,
     res:'https://resy.com/cities/bna/fort-louise'
   },
   {
     name: 'Margot',
     logo: MargotLogo,
     image: MargotImg,
-    blurb: `Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.`,
+    blurb: `Margot café & bar is a French inspired restaurant with southern influence located at the
+      Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products
+      and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack.
+      The building itself dates back to the 1930’s and was originally Fluty’s service station. The space
+      was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with
+      copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and
+      comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a
+      marble bar, an open kitchen and a mezzanine dining area.`,
     phone: '(615) 228-4864',
     web: 'margotcafe.com',
     map: '1017 Woodland Street',
-    menu:'',
+    menu: null,
     res:''
   },
   {
     name: 'Two Ten Jack',
     logo: JackLogo ,
     image: 'http://twotenjack.com/nashville/wp-content/themes/twotenjack/img/web-bg-3.jpg',
-    blurb: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita, alias fugit,
-      nobis ab, est laborum nemo tempora facere error quam ratione. Magnam consequatur iure minima nisi,
-      vero eligendi quae!`,
+    blurb: `Two Ten Jack is a Japanese-inspired neighborhood pub, or izakaya, featuring kodawari ramen,
+      yakitori (skewers & grilled items), sushi selections, and other Japanese-inspired pub comfort food
+      that incorporates local, Southern ingredients. The beverage selection features craft beers, wine,
+      handcrafted cocktails, sake and shochu. Located in Walden’s Phase 2 in East Nashville
+      (next to Jeni’s), Two Ten Jack offers an unpretentious and comfortable environment – the true izakaya
+      experience – as an urban gathering spot for the community where local and Japanese culture can come
+      together.`,
     phone: '(615) 454-2731',
     web: 'twotenjack.com',
     map: '1900 Eastland Ave #105',
-    menu:'',
+    menu: null,
     res:''
   },
   {
     name: 'Treehouse',
     logo: 'http://www.glutenfreegeek.com/wp-content/uploads/2015/03/the-Treehouse.jpg',
     image: 'https://pbs.twimg.com/media/CwX5zAIWgAAFeyY.jpg',
-    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads, and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and a shareable ewer of punch called "The Test."`,
+    blurb: `Located in East Nashville’s Inglewood neighborhood, Fort Louise is a restaurant from local
+      entrepreneur Jessica Bower and acclaimed Chicago chef Greg Biggers (McCrady’s, TRU, Morimoto) offering
+      a friendly spin on American comfort cuisine. The space — formerly a residential house — is cozy and
+      intimate, and there's a charming back porch for al fresco dining. Beyond the menu of snacks, salads,
+      and large plates, the bar program boasts frozen cocktails, beers sourced from across the country, and
+      a shareable ewer of punch called "The Test."`,
     phone: '(615) 454-4201',
     web: 'treehousenashville.com',
     map: '1011 Clearview Ave',
-    menu:'',
+    menu: null,
     res:'https://www.opentable.com/r/the-treehouse-nashville'
   },
   {
     name: 'Cafe Roze',
     logo: RozeLogo,
     image: RozeImg,
-    blurb: `Cafe Roze, a neighborhood cafe by New York City chef Julia Jaksic, focuses on fresh, modern all day fare.  Lattes, steamers and spins on classic breakfast dishes are served throughout the mornings, salads and grain bowls come at lunchtime, and hearty globally influenced dinners with riffs on classic cocktails finish out the night. The airy minimalist space features an expansive marble bar, with pink and gray accents throughout.`,
+    blurb: `Cafe Roze, a neighborhood cafe by New York City chef Julia Jaksic, focuses on fresh, modern
+      all day fare.  Lattes, steamers and spins on classic breakfast dishes are served throughout the
+      mornings, salads and grain bowls come at lunchtime, and hearty globally influenced dinners with
+      riffs on classic cocktails finish out the night. The airy minimalist space features an expansive
+      marble bar, with pink and gray accents throughout.`,
     phone: '(615) 645-9100',
     web: 'caferoze.com',
     map: '1115 Porter Rd',
-    menu:'',
+    menu: null,
     res:'https://resy.com/cities/22/cafe-roze'
   },
   {
     name: 'Peninsula',
     logo: 'http://peninsulanashville.com/wp-content/uploads/2017/04/logo.png',
     image: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/57022901/Peninsula.0.jpg',
-    blurb: `Cuisine of the Iberian Peninsula in the heart of East Nashville. We serve Spanish and Portuguese fare accented with French techniques, and a bar program that features a Spanish gin and tonic menu, Old World Wines, and thoughtfully crafted cocktails.`,
+    blurb: `Cuisine of the Iberian Peninsula in the heart of East Nashville. We serve Spanish and Portuguese
+      fare accented with French techniques, and a bar program that features a Spanish gin and tonic menu,
+      Old World Wines, and thoughtfully crafted cocktails.`,
     phone: '(615) 679-0377',
     web: 'peninsulanashville.com',
     map: '1035 W Eastland Ave',
-    menu:'',
+    menu: null,
     res: 'https://resy.com/cities/bna/peninsula'
   }
 ]
