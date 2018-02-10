@@ -12,6 +12,7 @@ import MargotImg from 'assets/ext-margot.jpg';
 import JackLogo from 'assets/logo-two-ten-jack.jpg';
 import RozeLogo from 'assets/logo-roze.jpg';
 import RozeImg from 'assets/CafeRoze-exterior.jpg';
+import TreeHouseLogo from 'assets/logo-treehouse.jpg'
 // import JackImg from 'assets/fort-exterior.jpg';
 import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
@@ -265,7 +266,7 @@ const partners = [
   },
   {
     name: 'Treehouse',
-    logo: 'http://www.glutenfreegeek.com/wp-content/uploads/2015/03/the-Treehouse.jpg',
+    logo: TreeHouseLogo,
     image: 'https://pbs.twimg.com/media/CwX5zAIWgAAFeyY.jpg',
     blurb: `Rustic American eatery & bar featuring an ever-changing menu, outdoor seating & late-night hours`,
     phone: '(615) 454-4201',
