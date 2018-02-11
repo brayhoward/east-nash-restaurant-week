@@ -9,7 +9,7 @@ import animateJumpers from './animateJumpers'
 ReactDOM.render(<App />, document.getElementById('root'));
 animateJumpers();
 
-consoleMsg('Created  By:');
+consoleMsg('Created By:');
 console.log(`
   _    _                            _           _    _                            _ 
  | |  | |                          | |  ___    | |  | |                          | |
