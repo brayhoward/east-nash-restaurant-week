@@ -9,7 +9,9 @@ import animateJumpers from './animateJumpers'
 ReactDOM.render(<App />, document.getElementById('root'));
 animateJumpers();
 
-consoleMsg('Created  By:');
+// Mark my teritory??
+console.log('\n\n')
+consoleMsg('Created By:');
 console.log(`
   _    _                            _           _    _                            _ 
  | |  | |                          | |  ___    | |  | |                          | |
@@ -41,6 +43,7 @@ console.log(
   background-size: 100% 100%;
   `
 );
+console.log('\n\n')
 
 function consoleMsg(msg) {
   console.log(

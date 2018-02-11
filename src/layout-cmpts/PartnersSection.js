@@ -26,10 +26,10 @@ const styles = {
     composes: 'flex justify-center',
     minWidth: '100%',
     maxWidth: '100%',
-    transition: 'margin-left .75s ease-in-out',
+    transition: 'margin-right .75s ease-in-out',
   },
-  marginLeft: {
-    marginLeft: '-100%',
+  marginright: {
+    marginright: '-100%',
   },
   partnersList: {
     composes: 'partners flex flex-wrap justify-center pd-0',
@@ -120,15 +120,16 @@ export default class extends Component {
       listWrapper,
       partnersList,
       listItems,
-      marginLeft,
+      marginright,
       fadeIn,
       fadeOut,
       h3
     } = this.props.classes;
 
-    const { showDetail, detailCardInfo, detailHeight } = this.state;
+    const { showDetail, detailCardInfo, detailHeight, cardPositionRight, swiping } = this.state;
 
     const maxHeight = `${detailHeight}px`;
+    const right = `${cardPositionRight ? -cardPositionRight : 0}px`
 
     const handleClick = info => (
       showDetail ? this.hideDetail() : this.showDetail(info)
@@ -141,7 +142,7 @@ export default class extends Component {
         </h3>
 
         <div className={wrapper} style={{ maxHeight }}>
-          <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
+          <div className={classnames([listWrapper, showDetail ? marginright : null])}>
             <div>
               <ul className={partnersList}>
                 {
@@ -160,11 +161,16 @@ export default class extends Component {
           {/* TODO: Make swipe right work */}
           <Swipeable
             className={showDetail ? fadeIn : fadeOut}
-            onSwipedRight={() => this.hideDetail()}
-            onSwipedLeft={() => this.hideDetail()}
-            delta={80}
+            
+            onSwipingRight={this.swipeingRight}
+            onSwipedRight={this.swipedRight}
+            // Swipeable Config
+            // Delta is how many pixles have to be swiped before we start tirggering swipe events
+            delta={1}
+            // Default vilocity is .6 - Lower the number to make more sensitive
+            flickThreshold={.8}
           >  
-            <div ref="detail">
+            <div ref="detail" style={{ right, position: 'relative', maxWidth: '100vw' }}>
               <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
             </div>
           </Swipeable>
@@ -180,13 +186,6 @@ export default class extends Component {
     }
   }
 
-  @bind
-  flickedUp(_e, _deltaY, isFlick) {
-
-    if (isFlick) this.hideDetail()
-  }
-
-
   showDetail(info) {
     this.setState({
       detailCardInfo: { ...info },
@@ -195,8 +194,26 @@ export default class extends Component {
   }
 
   @bind
-  hideDetail(info) {
+  hideDetail() {
     this.setState({ showDetail: false });
+  }
+
+  @bind  
+  swipeingRight(_e, deltaX) {
+    this.setState(
+      ({ originalPosition }) => ({
+        cardPositionRight: deltaX,
+        originalPosition: originalPosition || deltaX,
+        swipeing: true
+      })
+    )
+  }
+  
+  @bind
+  swipedRight(_e, _deltaX, isFlick) {
+    if (isFlick) this.hideDetail()
+
+    this.setState({ cardPositionRight: 0, swiping: false })
   }
 }
 
