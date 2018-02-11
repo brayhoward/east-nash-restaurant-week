@@ -101,20 +101,17 @@ export default class extends Component {
     document.removeEventListener("keyup", this.escFunction, false);
   }
 
-  shouldComponentUpdate(_props, { showDetail: nextShowDetail }) {
+  componentDidUpdate(_props, { showDetail: previousShowDetail }) {
     const { showDetail } = this.state;
-    const scrollIntoView = nextShowDetail && (nextShowDetail !== showDetail);
-    // Only scroll into view it show detail state has change from false to true
+    const scrollIntoView = showDetail && (showDetail !== previousShowDetail);
+    // Only scroll into view if show detail state has change from false to true
     if (scrollIntoView) {
-      window.setTimeout(
-        () => {
-          this.refs['heading'].scrollIntoView({ block: "start", behavior: 'smooth' });
-        },
-        500
-      );
-    }
+      this.refs['heading'].scrollIntoView({ block: "start", behavior: 'smooth' });
 
-    return true;
+      const detailHeight = this.refs['detail'].offsetHeight;
+
+      this.setState({ detailHeight })
+    }
   } 
 
   render() {
@@ -129,7 +126,9 @@ export default class extends Component {
       h3
     } = this.props.classes;
 
-    const { showDetail, detailCardInfo } = this.state;
+    const { showDetail, detailCardInfo, detailHeight } = this.state;
+
+    const maxHeight = `${detailHeight}px`;
 
     const handleClick = info => (
       showDetail ? this.hideDetail() : this.showDetail(info)
@@ -141,7 +140,7 @@ export default class extends Component {
           Visit these Participating Restaurants
         </h3>
 
-        <div className={wrapper}>
+        <div className={wrapper} style={{ maxHeight }}>
           <div className={classnames([listWrapper, showDetail ? marginLeft : null])}>
             <div>
               <ul className={partnersList}>
@@ -165,7 +164,9 @@ export default class extends Component {
             onSwipedLeft={() => this.hideDetail()}
             delta={80}
           >  
-            <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
+            <div ref="detail">
+              <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
+            </div>
           </Swipeable>
         </div>
       </Fragment>
