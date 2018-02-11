@@ -13,6 +13,8 @@ import JackLogo from 'assets/logo-two-ten-jack.jpg';
 import RozeLogo from 'assets/logo-roze.jpg';
 import RozeImg from 'assets/CafeRoze-exterior.jpg';
 import TreeHouseLogo from 'assets/logo-treehouse.jpg'
+import TkoLogo from 'assets/logo-tko.jpg';
+import TkoImg from 'assets/tko-bar.jpg';
 // import JackImg from 'assets/fort-exterior.jpg';
 import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
@@ -303,5 +305,16 @@ const partners = [
     map: '1035 W Eastland Ave',
     menu: null,
     res: 'https://resy.com/cities/bna/peninsula'
+  },
+  {
+    name: 'TKO',
+    logo: 'http://peninsulanashville.com/wp-content/uploads/2017/04/logo.png',
+    image: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/57022901/Peninsula.0.jpg',
+    blurb: `Cozy neighborhood spot for inventive Chinese food with a Southern-inspired twist, plus takeout.`,
+    phone: '(615) 915-3102',
+    web: 'tkotn.com',
+    map: '4204 Gallatin Pike',
+    menu: null,
+    res: null
   }
 ]
