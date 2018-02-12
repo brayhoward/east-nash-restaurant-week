@@ -69,6 +69,7 @@ const styles = {
   },
   h3: {
     composes: "mg--sm txt-center txt-upper",
+    textTransform: 'capitalize',
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.9em'
     }
@@ -136,7 +137,7 @@ export default class extends Component {
     return (
       <Fragment>
         <h3 className={h3} ref="heading">
-          Visit these Participating Restaurants
+          Select a restaurant to view specials
         </h3>
 
         <div className={wrapper}>
