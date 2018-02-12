@@ -1,38 +1,44 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss'
-import { MED, LG } from 'constants/media-screens';
+import { MED, MED_LG, LG } from 'constants/media-screens';
 import Card, { CardContent } from 'material-ui/Card';
+
+const colBreakPoint = MED_LG
 
 const styles = {
   main: {
     composes: 'flex justify-center'
   },
   contentWrapper: {
-    composes: 'flex justify-between',
+    composes: 'flex',
     padding: '20px',
-    [`@media (max-width: ${MED})`]: {
+    [`@media (max-width: ${colBreakPoint})`]: {
       flexFlow: 'column'
     },
     [`@media (max-width: ${LG})`]: {
-      padding: 0
+      padding: 0,
+      fontSize: '.9em'
     }
   },
   contentLeftWrapper: {
     width: '60%', 
     paddingRight: '10px',
     marginBottom: '.5em',
-    [`@media (max-width: ${MED})`]: {
+    [`@media (max-width: ${colBreakPoint})`]: {
       width: '100%'
-    },
-    [`@media (max-width: ${LG})`]: {
-      fontSize: '.9em'
     }
   },
   contactInfo: {  
     fontSize: '1em',
     paddingLeft: '10px',
-    [`@media (max-width: ${MED})`]: {
-      paddingLeft: 0
+    maxWidth: '35%',
+    overflowWrap: 'break-word',
+    [`@media (max-width: ${colBreakPoint})`]: {
+      paddingLeft: 0,
+      maxWidth: 'inherit',
+    },
+    [`@media (min-width: ${colBreakPoint}) and (max-width: ${LG})`]: {
+      fontSize: '.8em'
     }
   },
   card: {
@@ -93,8 +99,7 @@ class DetailCard extends Component {
       
         <CardContent>
           
-          <div className="flex justify-between" ref="detailView">
-      
+          <div ref="detailView">
             <div className={contentWrapper}>
       
               <div className={contentLeftWrapper}>

@@ -15,7 +15,10 @@ import RozeImg from 'assets/CafeRoze-exterior.jpg';
 import TreeHouseLogo from 'assets/logo-treehouse.jpg'
 import TkoLogo from 'assets/logo-tko.jpg';
 import TkoImg from 'assets/tko-bar.jpg';
-// import JackImg from 'assets/fort-exterior.jpg';
+import RudiesLogo from 'assets/logo-rudies.jpg'
+import RudiesImg from 'assets/rudies.jpeg';
+import UrbanCowboyLogo from 'assets/logo-urban-cowboy.png'
+import PublicHouseImg from 'assets/public-house.jpg'
 import Swipeable from 'react-swipeable'
 import DetailCard from './DetailCard';
 
@@ -309,6 +312,43 @@ const partners = [
     web: 'tkotn.com',
     map: '4204 Gallatin Pike',
     menu: null,
+    res: null
+  },
+  {
+    name: "Rudies's",
+    logo: RudiesLogo,
+    image: RudiesImg,
+    blurb: `Rudie’s is a family-owned business located in the heart of East Nashville’s Riverside Village.
+      It was founded by Dave Mitchell, of Mitchell Delicatessen. When the time came to move Mitchell
+      Delicatessen, we wanted to combine our love of oysters and pork with great beer and drinks. Throw in a
+      courtyard patio, a relaxed vibe, a friendly staff and you have Rudie’s Seafood and Sausage. Rudie’s
+      opened it’s doors in November 2014. We have made contacts on the northwest coast and gulf coast to get
+      the freshest oysters available. Our pork comes from hogs raised in Summertown by Amish farmer. We get 2
+      hogs every week and create sausages, chops and porchetta, to name a few. Sausages that are always
+      available include andouille and bratwurst, guest starring beef cheddar, green chili, togarashi and
+      polish sausages. We offer a special dog of the day. Our seafood offering includes mussels, shrimp and
+      grits and salmon dishes. We love our vegetarian and vegan friends too and offer vegan hot chicken, beet
+      tartare and stuffed seasonal vegetables. If a touch of creole hits the spot, we also serve po’boys and
+      jambalaya.`,
+    phone: '(615) 645-5167',
+    web: 'rudiesnashville.com',
+    map: "Rudie's Seafood and Sausage, 1402 McGavock Pike",
+    menu: "http://rudiesnashville.com/menu",
+    res: null
+  },
+  {
+    name: 'Public House',
+    logo: UrbanCowboyLogo,
+    image: PublicHouseImg,
+    blurb: `The Public House is located in the back of the Urban Cowboy B&B in the Stable House. We are a
+      neighborhood bar and kitchen focusing on craft cocktails, a ever-changing menu of locally sourced food
+      cooked over a wood burning grill, and genuine hospitality. Our kitchen is open from 4pm-10pm Tuesday
+      to Sunday (bar stays open till 11pm weeknight, midnight on the weekends).We are closed on Mondays.
+      All food and drinks are ordered at the bar. We do not take reservations. `,
+    phone: '(347) 840-0525',
+    web: 'http://www.urbancowboybnb.com/public-house/',
+    map: '1603 Woodland St',
+    menu: 'http://www.urbancowboybnb.com/public-house/',
     res: null
   }
 ]
