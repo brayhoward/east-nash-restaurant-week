@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import injectSheet from 'react-jss';
 import bind from 'bind-decorator';
 import classnames from 'classnames';
+import sortBy from 'lodash.sortby';
 import { MED_SM } from 'constants/media-screens';
 import FortLogo from 'assets/logo-fort-louise.jpg';
 import FortImg from 'assets/fort-exterior.jpg';
@@ -145,10 +146,10 @@ export default class extends Component {
             <div>
               <ul className={partnersList}>
                 {
-                  partners.map(
+                  sortBy(partners, ['name']).map(
                     ({ logo, name, ...rest }, i) => (
                       <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
-                        <img src={logo} alt={`${name} logo`} style={{maxWidth: '9em'}}/>
+                        <img src={logo} alt={`${name} logo`} style={{ maxWidth: '9em' }} />
                       </li>
                     )
                   )
