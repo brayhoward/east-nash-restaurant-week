@@ -70,7 +70,7 @@ const styles = {
   },
   h3: {
     composes: "mg--sm txt-center txt-upper",
-    textTransform: 'capitalize',
+    textTransform: 'none',
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.9em'
     }
