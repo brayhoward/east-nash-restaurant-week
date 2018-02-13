@@ -157,6 +157,7 @@ ul {
   border: 1px solid black;
   cursor: pointer;
   text-decoration: none;
+  transition: all .15s ease-in-out;
 }
 .btn:hover,
 .btn:active,
@@ -164,6 +165,7 @@ ul {
   border-color: transparent;
   background-color: #e6f948;
   color: black;
+  transition: all .15s ease-in-out;
 }
 
 .box-shadow {
