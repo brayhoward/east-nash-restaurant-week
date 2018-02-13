@@ -131,6 +131,10 @@ export default class extends Component {
 
     const { showDetail, detailCardInfo } = this.state;
 
+    const [first, second, third, ...rest] = sortBy(partners, ['name'])
+    
+    const almostAlpha = [first, third, second, ...rest ]
+
     const handleClick = info => (
       showDetail ? this.hideDetail() : this.showDetail(info)
     );
@@ -146,7 +150,7 @@ export default class extends Component {
             <div>
               <ul className={partnersList}>
                 {
-                  sortBy(partners, ['name']).map(
+                  almostAlpha.map(
                     ({ logo, name, ...rest }, i) => (
                       <li onClick={() => handleClick({ name, logo, ...rest })} className={listItems} key={i}>
                         <img src={logo} alt={`${name} logo`} style={{ maxWidth: '9em' }} />
@@ -247,7 +251,7 @@ const partners = [
     web: 'margotcafe.com',
     map: '1017 Woodland Street',
     menu: null,
-    res:''
+    res: null
   },
   {
     name: 'Two Ten Jack',
@@ -264,7 +268,7 @@ const partners = [
     web: 'twotenjack.com',
     map: '1900 Eastland Ave #105',
     menu: null,
-    res:''
+    res: null
   },
   {
     name: 'Treehouse',
@@ -335,7 +339,7 @@ const partners = [
     phone: '(615) 645-5167',
     web: 'rudiesnashville.com',
     map: "Rudie's Seafood and Sausage, 1402 McGavock Pike",
-    menu: "http://rudiesnashville.com/menu",
+    menu: null,
     res: null
   },
   {
@@ -350,7 +354,7 @@ const partners = [
     phone: '(347) 840-0525',
     web: 'http://www.urbancowboybnb.com/public-house/',
     map: '1603 Woodland St',
-    menu: 'http://www.urbancowboybnb.com/public-house/',
+    menu: null,
     res: null
   }
 ]
