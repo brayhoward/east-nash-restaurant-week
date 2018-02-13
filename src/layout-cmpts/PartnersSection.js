@@ -210,13 +210,14 @@ const partners = [
     name: 'Butcher & Bee',
     logo: ButcherLogo ,
     image: ButcherImg,
-    blurb: `It all started with a vision... of sandwiches. The notion was simple. Perfect all the ingredients - proteins, cheeses, veggies, bread - and craft sandwiches with flavor combinations and food quality usually reserved for fine dining. A gourmet meal between two pieces of bread.
-
-      Now the dream has grown beyond sandwiches to all types of foods. And we bring them to you from local farmers who produce spectacular flavors. Supporting local and sustainable is not a slogan. It’s the right thing to do, and the food tastes better for it.`,
+    blurb: `Opened in 2015 with the same philosophy of carefully sourced ingredients and an ever
+      changing menu as it's Charleston counterpart, Butcher & Bee serves a diverse, Middle Eastern
+      leaning menu from chef Bryan Lee Weaver of mezze, entrees, and vegetables for which B&B has
+      gained a cult following.`,
     phone: '(615) 226-3322',
     web: 'butcherandbee.com',
     map: '902 Main St',
-    menu: null,
+    menu: 'menu-butcher-and-bee.pdf',
     res: null
   },
   {

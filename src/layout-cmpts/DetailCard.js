@@ -117,7 +117,12 @@ class DetailCard extends Component {
               </div>
       
               <div className={contactInfo}>
-                {menu ? <a className="btn" href={`${menu}`}>View Menu</a> : null}
+                {
+                  menu ?
+                    <a className="btn" href={`${menu}`} target='blank'>View Menu</a>
+                  :
+                    null
+                }
 
                 {res ? <a className="btn" href={`${res}`}>Make a Reservation</a> : null}
 
