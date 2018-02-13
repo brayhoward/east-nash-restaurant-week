@@ -18,6 +18,7 @@ import TkoLogo from 'assets/logo-tko.jpg';
 import TkoImg from 'assets/tko-bar.jpg';
 import RudiesLogo from 'assets/logo-rudies.jpg'
 import RudiesImg from 'assets/rudies.jpeg';
+import RudiesMenu from 'assets/menu-rudies.pdf';
 import UrbanCowboyLogo from 'assets/logo-urban-cowboy.png'
 import PublicHouseImg from 'assets/public-house.jpg'
 import Swipeable from 'react-swipeable'
@@ -217,7 +218,7 @@ const partners = [
     phone: '(615) 226-3322',
     web: 'butcherandbee.com',
     map: '902 Main St',
-    menu: 'menu-butcher-and-bee.pdf',
+    menu: null,
     res: null
   },
   {
@@ -340,7 +341,7 @@ const partners = [
     phone: '(615) 645-5167',
     web: 'rudiesnashville.com',
     map: "Rudie's Seafood and Sausage, 1402 McGavock Pike",
-    menu: null,
+    menu: RudiesMenu,
     res: null
   },
   {
