@@ -58,10 +58,21 @@ const styles = {
     [`@media (max-width: ${MED_SM})`]: {
       maxWidth: '95%',
     }
+  },
+  dates: {
+    color:'rgb(187, 195, 37)', 
+    fontSize: '1.8em', 
+    textAlign: 'center', 
+    textTransform: 'uppercase', 
+    fontWeight: '700',
+    marginBottom: '150px',
+    [`@media (max-width: ${MED_SM})`]: {
+      fontSize: '1.2em'
+    }
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciousFoodFront, h2 } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciousFoodFront, h2, dates } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -83,6 +94,10 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciou
     <h2 className={h2}>
       Support local restaurants in East Nashville with a week of dining deals.
     </h2>
+
+    <h3 className={dates}>
+      <span>February 26 - March 4, 2018</span><br/>
+    </h3>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div className={deliciousFoodFront}/>
