@@ -341,7 +341,7 @@ const partners = [
     phone: '(615) 645-5167',
     web: 'rudiesnashville.com',
     map: "Rudie's Seafood and Sausage, 1402 McGavock Pike",
-    menu: RudiesMenu,
+    menu: null,
     res: null
   },
   {
