@@ -22,7 +22,7 @@ const styles = {
   },
   contentLeftWrapper: {
     width: '60%', 
-    paddingRight: '10px',
+    paddingRight: '30px',
     marginBottom: '.5em',
     [`@media (max-width: ${colBreakPoint})`]: {
       width: '100%'
@@ -77,7 +77,7 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn, contactInfo } = classes;
-    const { name, blurb, logo, web, res, phone, map, menu } = info;
+    const { name, blurb, logo, web, res, phone, map, menu, special } = info;
     const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
     return (
@@ -112,6 +112,21 @@ class DetailCard extends Component {
                   }}
                 />
                 <p>
+                {
+                  special ?
+                    <em><strong>{`${special}`}</strong></em>
+                  :
+                    null
+                }
+                <br/>
+                {
+                  menu ?
+                    <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
+                  :
+                    null
+                }
+                  <hr/>
+                  <br/>
                   {blurb}
                 </p>
               </div>

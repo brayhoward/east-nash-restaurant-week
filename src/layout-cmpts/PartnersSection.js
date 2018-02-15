@@ -6,6 +6,7 @@ import sortBy from 'lodash.sortby';
 import { MED_SM } from 'constants/media-screens';
 import FortLogo from 'assets/logo-fort-louise.jpg';
 import FortImg from 'assets/fort-exterior.jpg';
+import FortMenu from 'assets/Fort-louise-ENRWmenu.pdf';
 import ButcherLogo from 'assets/logo-butcher-bee.jpg';
 import ButcherImg from 'assets/Cebulka-B+B-4869.jpg';
 import MargotLogo from 'assets/logo-margot.jpg';
@@ -19,9 +20,10 @@ import TkoImg from 'assets/tko-bar.jpg';
 import RudiesLogo from 'assets/logo-rudies.jpg'
 import RudiesImg from 'assets/rudies.jpeg';
 import RudiesMenu from 'assets/menu-rudies.pdf';
-import UrbanCowboyLogo from 'assets/logo-urban-cowboy.png'
-import PublicHouseImg from 'assets/public-house.jpg'
-import Swipeable from 'react-swipeable'
+import UrbanCowboyLogo from 'assets/logo-urban-cowboy.png';
+import PublicHouseImg from 'assets/public-house.jpg';
+import PeninsulaMenu from 'assets/ENRW Menu-Yuriko Say.pdf';
+import Swipeable from 'react-swipeable';
 import DetailCard from './DetailCard';
 
 const styles = {
@@ -84,7 +86,7 @@ export default class extends Component {
   constructor(props) { 
     super(props);
     // Init state
-    const { name, blurb, image, logo, phone, web, res, map } = partners[0];
+    const { name, blurb, image, logo, phone, web, res, map, special, menu } = partners[0];
 
     this.state = {
       showDetail: false,
@@ -96,7 +98,9 @@ export default class extends Component {
         phone,
         web,
         res,
-        map
+        map,
+        special,
+        menu
       }
     }
   }
@@ -218,6 +222,7 @@ const partners = [
     phone: '(615) 226-3322',
     web: 'butcherandbee.com',
     map: '902 Main St',
+    special: null,
     menu: null,
     res: null
   },
@@ -234,7 +239,8 @@ const partners = [
     phone: '(615) 730-6273',
     web: 'hungrylikeafort.com',
     map: '1304 McGavock Pike',
-    menu: null,
+    special: 'Prix Fixe $33 / Person',
+    menu: FortMenu,
     res:'https://resy.com/cities/bna/fort-louise'
   },
   {
@@ -252,6 +258,7 @@ const partners = [
     phone: '(615) 228-4864',
     web: 'margotcafe.com',
     map: '1017 Woodland Street',
+    special: null,
     menu: null,
     res: null
   },
@@ -269,6 +276,7 @@ const partners = [
     phone: '(615) 454-2731',
     web: 'twotenjack.com',
     map: '1900 Eastland Ave #105',
+    special: null,
     menu: null,
     res: null
   },
@@ -280,6 +288,7 @@ const partners = [
     phone: '(615) 454-4201',
     web: 'treehousenashville.com',
     map: '1011 Clearview Ave',
+    special: null,
     menu: null,
     res:'https://www.opentable.com/r/the-treehouse-nashville'
   },
@@ -295,6 +304,7 @@ const partners = [
     phone: '(615) 645-9100',
     web: 'caferoze.com',
     map: '1115 Porter Rd',
+    special: null,
     menu: null,
     res:'https://resy.com/cities/22/cafe-roze'
   },
@@ -308,7 +318,8 @@ const partners = [
     phone: '(615) 679-0377',
     web: 'peninsulanashville.com',
     map: '1035 W Eastland Ave',
-    menu: null,
+    special: 'Family style menu for two people ($65) or four people ($130)',
+    menu: PeninsulaMenu,
     res: 'https://resy.com/cities/bna/peninsula'
   },
   {
@@ -319,6 +330,7 @@ const partners = [
     phone: '(615) 915-3102',
     web: 'tkotn.com',
     map: '4204 Gallatin Pike',
+    special: null,
     menu: null,
     res: null
   },
@@ -341,7 +353,8 @@ const partners = [
     phone: '(615) 645-5167',
     web: 'rudiesnashville.com',
     map: "1402 McGavock Pike",
-    menu: null,
+    special: 'Three courses for $33',
+    menu: RudiesMenu,
     res: null
   },
   {
@@ -356,6 +369,7 @@ const partners = [
     phone: '(347) 840-0525',
     web: 'http://www.urbancowboybnb.com/public-house/',
     map: '1603 Woodland St',
+    special: null,
     menu: null,
     res: null
   }

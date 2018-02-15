@@ -59,6 +59,11 @@ ul {
   -webkit-padding-start: 0;
 }
 
+hr {
+  border-style: dashed;
+  border-width: 1px;
+}
+
 /* HELPERS */
 /* flex helpers */
 .flex { display: flex; }
@@ -166,6 +171,10 @@ ul {
   background-color: #e6f948;
   color: black;
   transition: all .15s ease-in-out;
+}
+.btn-m {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .box-shadow {
