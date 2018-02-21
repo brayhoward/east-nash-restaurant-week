@@ -111,24 +111,33 @@ class DetailCard extends Component {
                     marginBottom: '.5em'
                   }}
                 />
-                <p>
+                <div>
                   {
                     special ?
-                      <em><strong>{`${special}`}</strong></em>
+                      <div>
+                        <em><strong>{special}</strong></em>
+                      </div>
                     :
                       null
                   }
-                  <br/>
+
+                  <br />
+
                   {
                     menu ?
                       <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
                     :
                       null
                   }
-                  <hr/>
-                  <br/>
-                  {blurb}
-                </p>
+
+                  <hr />
+
+                  <br />
+
+                  <p>
+                    {blurb}
+                  </p>
+                </div>
               </div>
 
               <div className={contactInfo}>
