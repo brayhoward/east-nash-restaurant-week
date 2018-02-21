@@ -21,14 +21,14 @@ const styles = {
     }
   },
   contentLeftWrapper: {
-    width: '60%', 
+    width: '60%',
     paddingRight: '30px',
     marginBottom: '.5em',
     [`@media (max-width: ${colBreakPoint})`]: {
       width: '100%'
     }
   },
-  contactInfo: {  
+  contactInfo: {
     fontSize: '1em',
     paddingLeft: '10px',
     maxWidth: '35%',
@@ -93,15 +93,15 @@ class DetailCard extends Component {
             </svg>
           </span>
         </div>
-      
+
         {/* BACKGROUND IMAGE*/}
         <div className={img} style={{ borderBottom: '5px solid rgb(205, 212, 82)' }}/>
-      
+
         <CardContent>
-          
+
           <div ref="detailView">
             <div className={contentWrapper}>
-      
+
               <div className={contentLeftWrapper}>
                 <img
                   src={logo}
@@ -112,25 +112,25 @@ class DetailCard extends Component {
                   }}
                 />
                 <p>
-                {
-                  special ?
-                    <em><strong>{`${special}`}</strong></em>
-                  :
-                    null
-                }
-                <br/>
-                {
-                  menu ?
-                    <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
-                  :
-                    null
-                }
+                  {
+                    special ?
+                      <em><strong>{`${special}`}</strong></em>
+                    :
+                      null
+                  }
+                  <br/>
+                  {
+                    menu ?
+                      <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
+                    :
+                      null
+                  }
                   <hr/>
                   <br/>
                   {blurb}
                 </p>
               </div>
-      
+
               <div className={contactInfo}>
                 {
                   menu ?
@@ -142,7 +142,7 @@ class DetailCard extends Component {
                 {res ? <a className="btn" href={`${res}`}>Make a Reservation</a> : null}
 
                 <span style={{ fontSize: '.75em' }}>Directions:</span><br />
-                
+
                 <address>
                   <a href={`http://maps.google.com?q=${mapQuery}`}>{map}</a>
                 </address>
