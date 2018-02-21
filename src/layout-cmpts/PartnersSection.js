@@ -9,6 +9,7 @@ import FortImg from 'assets/fort-exterior.jpg';
 import FortMenu from 'assets/Fort-louise-ENRWmenu.pdf';
 import ButcherLogo from 'assets/logo-butcher-bee.jpg';
 import ButcherImg from 'assets/Cebulka-B+B-4869.jpg';
+import ButcherMenu from 'assets/menu-butcher-and-bee.pdf';
 import MargotLogo from 'assets/logo-margot.jpg';
 import MargotImg from 'assets/ext-margot.jpg';
 import JackLogo from 'assets/logo-two-ten-jack.jpg';
@@ -83,7 +84,7 @@ const styles = {
 @injectSheet(styles)
 export default class extends Component {
 
-  constructor(props) { 
+  constructor(props) {
     super(props);
     // Init state
     const { name, blurb, image, logo, phone, web, res, map, special, menu } = partners[0];
@@ -223,7 +224,7 @@ const partners = [
     web: 'butcherandbee.com',
     map: '902 Main St',
     special: null,
-    menu: null,
+    menu: ButcherMenu,
     res: null
   },
   {
