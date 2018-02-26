@@ -107,7 +107,7 @@ class DetailCard extends Component {
                   src={logo}
                   alt={`${name} logo`}
                   style={{
-                    maxWidth: '200px',
+                    maxWidth: '150px',
                     marginBottom: '.5em'
                   }}
                 />

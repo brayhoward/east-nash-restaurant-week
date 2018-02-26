@@ -15,7 +15,8 @@ import MargotImg from 'assets/ext-margot.jpg';
 import JackLogo from 'assets/logo-two-ten-jack.jpg';
 import RozeLogo from 'assets/logo-roze.jpg';
 import RozeImg from 'assets/CafeRoze-exterior.jpg';
-import TreeHouseLogo from 'assets/logo-treehouse.jpg'
+import RozeMenu from 'assets/cafe-roze-menu.pdf';
+import TreeHouseLogo from 'assets/logo-treehouse.jpg';
 import TkoLogo from 'assets/logo-tko.jpg';
 import TkoImg from 'assets/tko-bar.jpg';
 import RudiesLogo from 'assets/logo-rudies.jpg'
@@ -305,8 +306,8 @@ const partners = [
     phone: '(615) 645-9100',
     web: 'caferoze.com',
     map: '1115 Porter Rd',
-    special: null,
-    menu: null,
+    special: 'Drink and Appetizer for $15',
+    menu: RozeMenu,
     res:'https://resy.com/cities/22/cafe-roze'
   },
   {
