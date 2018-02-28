@@ -13,6 +13,7 @@ import ButcherMenu from 'assets/menu-butcher-and-bee.pdf';
 import MargotLogo from 'assets/logo-margot.jpg';
 import MargotImg from 'assets/ext-margot.jpg';
 import JackLogo from 'assets/logo-two-ten-jack.jpg';
+import JackMenu from 'assets/two-ten-jack-menu.pdf'
 import RozeLogo from 'assets/logo-roze.jpg';
 import RozeImg from 'assets/CafeRoze-exterior.jpg';
 import RozeMenu from 'assets/cafe-roze-menu.pdf';
@@ -279,7 +280,7 @@ const partners = [
     web: 'twotenjack.com',
     map: '1900 Eastland Ave #105',
     special: null,
-    menu: null,
+    menu: JackMenu,
     res: null
   },
   {
