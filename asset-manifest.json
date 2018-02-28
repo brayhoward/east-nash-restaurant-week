@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.a7efd808.css",
   "main.css.map": "static/css/main.a7efd808.css.map",
-  "main.js": "static/js/main.b3d8b4a1.js",
-  "main.js.map": "static/js/main.b3d8b4a1.js.map",
+  "main.js": "static/js/main.47ce19a0.js",
+  "main.js.map": "static/js/main.47ce19a0.js.map",
   "static/media/CafeRoze-exterior.jpg": "static/media/CafeRoze-exterior.83d811ae.jpg",
   "static/media/Cebulka-B+B-4869.jpg": "static/media/Cebulka-B+B-4869.f3073385.jpg",
   "static/media/ENRW Menu-Yuriko Say.pdf": "static/media/ENRW Menu-Yuriko Say.2c1deaf1.pdf",
@@ -29,5 +29,6 @@
   "static/media/rudies.jpeg": "static/media/rudies.6911fc19.jpeg",
   "static/media/soup-back.jpg": "static/media/soup-back.17c3b5d1.jpg",
   "static/media/soup-front.png": "static/media/soup-front.711f6354.png",
-  "static/media/tko-bar.jpg": "static/media/tko-bar.8110b67f.jpg"
+  "static/media/tko-bar.jpg": "static/media/tko-bar.8110b67f.jpg",
+  "static/media/two-ten-jack-menu.pdf": "static/media/two-ten-jack-menu.d7ef8b9d.pdf"
 }
