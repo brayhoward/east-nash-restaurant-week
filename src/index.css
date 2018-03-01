@@ -186,13 +186,13 @@ hr {
 /* for deveopment purposes */
 .bd { border: 1px solid lime; }
 
-.partners li{ 
+.partners li {
   display: flex;
   align-items: center;
   cursor: pointer;
   border: 1px solid white;
 }
-.partners li:hover{ 
+.partners li:hover {
   cursor: pointer;
   border: 1px solid black;
 }

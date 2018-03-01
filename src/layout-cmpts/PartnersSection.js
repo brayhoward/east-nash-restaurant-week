@@ -18,6 +18,7 @@ import RozeLogo from 'assets/logo-roze.jpg';
 import RozeImg from 'assets/CafeRoze-exterior.jpg';
 import RozeMenu from 'assets/cafe-roze-menu.pdf';
 import TreeHouseLogo from 'assets/logo-treehouse.jpg';
+import TreehouseManu from 'assets/treehouse-menu.pdf';
 import TkoLogo from 'assets/logo-tko.jpg';
 import TkoImg from 'assets/tko-bar.jpg';
 import RudiesLogo from 'assets/logo-rudies.jpg'
@@ -123,7 +124,7 @@ export default class extends Component {
     if (scrollIntoView) {
       this.refs['heading'].scrollIntoView({ block: "start", behavior: 'smooth' });
     }
-  } 
+  }
 
   render() {
     const {
@@ -140,7 +141,7 @@ export default class extends Component {
     const { showDetail, detailCardInfo } = this.state;
 
     const [first, second, third, ...rest] = sortBy(partners, ['name'])
-    
+
     const almostAlpha = [first, third, second, ...rest ]
 
     const handleClick = info => (
@@ -169,14 +170,14 @@ export default class extends Component {
               </ul>
             </div>
           </div>
-        
+
           {/* TODO: Make swipe right work */}
           <Swipeable
             className={showDetail ? fadeIn : fadeOut}
             onSwipedRight={() => this.hideDetail()}
             onSwipedLeft={() => this.hideDetail()}
             delta={80}
-          >  
+          >
             <div ref="detail">
               <DetailCard info={detailCardInfo} handleClose={this.hideDetail} showDetail={showDetail}/>
             </div>
@@ -186,7 +187,7 @@ export default class extends Component {
     );
   }
 
-  @bind 
+  @bind
   escFunction({ keyCode }) {
     if(keyCode === 27) {
       this.setState({ showDetail: false });
@@ -291,8 +292,25 @@ const partners = [
     phone: '(615) 454-4201',
     web: 'treehousenashville.com',
     map: '1011 Clearview Ave',
-    special: null,
-    menu: null,
+    special:
+      <ul style={{listStyle: 'square', paddingLeft: '1.2em'}}>
+        <li>
+        <p>
+          Wild GA Shrimp Cocktail Cocktail with Very Horseradishey Cocktail Sauce
+            and Cajun Dry Spiced Chicken Wings with House Made Ranch, Lime for $22
+        </p>
+        </li>
+
+        <li>
+        <p className="mg-t">
+          The Cheshire
+          <br/>
+          CATHEAD VODKA, ST. GERMAIN, LEMON, GRAPEFRUIT,
+            BUBBLES for $12
+        </p>
+        </li>
+      </ul>,
+    menu: TreehouseManu,
     res:'https://www.opentable.com/r/the-treehouse-nashville'
   },
   {
