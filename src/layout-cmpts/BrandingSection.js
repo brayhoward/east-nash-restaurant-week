@@ -60,10 +60,9 @@ const styles = {
     }
   },
   dates: {
-    color:'rgb(187, 195, 37)', 
-    fontSize: '1.8em', 
-    textAlign: 'center', 
-    textTransform: 'uppercase', 
+    color:'rgb(187, 195, 37)',
+    fontSize: '1.8em',
+    textAlign: 'center',
     fontWeight: '700',
     marginBottom: '150px',
     [`@media (max-width: ${MED_SM})`]: {
@@ -96,13 +95,13 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciou
     </h2>
 
     <h3 className={dates}>
-      <span>February 26 - March 4, 2018</span><br/>
+      <span>FEBRUARY 4 - FEBUARY 10, {new Date().getFullYear()}</span><br/>
     </h3>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div className={deliciousFoodFront}/>
     </div>
-  </Fragment>  
+  </Fragment>
 );
 
 export default injectSheet(styles)(BrandingSection);

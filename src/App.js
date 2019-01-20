@@ -18,7 +18,7 @@ const styles = {
     composes: 'flex flex-col flex-between align-content-center',
     paddingTop: headerHeight,
     width: '100vw',
-    maxWidth: `calc(${XL} - 100px)`  
+    maxWidth: `calc(${XL} - 100px)`
   },
   collage: {
     composes: 'full-width flex justify-between align-items-end',
@@ -101,12 +101,12 @@ class App extends Component {
   @bind
   clearAnimationInterval() {
     clearInterval(this.state.intervalId);
-  }  
+  }
 
   @bind
   triggerBirdAnimation() {
     const mostlyTrue = (Math.random() >= 0.25);
-    
+
     if (mostlyTrue) {
       this.setState({ shakeIt: true })
 
@@ -137,10 +137,10 @@ class App extends Component {
             <li></li>
           </ul>
         </header>
-        
-        <div className={appContainer}>  
+
+        <div className={appContainer}>
           <BrandingSection />
-        
+
           <PartnersSection />
         </div>
 

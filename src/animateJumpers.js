@@ -9,7 +9,7 @@ function runScene() {
   })
   .setPin("#jumpers", {pushfollowers: false})
   .addTo(controller);
-  
+
   // When #jumpers reach the #deliciousFood apply css animation class
   new ScrollMagic.Scene({
     triggerElement: '#deliciousFood',
@@ -17,9 +17,9 @@ function runScene() {
   })
   .setClassToggle('#jumpers', 'faded')
   .addTo(controller);
-  
+
   // If user scrolls past the #deliciousFood apply hidden class
-  // b/c if they are scrolling to fast the animation wont be done and 
+  // b/c if they are scrolling to fast the animation wont be done and
   // everything will look like shite.
   new ScrollMagic.Scene({
     triggerElement: '#deliciousFood',
