@@ -43,10 +43,15 @@ const styles = {
   },
   card: {
     maxWidth: '60%',
-    margin: 'auto',
     position: 'relative',
     [`@media (max-width: ${MED})`]: {
-      maxWidth: '95%'
+      maxWidth: 'inherit',
+      width: '95%'
+    }
+  },
+  cardWrapper: {
+    [`@media (max-width: ${MED})`]: {
+      width: '95%'
     }
   },
   img: {
@@ -77,7 +82,7 @@ class DetailCard extends Component {
   render() {
     const { classes, info, handleClose } = this.props;
     const {card, contentWrapper, contentLeftWrapper, img, closeBtn, contactInfo } = classes;
-    const { name, blurb, logo, web, res, phone, map, menu, special } = info;
+    const { name, blurb, logo, web, res, phone, map, menu, offering } = info;
     const mapQuery = `Nashville ${name} ${map}`.split(" ").join("+")
 
     return (
@@ -86,9 +91,6 @@ class DetailCard extends Component {
         <div className={closeBtn} style={{backgroundColor: '#fff'}}>
           <span onClick={handleClose}>
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>
-                close [#1511]
-            </title>
               <path fill="#000" d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446z" fillRule="evenodd" />
             </svg>
           </span>
@@ -113,21 +115,17 @@ class DetailCard extends Component {
                 />
                 <div>
                   {
-                    special ?
+                    offering && (
                       <div>
-                        <em><strong>{special}</strong></em>
+                        <em><strong>{offering}</strong></em>
                       </div>
-                    :
-                      null
+                    )
                   }
 
                   <br />
 
                   {
-                    menu ?
-                      <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
-                    :
-                      null
+                    menu && <a className="btn-m" href={`${menu}`} target='blank'>See what's on the menu</a>
                   }
 
                   <hr />
