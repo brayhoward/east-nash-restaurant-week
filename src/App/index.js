@@ -3,10 +3,11 @@ import injectSheet from 'react-jss'
 import bind from 'bind-decorator';
 import classnames from 'classnames';
 import { MED_SM, LG, XL, MED } from 'constants/media-screens';
-import BrandingSection from 'layout-cmpts/BrandingSection';
-import PartnersSection from 'layout-cmpts/PartnersSection';
+import BrandingSection from './BrandingSection';
+import PartnersSection from './PartnersSection';
 import footerImage from 'assets/footer-collage-fpo.png';
 import birdImage from 'assets/golden-pheasant-lives.png';
+
 
 const headerHeight = '3em';
 const styles = {
