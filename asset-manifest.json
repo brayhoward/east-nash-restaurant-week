@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.a7efd808.css",
-  "main.css.map": "static/css/main.a7efd808.css.map",
-  "main.js": "static/js/main.e98239f5.js",
-  "main.js.map": "static/js/main.e98239f5.js.map",
+  "main.css": "static/css/main.858fad04.css",
+  "main.css.map": "static/css/main.858fad04.css.map",
+  "main.js": "static/js/main.7eaf0d04.js",
+  "main.js.map": "static/js/main.7eaf0d04.js.map",
   "static/media/CafeRoze.jpg": "static/media/CafeRoze.83d811ae.jpg",
   "static/media/butcher-n-bee.jpg": "static/media/butcher-n-bee.f3073385.jpg",
   "static/media/enrw-logo-bigeast-color.svg": "static/media/enrw-logo-bigeast-color.2a3c9d83.svg",
@@ -18,5 +18,7 @@
   "static/media/peninsula.png": "static/media/peninsula.e57e4a3e.png",
   "static/media/soup-back.jpg": "static/media/soup-back.17c3b5d1.jpg",
   "static/media/soup-front.png": "static/media/soup-front.711f6354.png",
-  "static/media/treehouse.jpg": "static/media/treehouse.8edfea54.jpg"
+  "static/media/sponser.png": "static/media/sponser.643211d7.png",
+  "static/media/treehouse.jpg": "static/media/treehouse.a3b40aad.jpg",
+  "static/media/two-ten-jack.jpg": "static/media/two-ten-jack.87d6d61b.jpg"
 }
