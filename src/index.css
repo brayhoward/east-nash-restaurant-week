@@ -32,6 +32,9 @@ a:focus {
   background-color: #929a0e;
   color: white;
 }
+a.no-hover {
+  background-color: inherit
+}
 .footer-links a {
   color: #cdd452;
 }
@@ -191,6 +194,7 @@ hr {
   align-items: center;
   cursor: pointer;
   border: 1px solid white;
+  transition: border .20s ease-in-out;
 }
 .partners li:hover {
   cursor: pointer;

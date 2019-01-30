@@ -14,8 +14,21 @@ import FoxBarLogo from 'assets/logos/fox-bar.png';
 import FoxBarBanner from 'assets/banners/fox-bar.jpg';
 import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
 import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
+import JackLogo from 'assets/logos/two-ten-jack.jpg';
+import JackBanner from 'assets/banners/two-ten-jack.jpg';
 
 const partners = [
+  {
+    name: 'Two Ten Jack',
+    logo: JackLogo ,
+    image: JackBanner,
+    blurb: 'Casual, neighborhood izakaya serving craft cocktails, yakitori, and ramen.',
+    phone: '(615) 579-9517',
+    web: 'twotenjack.com',
+    map: '1900 Eastland Ave #105',
+    offering: 'Seasonal yakitori + ramen specials',
+    res: 'https://resy.com/cities/bna/two-ten-jack-nashville'
+  },
   {
     name: 'Butcher & Bee',
     logo: ButcherLogo ,

@@ -4,6 +4,7 @@ import Swipeable from 'react-swipeable';
 import injectSheet from 'react-jss';
 import classnames from 'classnames';
 
+import SponsorLogo from 'assets/logos/sponser.png'
 import { MED_SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
@@ -53,9 +54,8 @@ const styles = {
     position: 'fixed',
     zIndex: 1000
   },
-  h3: {
-    composes: "mg--sm txt-center txt-upper",
-    textTransform: 'none',
+  subtitle: {
+    composes: "mg--sm txt-center",
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.9em'
     }
@@ -86,7 +86,8 @@ export default class extends Component {
   componentDidUpdate(_props, { showDetail: previousShowDetail }) {
     const { showDetail } = this.state;
     const scrollIntoView = showDetail && (showDetail !== previousShowDetail);
-    // Only scroll into view if show detail state has change from false to true
+    // Only scroll into view if show detail state has changed from false to true
+    // So the detail card is centered on page correctly
     if (scrollIntoView) {
       this.refs['heading'].scrollIntoView({ block: "start", behavior: 'smooth' });
     }
@@ -101,7 +102,7 @@ export default class extends Component {
       hidePartners,
       fadeIn,
       fadeOut,
-      h3
+      subtitle
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -112,7 +113,7 @@ export default class extends Component {
 
     return (
       <Fragment>
-        <h3 className={h3} ref="heading">
+        <h3 className={subtitle} ref="heading">
           Select a restaurant to view specials
         </h3>
 
@@ -150,6 +151,17 @@ export default class extends Component {
             </div>
           </Swipeable>
         </div>
+
+        <div style={{marginBottom: -110, zIndex: 2}} className="flex flex-col justify-between align-items-center mg-t--xl">
+          <h5 style={{marginBottom: "2em"}} className={subtitle}>
+            Special thanks to our partner <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
+          </h5>
+
+          <a className="no-hover" href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">
+            <img style={{maxWidth: 80}} src={SponsorLogo} alt="Fannie Battle logo"/>
+          </a>
+        </div>
+
       </Fragment>
     );
   }
