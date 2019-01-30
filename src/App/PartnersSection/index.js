@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import classnames from 'classnames';
 
 import SponsorLogo from 'assets/logos/sponser.png'
-import { MED_SM } from 'constants/media-screens';
+import { MED_SM, SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
 
@@ -59,6 +59,30 @@ const styles = {
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.9em'
     }
+  },
+  sponsor: {
+    composes: "flex flex-col justify-between align-items-center mg-t--xl",
+    marginBottom: -110,
+    zIndex: 2,
+    [`@media (max-width: ${MED_SM})`]: {
+      marginBottom: -55
+    },
+    [`@media (max-width: ${SM})`]: {
+      marginBottom: -113
+    }
+  },
+  sponsorMsg: {
+    composes: "mg-b--lg",
+    [`@media (max-width: ${MED_SM})`]: {
+      fontSize: '.75em',
+      marginBottom: "1.5em"
+    }
+  },
+  sponsorImg: {
+    maxWidth: 80,
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: 46
+    }
   }
 }
 
@@ -102,7 +126,10 @@ export default class extends Component {
       hidePartners,
       fadeIn,
       fadeOut,
-      subtitle
+      subtitle,
+      sponsorImg,
+      sponsorMsg,
+      sponsor
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -152,13 +179,13 @@ export default class extends Component {
           </Swipeable>
         </div>
 
-        <div style={{marginBottom: -110, zIndex: 2}} className="flex flex-col justify-between align-items-center mg-t--xl">
-          <h5 style={{marginBottom: "2em"}} className={subtitle}>
+        <div className={sponsor}>
+          <h5 className={sponsorMsg}>
             Special thanks to our partner <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
           </h5>
 
           <a className="no-hover" href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">
-            <img style={{maxWidth: 80}} src={SponsorLogo} alt="Fannie Battle logo"/>
+            <img className={sponsorImg} src={SponsorLogo} alt="Fannie Battle logo"/>
           </a>
         </div>
 
