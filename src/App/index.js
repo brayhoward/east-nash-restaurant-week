@@ -30,7 +30,7 @@ const styles = {
     position: 'relative',
     [`@media (max-width: ${MED_SM})`]: {
       background: `url(${footerImage}) no-repeat bottom/contain`,
-      height: '45vh'
+      height: '33vh'
     }
   },
   navList: {

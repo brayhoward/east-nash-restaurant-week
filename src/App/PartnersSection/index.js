@@ -60,19 +60,9 @@ const styles = {
       fontSize: '.9em'
     }
   },
-  sponsor: {
-    composes: "flex flex-col justify-between align-items-center mg-t--xl",
-    marginBottom: -110,
-    zIndex: 2,
-    [`@media (max-width: ${MED_SM})`]: {
-      marginBottom: -55
-    },
-    [`@media (max-width: ${SM})`]: {
-      marginBottom: -113
-    }
-  },
   sponsorMsg: {
     composes: "mg-b--lg",
+    textAlign: "center",
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.75em',
       marginBottom: "1.5em"
@@ -128,8 +118,7 @@ export default class extends Component {
       fadeOut,
       subtitle,
       sponsorImg,
-      sponsorMsg,
-      sponsor
+      sponsorMsg
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -179,16 +168,15 @@ export default class extends Component {
           </Swipeable>
         </div>
 
-        <div className={sponsor}>
+        <div className="flex flex-col justify-between align-items-center mg-t--xl pd-l pd-r">
           <h5 className={sponsorMsg}>
-            Special thanks to our partner <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
+            Supporting the work of <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
           </h5>
 
           <a className="no-hover" href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">
             <img className={sponsorImg} src={SponsorLogo} alt="Fannie Battle logo"/>
           </a>
         </div>
-
       </Fragment>
     );
   }
