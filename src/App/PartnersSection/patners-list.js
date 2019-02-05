@@ -1,3 +1,4 @@
+import React from "react"
 import sortBy from 'lodash.sortby';
 
 import ButcherLogo from 'assets/logos/butcher-n-bee.jpg';
@@ -26,7 +27,23 @@ const partners = [
     phone: '(615) 579-9517',
     web: 'twotenjack.com',
     map: '1900 Eastland Ave #105',
-    offering: 'Seasonal yakitori + ramen specials',
+    offering: <div>
+      <div> YAKITORI </div>
+      <div>fingerling sweet potatoes | miso butter $4</div>
+      <div> tuna toro | wasabi oil $9</div>
+      <br/>
+
+      <bold>SPECIALTY SASHIMI $13</bold>
+      <div>onaga | Japanese long-tail snapper | benimosu | mandarin | marcona</div>
+      <br/>
+
+      <div>RAMEN $15</div>
+      <div>tori paitan shio | smoked chicken | frilly mustard | ajitama | red onion | yuzu oil</div>
+      <br/>
+
+      <div>COCKTAIL $11</div>
+      <div>silver rum | keffir lime cordial | blackberry </div>
+    </div>,
     res: 'https://resy.com/cities/bna/two-ten-jack-nashville'
   },
   {

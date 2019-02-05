@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import classnames from 'classnames';
 
 import SponsorLogo from 'assets/logos/sponser.png'
-import { MED_SM, SM } from 'constants/media-screens';
+import { MED_SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
 
