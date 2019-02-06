@@ -1,9 +1,11 @@
 {
   "main.css": "static/css/main.858fad04.css",
   "main.css.map": "static/css/main.858fad04.css.map",
-  "main.js": "static/js/main.6d912121.js",
-  "main.js.map": "static/js/main.6d912121.js.map",
+  "main.js": "static/js/main.9043be31.js",
+  "main.js.map": "static/js/main.9043be31.js.map",
   "static/media/CafeRoze.jpg": "static/media/CafeRoze.83d811ae.jpg",
+  "static/media/be-hive.png": "static/media/be-hive.2851ad87.png",
+  "static/media/behive.jpg": "static/media/behive.483ef3ca.jpg",
   "static/media/butcher-n-bee.jpg": "static/media/butcher-n-bee.f3073385.jpg",
   "static/media/enrw-logo-bigeast-color.svg": "static/media/enrw-logo-bigeast-color.2a3c9d83.svg",
   "static/media/footer-collage-fpo.png": "static/media/footer-collage-fpo.608ae87f.png",
@@ -11,7 +13,7 @@
   "static/media/fox-bar.png": "static/media/fox-bar.1b70bf13.png",
   "static/media/golden-pheasant-lives.png": "static/media/golden-pheasant-lives.6d0eb01b.png",
   "static/media/halsman-jump.png": "static/media/halsman-jump.278089ae.png",
-  "static/media/lyra.jpg": "static/media/lyra.be655b10.jpg",
+  "static/media/lyra.jpg": "static/media/lyra.f56be2d3.jpg",
   "static/media/pearl-diver.jpeg": "static/media/pearl-diver.aec3664f.jpeg",
   "static/media/pearl-diver.jpg": "static/media/pearl-diver.fe375f65.jpg",
   "static/media/peninsula.jpg": "static/media/peninsula.7b11ba83.jpg",
@@ -19,6 +21,6 @@
   "static/media/soup-back.jpg": "static/media/soup-back.17c3b5d1.jpg",
   "static/media/soup-front.png": "static/media/soup-front.711f6354.png",
   "static/media/sponser.png": "static/media/sponser.643211d7.png",
-  "static/media/treehouse.jpg": "static/media/treehouse.a3b40aad.jpg",
-  "static/media/two-ten-jack.jpg": "static/media/two-ten-jack.87d6d61b.jpg"
+  "static/media/treehouse.jpg": "static/media/treehouse.8edfea54.jpg",
+  "static/media/two-ten-jack.jpg": "static/media/two-ten-jack.11d0fbf1.jpg"
 }
