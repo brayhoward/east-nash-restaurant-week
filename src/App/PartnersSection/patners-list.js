@@ -3,6 +3,8 @@ import sortBy from 'lodash.sortby';
 
 import ButcherLogo from 'assets/logos/butcher-n-bee.jpg';
 import ButcherImg from 'assets/banners/butcher-n-bee.jpg';
+import BeHiveLogo from 'assets/logos/be-hive.png';
+import BeHiveImg from 'assets/banners/behive.jpg';
 import RozeLogo from 'assets/logos/cafe-roze.jpg';
 import RozeImg from 'assets/banners/CafeRoze.jpg';
 import TreeHouseLogo from 'assets/logos/treehouse.jpg';
@@ -121,6 +123,17 @@ const partners = [
     web: 'pearldivernashville.com',
     map: '1008 Gallatin Ave',
     offering: 'Cubano & Daiquiri for $15 or Fish Tacos & Mexican beer of choice for $15',
+  },
+  {
+    name: 'The BE-Hive',
+    logo: BeHiveLogo ,
+    image: BeHiveImg,
+    blurb: "We are a plant based deli and market open weekly inside of our commercial kitchen where we create and produce small batch vegan meats and cheeses. We offer a variety of sandwiches, seitan wings and other comfort foods that are hard for people with restricted diets to find without sacrificing flavor.",
+    phone: '(615) 358-8668',
+    web: 'http://bethehive.com',
+    map: '2414 Gallatin Ave',
+    offering: 'Special Combo: Choice of Sandwich + Fancy Tot',
+    res: ''
   }
 
   // {

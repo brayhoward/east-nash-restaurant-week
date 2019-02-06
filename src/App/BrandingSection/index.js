@@ -5,6 +5,7 @@ import Jumpers from 'assets/halsman-jump.png';
 import SoupFront from 'assets/soup-front.png'
 import SoupBack from 'assets/soup-back.jpg'
 import Logo from 'assets/enrw-logo-bigeast-color.svg'
+import SponsorLogo from 'assets/logos/sponser.png'
 
 const styles = {
   main: {
@@ -59,19 +60,23 @@ const styles = {
       maxWidth: '95%',
     }
   },
-  dates: {
-    color:'rgb(187, 195, 37)',
-    fontSize: '1.8em',
-    textAlign: 'center',
-    fontWeight: '700',
-    marginBottom: '150px',
+  sponsorMsg: {
+    composes: "mg-b--lg",
+    textAlign: "center",
     [`@media (max-width: ${MED_SM})`]: {
-      fontSize: '1.2em'
+      fontSize: '.75em',
+      marginBottom: "1.5em"
+    }
+  },
+  sponsorImg: {
+    maxWidth: 130,
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: 80
     }
   }
 };
 
-const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciousFoodFront, h2, dates } }) => (
+const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciousFoodFront, h2, sponsorImg, sponsorMsg } }) => (
   <Fragment>
     <div className={main}>
       <div className="flex flex-col align-items-center">
@@ -91,12 +96,18 @@ const BrandingSection = ({ classes: { main, jumpers, deliciousFoodBack, deliciou
     </div>
 
     <h2 className={h2}>
-      Support local restaurants in East Nashville with a week of dining deals.
+      Support local restaurants in East Nashville with a week of dining deals...
     </h2>
 
-    <h3 className={dates}>
-      <span>FEBRUARY 4 - FEBUARY 10, {new Date().getFullYear()}</span><br/>
-    </h3>
+    <div className="flex flex-col justify-between align-items-center mg-t--xl pd-l pd-r">
+      <h2 className={sponsorMsg}>
+        ...and support the work of <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
+      </h2>
+
+      <a className="no-hover" href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">
+        <img className={sponsorImg} src={SponsorLogo} alt="Fannie Battle logo"/>
+      </a>
+    </div>
 
     <div id="deliciousFood" className={deliciousFoodBack}>
       <div className={deliciousFoodFront}/>

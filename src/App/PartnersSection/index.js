@@ -4,7 +4,6 @@ import Swipeable from 'react-swipeable';
 import injectSheet from 'react-jss';
 import classnames from 'classnames';
 
-import SponsorLogo from 'assets/logos/sponser.png'
 import { MED_SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
@@ -60,18 +59,13 @@ const styles = {
       fontSize: '.9em'
     }
   },
-  sponsorMsg: {
-    composes: "mg-b--lg",
-    textAlign: "center",
+  dates: {
+    color:'rgb(187, 195, 37)',
+    fontSize: '1.8em',
+    textAlign: 'center',
+    fontWeight: '700',
     [`@media (max-width: ${MED_SM})`]: {
-      fontSize: '.75em',
-      marginBottom: "1.5em"
-    }
-  },
-  sponsorImg: {
-    maxWidth: 80,
-    [`@media (max-width: ${MED_SM})`]: {
-      maxWidth: 46
+      fontSize: '1.2em'
     }
   }
 }
@@ -117,8 +111,7 @@ export default class extends Component {
       fadeIn,
       fadeOut,
       subtitle,
-      sponsorImg,
-      sponsorMsg
+      dates
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -130,7 +123,10 @@ export default class extends Component {
     return (
       <Fragment>
         <h3 className={subtitle} ref="heading">
-          Select a restaurant to view specials
+          Select a restaurant to view special menus
+        </h3>
+        <h3 className={dates}>
+          <span>FEBRUARY 4-10th, {new Date().getFullYear()}</span><br/>
         </h3>
 
         <div className={wrapper}>
@@ -168,15 +164,6 @@ export default class extends Component {
           </Swipeable>
         </div>
 
-        <div className="flex flex-col justify-between align-items-center mg-t--xl pd-l pd-r">
-          <h5 className={sponsorMsg}>
-            Supporting the work of <a className="no-hover" style={{color: "inherit"}} href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">Fannie Battle</a>
-          </h5>
-
-          <a className="no-hover" href="http://www.fanniebattle.org/" target="_blank" rel="noopener noreferrer">
-            <img className={sponsorImg} src={SponsorLogo} alt="Fannie Battle logo"/>
-          </a>
-        </div>
       </Fragment>
     );
   }
