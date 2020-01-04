@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import { MED_SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
+import CatheadLogo from 'assets/logos/cathead.png'
 
 const styles = {
   wrapper: {
@@ -60,12 +61,26 @@ const styles = {
     }
   },
   dates: {
-    color:'rgb(187, 195, 37)',
+    color:'rgb(253, 11, 133)',
     fontSize: '1.8em',
     textAlign: 'center',
     fontWeight: '700',
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '1.2em'
+    }
+  },
+  sponsorMsg: {
+    composes: "mg-b--lg",
+    textAlign: "center",
+    [`@media (max-width: ${MED_SM})`]: {
+      fontSize: '.55em',
+      marginBottom: "1.5em"
+    }
+  },
+  sponsorImg: {
+    maxWidth: 200,
+    [`@media (max-width: ${MED_SM})`]: {
+      maxWidth: 100
     }
   }
 }
@@ -111,7 +126,9 @@ export default class extends Component {
       fadeIn,
       fadeOut,
       subtitle,
-      dates
+      dates,
+      sponsorMsg,
+      sponsorImg
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -126,7 +143,7 @@ export default class extends Component {
           Select a restaurant to view special menus
         </h3>
         <h3 className={dates}>
-          <span>FEBRUARY 4-10th, {new Date().getFullYear()}</span><br/>
+          <span>FEBRUARY 16-22nd, {new Date().getFullYear()}</span><br/>
         </h3>
 
         <div className={wrapper}>
@@ -162,6 +179,15 @@ export default class extends Component {
               <DetailCard info={detailCardInfo} handleClose={this.hideDetail} />
             </div>
           </Swipeable>
+        </div>
+
+        <div className="flex flex-col justify-between align-items-center mg-t--xl pd-l pd-r">
+          <h4 className={sponsorMsg}>
+          In collaboration with
+          </h4>
+          <a className="no-hover" href="https://catheaddistillery.com/" target="_blank" rel="noopener noreferrer">
+            <img className={sponsorImg} src={CatheadLogo} alt="Cathead Distillery"/>
+          </a>
         </div>
 
       </Fragment>

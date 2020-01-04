@@ -23,20 +23,20 @@ body {
 }
 
 a {
-  color: #929a0e;
+  color: #FD0B85;
   cursor: pointer;
 }
 a:hover,
 a:active,
 a:focus {
-  background-color: #929a0e;
+  background-color: #FD0B85;
   color: white;
 }
 a.no-hover {
   background-color: inherit
 }
 .footer-links a {
-  color: #cdd452;
+  color: #fff;
 }
 .footer-links a:hover,
 .footer-links a:active,
@@ -171,7 +171,7 @@ hr {
 .btn:active,
 .btn:focus {
   border-color: transparent;
-  background-color: #e6f948;
+  background-color: #FD4399;
   color: black;
   transition: all .15s ease-in-out;
 }

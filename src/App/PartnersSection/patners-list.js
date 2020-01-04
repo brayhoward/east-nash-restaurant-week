@@ -3,51 +3,57 @@ import sortBy from 'lodash.sortby';
 
 import ButcherLogo from 'assets/logos/butcher-n-bee.jpg';
 import ButcherImg from 'assets/banners/butcher-n-bee.jpg';
-import BeHiveLogo from 'assets/logos/be-hive.png';
-import BeHiveImg from 'assets/banners/behive.jpg';
+// import BeHiveLogo from 'assets/logos/be-hive.png';
+// import BeHiveImg from 'assets/banners/behive.jpg';
 import RozeLogo from 'assets/logos/cafe-roze.jpg';
 import RozeImg from 'assets/banners/CafeRoze.jpg';
 import TreeHouseLogo from 'assets/logos/treehouse.jpg';
 import TreeHouseBanner from 'assets/banners/treehouse.jpg';
 import PeninsulaLogo from 'assets/logos/peninsula.png';
 import PeninsulaBanner from 'assets/banners/peninsula.jpg';
-import LyraLogo from 'assets/logos/lyra.jpg';
-import LyraBanner from 'assets/banners/lyra.jpg';
-import FoxBarLogo from 'assets/logos/fox-bar.png';
-import FoxBarBanner from 'assets/banners/fox-bar.jpg';
-import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
-import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
-import JackLogo from 'assets/logos/two-ten-jack.jpg';
-import JackBanner from 'assets/banners/two-ten-jack.jpg';
+// import LyraLogo from 'assets/logos/lyra.jpg';
+// import LyraBanner from 'assets/banners/lyra.jpg';
+// import FoxBarLogo from 'assets/logos/fox-bar.png';
+// import FoxBarBanner from 'assets/banners/fox-bar.jpg';
+// import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
+// import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
+// import JackLogo from 'assets/logos/two-ten-jack.jpg';
+// import JackBanner from 'assets/banners/two-ten-jack.jpg';
+import RedLogo from 'assets/logos/rhs.png';
+import RedBanner from 'assets/banners/rhs.jpg';
+import LouLogo from 'assets/logos/lou.png';
+import LouBanner from 'assets/banners/lou.jpg';
+import NicolettosLogo from 'assets/logos/nico.jpg';
+import NicolettosBanner from 'assets/banners/nico.jpg';
 
 const partners = [
-  {
-    name: 'Two Ten Jack',
-    logo: JackLogo ,
-    image: JackBanner,
-    blurb: 'Casual, neighborhood izakaya serving craft cocktails, yakitori, and ramen.',
-    phone: '(615) 579-9517',
-    web: 'twotenjack.com',
-    map: '1900 Eastland Ave #105',
-    offering: <div>
-      <div> YAKITORI </div>
-      <div>fingerling sweet potatoes | miso butter $4</div>
-      <div> tuna toro | wasabi oil $9</div>
-      <br/>
+  // {
+  //   name: 'Two Ten Jack',
+  //   logo: JackLogo ,
+  //   image: JackBanner,
+  //   blurb: 'Casual, neighborhood izakaya serving craft cocktails, yakitori, and ramen.',
+  //   phone: '(615) 579-9517',
+  //   web: 'twotenjack.com',
+  //   map: '1900 Eastland Ave #105',
+  //   offering: <div>
+  //     <div> YAKITORI </div>
+  //     <div>fingerling sweet potatoes | miso butter $4</div>
+  //     <div> tuna toro | wasabi oil $9</div>
+  //     <br/>
 
-      <bold>SPECIALTY SASHIMI $13</bold>
-      <div>onaga | Japanese long-tail snapper | benimosu | mandarin | marcona</div>
-      <br/>
+  //     <bold>SPECIALTY SASHIMI $13</bold>
+  //     <div>onaga | Japanese long-tail snapper | benimosu | mandarin | marcona</div>
+  //     <br/>
 
-      <div>RAMEN $15</div>
-      <div>tori paitan shio | smoked chicken | frilly mustard | ajitama | red onion | yuzu oil</div>
-      <br/>
+  //     <div>RAMEN $15</div>
+  //     <div>tori paitan shio | smoked chicken | frilly mustard | ajitama | red onion | yuzu oil</div>
+  //     <br/>
 
-      <div>COCKTAIL $11</div>
-      <div>silver rum | keffir lime cordial | blackberry </div>
-    </div>,
-    res: 'https://resy.com/cities/bna/two-ten-jack-nashville'
-  },
+  //     <div>COCKTAIL $11</div>
+  //     <div>silver rum | keffir lime cordial | blackberry </div>
+  //   </div>,
+  //   res: 'https://resy.com/cities/bna/two-ten-jack-nashville'
+  // },
   {
     name: 'Butcher & Bee',
     logo: ButcherLogo ,
@@ -93,48 +99,81 @@ const partners = [
     res: 'https://resy.com/cities/bna/peninsula'
   },
   {
-    name: 'Lyra',
-    logo: LyraLogo,
-    image: LyraBanner,
-    blurb: 'Bringing a fresh take on Middle Eastern cuisine to East Nashville, Lyra marries flavors rich in history with elevated plating and an effortlessly modern feel. A concept quite new to the flourishing local food scene, Lyra aims to introduce diners to a cuisine that goes way beyond basic kabobs; flavors Chef Hrant grew up on and is excited to share with you.',
-    phone: '(615) 928-8040',
-    web: 'lyranashville.com',
-    map: '935 W. Eastland Ave',
-    offering: '$35 per person mezze menu',
-    res: 'https://lyranashville.com/visit'
+    name: "Nicoletto's",
+    logo: NicolettosLogo,
+    image: NicolettosBanner,
+    blurb: "We love pasta. Fresh pasta, dried pasta, you name it. We love it so much that we founded Nicoletto's Pasta Co. to handcraft small batch pasta in fresh and dried varieties using traditional pasta making techniques. Nicoletto's pasta is bronze cut, slow dried, and packaged in Nashville, TN.",
+    phone: '(629) 202-8102',
+    web: 'nicolettos.com',
+    map: '2905A Gallatin Pike',
+    offering: '',
+    res: ''
   },
   {
-    name: 'The Fox Bar & Cocktail Club',
-    logo: FoxBarLogo,
-    image: FoxBarBanner,
-    blurb: 'Imaginative, seasonal cocktails & modern shareable plates served in a stylish space',
-    phone: '(615) 678-6541',
-    web: 'thefoxnashville.com',
-    map: '2905B Gallatin Pike',
-    offering: null,
-    res: 'www.thefoxnashville.com/reservations'
+    name: 'Lou',
+    logo: LouLogo,
+    image: LouBanner,
+    blurb: 'The daughter of a bohemian mother from Venice Beach and a well-read, charming Frenchman, lou is Chef / Owner Mailea Weger’s all-day café, brunch locale, and all-natural wine bar new to East Nashville, Tennessee.',
+    phone: '(615) 499-4495',
+    web: 'lounashville.com/',
+    map: '1304 McGavock Pk',
+    offering: '',
+    res: 'https://resy.com/cities/bna/lou?date=2020-01-04&seats=2'
   },
   {
-    name: 'Pearl Diver',
-    logo: PearlDiverLogo,
-    image: PearlDiverBanner,
-    blurb: 'Relaxed Island Lounge',
-    phone: '(615) 988-2265',
-    web: 'pearldivernashville.com',
-    map: '1008 Gallatin Ave',
-    offering: 'Cubano & Daiquiri for $15 or Fish Tacos & Mexican beer of choice for $15',
-  },
-  {
-    name: 'The BE-Hive',
-    logo: BeHiveLogo ,
-    image: BeHiveImg,
-    blurb: "We are a plant based deli and market open weekly inside of our commercial kitchen where we create and produce small batch vegan meats and cheeses. We offer a variety of sandwiches, seitan wings and other comfort foods that are hard for people with restricted diets to find without sacrificing flavor.",
-    phone: '(615) 358-8668',
-    web: 'http://bethehive.com',
-    map: '2414 Gallatin Ave',
-    offering: 'Special Combo: Choice of Sandwich + Fancy Tot',
+    name: 'Red Headed Stranger',
+    logo: RedLogo,
+    image: RedBanner,
+    blurb: 'We’re a neighborhood taco shop in East Nashville. If you like fresh and delicious tacos, brisket, Hatch green chiles and other southwestern inspired foods, you’re in the right place.',
+    phone: '(615) 544-TACO',
+    web: 'redheadedstrangertacos.com/',
+    map: '305 Arrington St.',
+    offering: '',
     res: ''
   }
+  // {
+  //   name: 'Lyra',
+  //   logo: LyraLogo,
+  //   image: LyraBanner,
+  //   blurb: 'Bringing a fresh take on Middle Eastern cuisine to East Nashville, Lyra marries flavors rich in history with elevated plating and an effortlessly modern feel. A concept quite new to the flourishing local food scene, Lyra aims to introduce diners to a cuisine that goes way beyond basic kabobs; flavors Chef Hrant grew up on and is excited to share with you.',
+  //   phone: '(615) 928-8040',
+  //   web: 'lyranashville.com',
+  //   map: '935 W. Eastland Ave',
+  //   offering: '$35 per person mezze menu',
+  //   res: 'https://lyranashville.com/visit'
+  // },
+  // {
+  //   name: 'The Fox Bar & Cocktail Club',
+  //   logo: FoxBarLogo,
+  //   image: FoxBarBanner,
+  //   blurb: 'Imaginative, seasonal cocktails & modern shareable plates served in a stylish space',
+  //   phone: '(615) 678-6541',
+  //   web: 'thefoxnashville.com',
+  //   map: '2905B Gallatin Pike',
+  //   offering: null,
+  //   res: 'www.thefoxnashville.com/reservations'
+  // },
+  // {
+  //   name: 'Pearl Diver',
+  //   logo: PearlDiverLogo,
+  //   image: PearlDiverBanner,
+  //   blurb: 'Relaxed Island Lounge',
+  //   phone: '(615) 988-2265',
+  //   web: 'pearldivernashville.com',
+  //   map: '1008 Gallatin Ave',
+  //   offering: 'Cubano & Daiquiri for $15 or Fish Tacos & Mexican beer of choice for $15',
+  // },
+  // {
+  //   name: 'The BE-Hive',
+  //   logo: BeHiveLogo ,
+  //   image: BeHiveImg,
+  //   blurb: "We are a plant based deli and market open weekly inside of our commercial kitchen where we create and produce small batch vegan meats and cheeses. We offer a variety of sandwiches, seitan wings and other comfort foods that are hard for people with restricted diets to find without sacrificing flavor.",
+  //   phone: '(615) 358-8668',
+  //   web: 'http://bethehive.com',
+  //   map: '2414 Gallatin Ave',
+  //   offering: 'Special Combo: Choice of Sandwich + Fancy Tot',
+  //   res: ''
+  // }
 
   // {
   //   name: 'Public House',

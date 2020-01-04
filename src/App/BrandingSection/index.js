@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import injectSheet from 'react-jss'
 import { MED_SM } from 'constants/media-screens';
 import Jumpers from 'assets/halsman-jump.png';
-import SoupFront from 'assets/soup-front.png'
-import SoupBack from 'assets/soup-back.jpg'
-import Logo from 'assets/enrw-logo-bigeast-color.svg'
+import SoupFront from 'assets/dish-front.png'
+import SoupBack from 'assets/dish-back.jpg'
+import Logo from 'assets/enrw-logo-color-2020.svg'
 import SponsorLogo from 'assets/logos/sponser.png'
 
 const styles = {
