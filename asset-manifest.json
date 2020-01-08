@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.67c5e422.css",
   "main.css.map": "static/css/main.67c5e422.css.map",
-  "main.js": "static/js/main.b94caea1.js",
-  "main.js.map": "static/js/main.b94caea1.js.map",
+  "main.js": "static/js/main.d820a0a8.js",
+  "main.js.map": "static/js/main.d820a0a8.js.map",
   "static/media/CafeRoze.jpg": "static/media/CafeRoze.83d811ae.jpg",
   "static/media/butcher-n-bee.jpg": "static/media/butcher-n-bee.f3073385.jpg",
   "static/media/cathead.png": "static/media/cathead.6fa152bc.png",
@@ -14,11 +14,14 @@
   "static/media/halsman-jump.png": "static/media/halsman-jump.278089ae.png",
   "static/media/lou.jpg": "static/media/lou.a95d0bfc.jpg",
   "static/media/lou.png": "static/media/lou.1503c782.png",
+  "static/media/margot.jpg": "static/media/margot.a1ec9b82.jpg",
+  "static/media/margot.png": "static/media/margot.8a547e5d.png",
   "static/media/nico.jpg": "static/media/nico.480b8e04.jpg",
   "static/media/peninsula.jpg": "static/media/peninsula.7b11ba83.jpg",
   "static/media/peninsula.png": "static/media/peninsula.e57e4a3e.png",
-  "static/media/rhs.jpg": "static/media/rhs.a09482ea.jpg",
+  "static/media/rhs.jpg": "static/media/rhs.327c467f.jpg",
   "static/media/rhs.png": "static/media/rhs.139c57cf.png",
+  "static/media/setsun.jpg": "static/media/setsun.ac5b4522.jpg",
   "static/media/sponser.png": "static/media/sponser.643211d7.png",
-  "static/media/treehouse.jpg": "static/media/treehouse.8edfea54.jpg"
+  "static/media/treehouse.jpg": "static/media/treehouse.a3b40aad.jpg"
 }
