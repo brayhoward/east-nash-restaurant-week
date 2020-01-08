@@ -25,8 +25,10 @@ import LouLogo from 'assets/logos/lou.png';
 import LouBanner from 'assets/banners/lou.jpg';
 import NicolettosLogo from 'assets/logos/nico.jpg';
 import NicolettosBanner from 'assets/banners/nico.jpg';
-import MargotLogo from 'assets/logos/margot.jpg';
+import MargotLogo from 'assets/logos/margot.png';
 import MargotBanner from 'assets/banners/margot.jpg';
+import SetsunLogo from 'assets/logos/setsun.png';
+import SetsunBanner from 'assets/banners/setsun.jpg';
 
 const partners = [
   // {
@@ -90,15 +92,15 @@ const partners = [
     res:'https://resy.com/cities/bna/cafe-roze'
   },
   {
-    name: 'Peninsula',
-    logo: PeninsulaLogo,
-    image: PeninsulaBanner,
-    blurb: 'Peninsula serves up shareable plates, old world wines, and Spanish style gin and tonics in an inviting and intimate space. Focusing on sustainable, local ingredients, Peninsula features seasonal and creative dishes influenced by the flavors and techniques of the Iberian Peninsula. The atmosphere is rustic yet modern, and encourages guests to sample the flavors of Spain, Portugal and France while maintaining a familiarity of local ingredients.',
-    phone: '(615) 679-0377',
-    web: 'peninsulanashville.com',
-    map: '1035 W Eastland Ave',
-    offering: '10% off of your food bill',
-    res: 'https://resy.com/cities/bna/peninsula'
+    name: 'Lou',
+    logo: LouLogo,
+    image: LouBanner,
+    blurb: 'The daughter of a bohemian mother from Venice Beach and a well-read, charming Frenchman, lou is Chef / Owner Mailea Weger’s all-day café, brunch locale, and all-natural wine bar new to East Nashville, Tennessee.',
+    phone: '(615) 499-4495',
+    web: 'lounashville.com/',
+    map: '1304 McGavock Pk',
+    offering: '',
+    res: 'https://resy.com/cities/bna/lou?date=2020-01-04&seats=2'
   },
   {
     name: 'Margot',
@@ -123,15 +125,15 @@ const partners = [
     res: ''
   },
   {
-    name: 'Lou',
-    logo: LouLogo,
-    image: LouBanner,
-    blurb: 'The daughter of a bohemian mother from Venice Beach and a well-read, charming Frenchman, lou is Chef / Owner Mailea Weger’s all-day café, brunch locale, and all-natural wine bar new to East Nashville, Tennessee.',
-    phone: '(615) 499-4495',
-    web: 'lounashville.com/',
-    map: '1304 McGavock Pk',
-    offering: '',
-    res: 'https://resy.com/cities/bna/lou?date=2020-01-04&seats=2'
+    name: 'Peninsula',
+    logo: PeninsulaLogo,
+    image: PeninsulaBanner,
+    blurb: 'Peninsula serves up shareable plates, old world wines, and Spanish style gin and tonics in an inviting and intimate space. Focusing on sustainable, local ingredients, Peninsula features seasonal and creative dishes influenced by the flavors and techniques of the Iberian Peninsula. The atmosphere is rustic yet modern, and encourages guests to sample the flavors of Spain, Portugal and France while maintaining a familiarity of local ingredients.',
+    phone: '(615) 679-0377',
+    web: 'peninsulanashville.com',
+    map: '1035 W Eastland Ave',
+    offering: '10% off of your food bill',
+    res: 'https://resy.com/cities/bna/peninsula'
   },
   {
     name: 'Red Headed Stranger',
@@ -141,6 +143,17 @@ const partners = [
     phone: '(615) 544-TACO',
     web: 'redheadedstrangertacos.com/',
     map: '305 Arrington St.',
+    offering: '',
+    res: ''
+  },
+  {
+    name: 'Setsun',
+    logo: SetsunLogo,
+    image: SetsunBanner,
+    blurb: 'A pop-up wine bar in the heart of East Nashville’s Historic Edgefield neighborhood. Chef Jason Zygmont and Ray Melendi bring a casually delicious menu of small plates that is paired with a concise, ever-rotating wine list.',
+    phone: '(615) 326-4866',
+    web: 'setsuneast.com/',
+    map: '700 Fatherland Street',
     offering: '',
     res: ''
   }
