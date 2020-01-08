@@ -25,6 +25,8 @@ import LouLogo from 'assets/logos/lou.png';
 import LouBanner from 'assets/banners/lou.jpg';
 import NicolettosLogo from 'assets/logos/nico.jpg';
 import NicolettosBanner from 'assets/banners/nico.jpg';
+import MargotLogo from 'assets/logos/margot.jpg';
+import MargotBanner from 'assets/banners/margot.jpg';
 
 const partners = [
   // {
@@ -97,6 +99,17 @@ const partners = [
     map: '1035 W Eastland Ave',
     offering: '10% off of your food bill',
     res: 'https://resy.com/cities/bna/peninsula'
+  },
+  {
+    name: 'Margot',
+    logo: MargotLogo,
+    image: MargotBanner,
+    blurb: 'Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.',
+    phone: '(615) 228-4864',
+    web: 'margotcafe.com',
+    map: '1017 Woodland Street',
+    offering: '',
+    res: ''
   },
   {
     name: "Nicoletto's",
@@ -199,25 +212,6 @@ const partners = [
   //   phone: '(615) 915-3102',
   //   web: 'tkotn.com',
   //   map: '4204 Gallatin Pike',
-  //   offering: null,
-  //   menu: null,
-  //   res: null
-  // },
-  // {
-  //   name: 'Margot',
-  //   logo: MargotLogo,
-  //   image: MargotImg,
-  //   blurb: `Margot café & bar is a French inspired restaurant with southern influence located at the
-  //     Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products
-  //     and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack.
-  //     The building itself dates back to the 1930’s and was originally Fluty’s service station. The space
-  //     was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with
-  //     copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and
-  //     comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a
-  //     marble bar, an open kitchen and a mezzanine dining area.`,
-  //   phone: '(615) 228-4864',
-  //   web: 'margotcafe.com',
-  //   map: '1017 Woodland Street',
   //   offering: null,
   //   menu: null,
   //   res: null
