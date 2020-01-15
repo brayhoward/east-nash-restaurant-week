@@ -69,7 +69,7 @@ const styles = {
     }
   },
   sponsorImg: {
-    maxWidth: 130,
+    maxWidth: 180,
     [`@media (max-width: ${MED_SM})`]: {
       maxWidth: 80
     }
