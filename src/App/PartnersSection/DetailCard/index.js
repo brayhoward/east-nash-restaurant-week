@@ -97,7 +97,7 @@ class DetailCard extends Component {
         </div>
 
         {/* BACKGROUND IMAGE*/}
-        <div className={img} style={{ borderBottom: '5px solid rgb(205, 212, 82)' }}/>
+        <div className={img} style={{ borderBottom: '5px solid #FD4399' }}/>
 
         <CardContent>
 

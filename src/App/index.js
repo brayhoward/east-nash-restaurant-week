@@ -23,9 +23,9 @@ const styles = {
   },
   collage: {
     composes: 'full-width flex justify-between align-items-end',
-    height: '700px',
+    height: '900px',
     background: `url(${footerImage}) no-repeat center/cover`,
-    color: '#cdd452',
+    color: 'aqua',
     fontSize: '12px',
     position: 'relative',
     [`@media (max-width: ${MED_SM})`]: {

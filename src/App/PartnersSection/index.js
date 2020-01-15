@@ -8,6 +8,7 @@ import { MED_SM } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
 import CatheadLogo from 'assets/logos/cathead.png'
+import JonesLogo from 'assets/logos/jones.jpg'
 
 const styles = {
   wrapper: {
@@ -72,16 +73,21 @@ const styles = {
   sponsorMsg: {
     composes: "mg-b--lg",
     textAlign: "center",
+    padding: '0 25%',
     [`@media (max-width: ${MED_SM})`]: {
       fontSize: '.55em',
       marginBottom: "1.5em"
     }
   },
   sponsorImg: {
-    maxWidth: 200,
+    maxWidth: 180,
+    padding: '10px',
     [`@media (max-width: ${MED_SM})`]: {
       maxWidth: 100
     }
+  },
+  sponsorOffer: {
+    fontSize: '.8em',
   }
 }
 
@@ -128,7 +134,8 @@ export default class extends Component {
       subtitle,
       dates,
       sponsorMsg,
-      sponsorImg
+      sponsorImg,
+      sponsorOffer
     } = this.props.classes;
 
     const { showDetail, detailCardInfo } = this.state;
@@ -181,13 +188,20 @@ export default class extends Component {
           </Swipeable>
         </div>
 
-        <div className="flex flex-col justify-between align-items-center mg-t--xl pd-l pd-r">
-          <h4 className={sponsorMsg}>
+        <div className={sponsorMsg}>
+          <h4 className="mg-t--xl">
           In collaboration with
           </h4>
-          <a className="no-hover" href="https://catheaddistillery.com/" target="_blank" rel="noopener noreferrer">
-            <img className={sponsorImg} src={CatheadLogo} alt="Cathead Distillery"/>
-          </a>
+          <div className="flex flex-row justify-between align-items-center pd-l pd-r">
+            <div className="pd--lg">
+              <img className={sponsorImg} src={CatheadLogo} alt="Cathead Distillery"/>
+              <p className={sponsorOffer}>Participating restaurants to offer $1 per <a href="https://catheaddistillery.com/" target="_blank" rel="noopener noreferrer">Cathead</a> specialty cocktail to benefit Fannie Battle</p>
+            </div>
+            <div className="pd--lg">
+              <img className={sponsorImg} src={JonesLogo} alt="Fieldhouse Jones"/>
+              <p className={sponsorOffer}>Interested in a stay-cation during resatruant week? <a href="https://fieldhousejones.com/nashville/" target="_blank" rel="noopener noreferrer">Fieldhouse Jones</a> is offering 10% off to locals</p>
+            </div>
+          </div>
         </div>
 
       </Fragment>

@@ -11,14 +11,16 @@ import TreeHouseLogo from 'assets/logos/treehouse.jpg';
 import TreeHouseBanner from 'assets/banners/treehouse.jpg';
 import PeninsulaLogo from 'assets/logos/peninsula.png';
 import PeninsulaBanner from 'assets/banners/peninsula.jpg';
-// import LyraLogo from 'assets/logos/lyra.jpg';
-// import LyraBanner from 'assets/banners/lyra.jpg';
+import LyraLogo from 'assets/logos/lyra.jpg';
+import LyraBanner from 'assets/banners/lyra-2020.jpg';
 // import FoxBarLogo from 'assets/logos/fox-bar.png';
 // import FoxBarBanner from 'assets/banners/fox-bar.jpg';
 // import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
 // import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
 // import JackLogo from 'assets/logos/two-ten-jack.jpg';
 // import JackBanner from 'assets/banners/two-ten-jack.jpg';
+import PelicanLogo from 'assets/logos/pelican.jpg';
+import PelicanBanner from 'assets/banners/pelican.jpg';
 import RedLogo from 'assets/logos/rhs.png';
 import RedBanner from 'assets/banners/rhs.jpg';
 import LouLogo from 'assets/logos/lou.png';
@@ -29,6 +31,8 @@ import MargotLogo from 'assets/logos/margot.png';
 import MargotBanner from 'assets/banners/margot.jpg';
 import SetsunLogo from 'assets/logos/setsun.png';
 import SetsunBanner from 'assets/banners/setsun.jpg';
+import FoxLogo from 'assets/logos/fox.jpg';
+import FoxBanner from 'assets/banners/fox.jpg';
 
 const partners = [
   // {
@@ -92,6 +96,17 @@ const partners = [
     res:'https://resy.com/cities/bna/cafe-roze'
   },
   {
+    name: 'Fox',
+    logo: FoxLogo,
+    image: FoxBanner,
+    blurb: 'Imaginative, seasonal cocktails & modern shareable plates served in a stylish space.',
+    phone: '',
+    web: 'thefoxnashville.com/',
+    map: '2905B Gallatin Pike',
+    offering: '',
+    res: 'https://resy.com/cities/bna/the-fox-bar-and-cocktail-club'
+  },
+  {
     name: 'Lou',
     logo: LouLogo,
     image: LouBanner,
@@ -101,6 +116,17 @@ const partners = [
     map: '1304 McGavock Pk',
     offering: '',
     res: 'https://resy.com/cities/bna/lou?date=2020-01-04&seats=2'
+  },
+  {
+    name: 'Lyra',
+    logo: LyraLogo,
+    image: LyraBanner,
+    blurb: "Lyra is a modern Middle Eastern restaurant taking classic Middle Eastern dishes to a new level. Chef Hrant's beautiful use of spice combined with his imaginative interpretation of ancient recipes from the Old Country spanning from Morocco to Oman will entertain your tastebuds.",
+    phone: '(615) 928-8040',
+    web: 'lyranashville.com',
+    map: '935 W. Eastland Ave',
+    offering: '',
+    res: 'https://lyranashville.com/visit'
   },
   {
     name: 'Margot',
@@ -134,6 +160,17 @@ const partners = [
     map: '1035 W Eastland Ave',
     offering: '10% off of your food bill',
     res: 'https://resy.com/cities/bna/peninsula'
+  },
+  {
+    name: 'Pelican & Pig',
+    logo: PelicanLogo,
+    image: PelicanBanner,
+    blurb: 'Located in a converted mid-century auto upholstery shop in East Nashville, Pelican & Pig is a purveyor of seasonal and creative fare cooked in a wood-burning hearth. Owned and operated by husband and wife team Nick & Audra Guidry, Pelican & Pig operates with creativity and service in mind, drawing inspiration from places they have lived and from their many travels.',
+    phone: '(615) 730-6887',
+    web: 'pelicanandpig.com/',
+    map: '1010 Gallatin Avee',
+    offering: '',
+    res: 'https://resy.com/cities/bna/pelican-and-pig'
   },
   {
     name: 'Red Headed Stranger',
