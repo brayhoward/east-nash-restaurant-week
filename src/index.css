@@ -71,7 +71,14 @@ hr {
 /* flex helpers */
 .flex { display: flex; }
 .flex-col { flex-flow: column; }
-.flex-row { flex-flow: row; }
+.flex-row { 
+  flex-flow: row; 
+}
+@media only screen and (max-width: 768px) {
+  .flex-row { 
+    flex-flow: column; /* short-sighted hack to make all rows stack on mobile */ 
+  }
+}
 .flex-wrap { flex-wrap: wrap; }
 /* horizontal alignments */
 .justify-end { justify-content: flex-end; }

@@ -4,7 +4,7 @@ import Swipeable from 'react-swipeable';
 import injectSheet from 'react-jss';
 import classnames from 'classnames';
 
-import { MED_SM } from 'constants/media-screens';
+import { MED_SM, MED, MED_LG } from 'constants/media-screens';
 import DetailCard from './DetailCard';
 import partners from "./patners-list";
 import CatheadLogo from 'assets/logos/cathead.png'
@@ -73,9 +73,16 @@ const styles = {
   sponsorMsg: {
     composes: "mg-b--lg",
     textAlign: "center",
-    padding: '0 25%',
+    padding: '0 20%',
+    [`@media (max-width: ${MED_LG})`]: {
+      padding: '0 3%'
+    },
+    [`@media (max-width: ${MED})`]: {
+      padding: '0 3%'
+    },
     [`@media (max-width: ${MED_SM})`]: {
-      fontSize: '.55em',
+      padding: '0 3%',
+      fontSize: '1em',
       marginBottom: "1.5em"
     }
   },
@@ -83,7 +90,7 @@ const styles = {
     maxWidth: 180,
     padding: '10px',
     [`@media (max-width: ${MED_SM})`]: {
-      maxWidth: 100
+      maxWidth: 160
     }
   },
   sponsorOffer: {
