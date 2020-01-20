@@ -13,8 +13,8 @@ import PeninsulaLogo from 'assets/logos/peninsula.png';
 import PeninsulaBanner from 'assets/banners/peninsula.jpg';
 import LyraLogo from 'assets/logos/lyra.jpg';
 import LyraBanner from 'assets/banners/lyra-2020.jpg';
-// import FoxBarLogo from 'assets/logos/fox-bar.png';
-// import FoxBarBanner from 'assets/banners/fox-bar.jpg';
+import LakesideLogo from 'assets/logos/lakeside.png';
+import LakesideBanner from 'assets/banners/lakeside.jpg';
 // import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
 // import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
 // import JackLogo from 'assets/logos/two-ten-jack.jpg';
@@ -191,6 +191,17 @@ const partners = [
     phone: '(615) 326-4866',
     web: 'setsuneast.com/',
     map: '700 Fatherland Street',
+    offering: '',
+    res: ''
+  },
+  {
+    name: 'Lakeside Lounge',
+    logo: LakesideLogo,
+    image: LakesideBanner,
+    blurb: 'Easy going sports bar with awesome food served till late!',
+    phone: '1-833-LAKESDE',
+    web: '',
+    map: '921 Woodland St',
     offering: '',
     res: ''
   }
