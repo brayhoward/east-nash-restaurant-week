@@ -81,7 +81,7 @@ const partners = [
     phone: '(615) 454-4201',
     web: 'treehousenashville.com',
     map: '1011 Clearview Ave',
-    offering: '"Chinese New Year" - A special menu of Chinese classics, a la carte.',
+    offering: 'Smoked Rabbitman Farms Rabbit, baby limas, drop biscuit, spicy game jus for $18',
     res:'https://www.opentable.com/r/the-treehouse-reservations-nashville?restref=289153&lang=en-US'
   },
   {
@@ -104,7 +104,7 @@ const partners = [
     web: 'thefoxnashville.com/',
     map: '2905B Gallatin Pike',
     offering: '',
-    res: 'https://resy.com/cities/bna/the-fox-bar-and-cocktail-club'
+    res: 'https://www.exploretock.com/thefox'
   },
   {
     name: 'Lou',

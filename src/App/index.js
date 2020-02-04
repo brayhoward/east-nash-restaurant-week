@@ -146,7 +146,7 @@ class App extends Component {
         </div>
 
         <div className={collage}>
-          <span className="footer-links" style={{margin: '20px'}}>site by <a href="http://adamswebpage.com/" target="_blank" rel="noopener noreferrer">Howard</a> &amp; <a href="http://www.brandonrhoward.com/" target="_blank" rel="noopener noreferrer">Howard</a></span>
+          <span className="footer-links" style={{margin: '20px'}}>site by <a href="http://adamswebpage.com/" target="_blank" rel="noopener noreferrer">Howard</a> &amp; <a href="mailto:brandonrhoward@gmail.com" target="_blank" rel="noopener noreferrer">Howard</a></span>
           <a
             href="http://theeastnashvillian.com/article/the-lonely-bird-in-shelby-bottoms"
             className={bird}
