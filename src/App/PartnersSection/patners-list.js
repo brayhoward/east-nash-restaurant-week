@@ -1,38 +1,38 @@
-import React from "react"
-import sortBy from 'lodash.sortby';
+import React from "react";
+import sortBy from "lodash.sortby";
 
-import ButcherLogo from 'assets/logos/butcher-n-bee.jpg';
-import ButcherImg from 'assets/banners/butcher-n-bee.jpg';
+import ButcherLogo from "assets/logos/butcher-n-bee.jpg";
+import ButcherImg from "assets/banners/butcher-n-bee.jpg";
 // import BeHiveLogo from 'assets/logos/be-hive.png';
 // import BeHiveImg from 'assets/banners/behive.jpg';
-import RozeLogo from 'assets/logos/cafe-roze.jpg';
-import RozeImg from 'assets/banners/CafeRoze.jpg';
-import TreeHouseLogo from 'assets/logos/treehouse.jpg';
-import TreeHouseBanner from 'assets/banners/treehouse.jpg';
-import PeninsulaLogo from 'assets/logos/peninsula.png';
-import PeninsulaBanner from 'assets/banners/peninsula.jpg';
-import LyraLogo from 'assets/logos/lyra.jpg';
-import LyraBanner from 'assets/banners/lyra-2020.jpg';
-import LakesideLogo from 'assets/logos/lakeside.png';
-import LakesideBanner from 'assets/banners/lakeside.jpg';
+import RozeLogo from "assets/logos/cafe-roze.jpg";
+import RozeImg from "assets/banners/CafeRoze.jpg";
+import TreeHouseLogo from "assets/logos/treehouse.jpg";
+import TreeHouseBanner from "assets/banners/treehouse.jpg";
+import PeninsulaLogo from "assets/logos/peninsula.png";
+import PeninsulaBanner from "assets/banners/peninsula.jpg";
+import LyraLogo from "assets/logos/lyra.jpg";
+import LyraBanner from "assets/banners/lyra-2020.jpg";
+import LakesideLogo from "assets/logos/lakeside.png";
+import LakesideBanner from "assets/banners/lakeside.jpg";
 // import PearlDiverLogo from 'assets/logos/pearl-diver.jpeg'
 // import PearlDiverBanner from 'assets/banners/pearl-diver.jpg';
 // import JackLogo from 'assets/logos/two-ten-jack.jpg';
 // import JackBanner from 'assets/banners/two-ten-jack.jpg';
-import PelicanLogo from 'assets/logos/pelican.jpg';
-import PelicanBanner from 'assets/banners/pelican.jpg';
-import RedLogo from 'assets/logos/rhs.png';
-import RedBanner from 'assets/banners/rhs.jpg';
-import LouLogo from 'assets/logos/lou.png';
-import LouBanner from 'assets/banners/lou.jpg';
-import NicolettosLogo from 'assets/logos/nico.jpg';
-import NicolettosBanner from 'assets/banners/nico.jpg';
-import MargotLogo from 'assets/logos/margot.png';
-import MargotBanner from 'assets/banners/margot.jpg';
-import SetsunLogo from 'assets/logos/setsun.png';
-import SetsunBanner from 'assets/banners/setsun.jpg';
-import FoxLogo from 'assets/logos/fox.jpg';
-import FoxBanner from 'assets/banners/fox.jpg';
+import PelicanLogo from "assets/logos/pelican.jpg";
+import PelicanBanner from "assets/banners/pelican.jpg";
+import RedLogo from "assets/logos/rhs.png";
+import RedBanner from "assets/banners/rhs.jpg";
+import LouLogo from "assets/logos/lou.png";
+import LouBanner from "assets/banners/lou.jpg";
+import NicolettosLogo from "assets/logos/nico.jpg";
+import NicolettosBanner from "assets/banners/nico.jpg";
+import MargotLogo from "assets/logos/margot.png";
+import MargotBanner from "assets/banners/margot.jpg";
+import SetsunLogo from "assets/logos/setsun.png";
+import SetsunBanner from "assets/banners/setsun.jpg";
+import FoxLogo from "assets/logos/fox.jpg";
+import FoxBanner from "assets/banners/fox.jpg";
 
 const partners = [
   // {
@@ -63,147 +63,161 @@ const partners = [
   //   res: 'https://resy.com/cities/bna/two-ten-jack-nashville'
   // },
   {
-    name: 'Butcher & Bee',
-    logo: ButcherLogo ,
+    name: "Butcher & Bee",
+    logo: ButcherLogo,
     image: ButcherImg,
-    blurb: "Opened in 2015 with the same philosophy of carefully sourced ingredients and an ever changing menu as it's Charleston counterpart, Butcher & Bee serves a diverse, Middle Eastern leaning menu from chef Bryan Lee Weaver of mezze, entrees, and vegetables for which B&B has gained a cult following.",
-    phone: '(615) 226-3322',
-    web: 'butcherandbee.com',
-    map: '902 Main St',
-    offering: 'Three courses for $30',
-    res: 'https://resy.com/cities/bna/butcher-and-bee-nashville'
+    blurb:
+      "Opened in 2015 with the same philosophy of carefully sourced ingredients and an ever changing menu as it's Charleston counterpart, Butcher & Bee serves a diverse, Middle Eastern leaning menu from chef Bryan Lee Weaver of mezze, entrees, and vegetables for which B&B has gained a cult following.",
+    phone: "(615) 226-3322",
+    web: "butcherandbee.com",
+    map: "902 Main St",
+    offering:
+      "ENRW Triple Dip - A sampling of all three of our dips; Hummus, Whipped Feta & Turkish Hummus. Half portions of each for $12, or full portions for $24",
+    res: "https://resy.com/cities/bna/butcher-and-bee-nashville"
   },
   {
-    name: 'Treehouse',
+    name: "Treehouse",
     logo: TreeHouseLogo,
     image: TreeHouseBanner,
     blurb: `Locally-sourced, The Treehouse Restaurant is a Chef-Driven restaurant located in the trendy 5-Points neighborhood in East Nashville. We focus on the best quality, organic ingredients from local farms in our dishes.`,
-    phone: '(615) 454-4201',
-    web: 'treehousenashville.com',
-    map: '1011 Clearview Ave',
-    offering: 'Smoked Rabbitman Farms Rabbit, baby limas, drop biscuit, spicy game jus for $18',
-    res:'https://www.opentable.com/r/the-treehouse-reservations-nashville?restref=289153&lang=en-US'
+    phone: "(615) 454-4201",
+    web: "treehousenashville.com",
+    map: "1011 Clearview Ave",
+    offering:
+      "Smoked Rabbitman Farms Rabbit, baby limas, drop biscuit, spicy game jus for $18",
+    res:
+      "https://www.opentable.com/r/the-treehouse-reservations-nashville?restref=289153&lang=en-US"
   },
   {
-    name: 'Cafe Roze',
+    name: "Cafe Roze",
     logo: RozeLogo,
     image: RozeImg,
-    blurb: 'Cafe Roze is an all-day cafe in East Nashville specializing in fresh and simple breakfast, lunch and dinner options, as well as top-notch cocktails at night.',
-    phone: '(615) 645-9100',
-    web: 'caferoze.com',
-    map: '1115 Porter Rd',
-    offering: '$35 Two Course Dinner (appetizer & entree)',
-    res:'https://resy.com/cities/bna/cafe-roze'
+    blurb:
+      "Cafe Roze is an all-day cafe in East Nashville specializing in fresh and simple breakfast, lunch and dinner options, as well as top-notch cocktails at night.",
+    phone: "(615) 645-9100",
+    web: "caferoze.com",
+    map: "1115 Porter Rd",
+    offering: "$35 Two Course Dinner (appetizer & entree)",
+    res: "https://resy.com/cities/bna/cafe-roze"
   },
   {
-    name: 'Fox',
+    name: "Fox",
     logo: FoxLogo,
     image: FoxBanner,
-    blurb: 'Imaginative, seasonal cocktails & modern shareable plates served in a stylish space.',
-    phone: '',
-    web: 'thefoxnashville.com/',
-    map: '2905B Gallatin Pike',
-    offering: '',
-    res: 'https://www.exploretock.com/thefox'
+    blurb:
+      "Imaginative, seasonal cocktails & modern shareable plates served in a stylish space.",
+    phone: "",
+    web: "thefoxnashville.com/",
+    map: "2905B Gallatin Pike",
+    offering: "",
+    res: "https://www.exploretock.com/thefox"
   },
   {
-    name: 'Lou',
+    name: "Lou",
     logo: LouLogo,
     image: LouBanner,
-    blurb: 'The daughter of a bohemian mother from Venice Beach and a well-read, charming Frenchman, lou is Chef / Owner Mailea Weger’s all-day café, brunch locale, and all-natural wine bar new to East Nashville, Tennessee.',
-    phone: '(615) 499-4495',
-    web: 'lounashville.com/',
-    map: '1304 McGavock Pk',
-    offering: '',
-    res: 'https://resy.com/cities/bna/lou?date=2020-01-04&seats=2'
+    blurb:
+      "The daughter of a bohemian mother from Venice Beach and a well-read, charming Frenchman, lou is Chef / Owner Mailea Weger’s all-day café, brunch locale, and all-natural wine bar new to East Nashville, Tennessee.",
+    phone: "(615) 499-4495",
+    web: "lounashville.com/",
+    map: "1304 McGavock Pk",
+    offering: "",
+    res: "https://resy.com/cities/bna/lou?date=2020-01-04&seats=2"
   },
   {
-    name: 'Lyra',
+    name: "Lyra",
     logo: LyraLogo,
     image: LyraBanner,
-    blurb: "Lyra is a modern Middle Eastern restaurant taking classic Middle Eastern dishes to a new level. Chef Hrant's beautiful use of spice combined with his imaginative interpretation of ancient recipes from the Old Country spanning from Morocco to Oman will entertain your tastebuds.",
-    phone: '(615) 928-8040',
-    web: 'lyranashville.com',
-    map: '935 W. Eastland Ave',
-    offering: '',
-    res: 'https://lyranashville.com/visit'
+    blurb:
+      "Lyra is a modern Middle Eastern restaurant taking classic Middle Eastern dishes to a new level. Chef Hrant's beautiful use of spice combined with his imaginative interpretation of ancient recipes from the Old Country spanning from Morocco to Oman will entertain your tastebuds.",
+    phone: "(615) 928-8040",
+    web: "lyranashville.com",
+    map: "935 W. Eastland Ave",
+    offering: "",
+    res: "https://lyranashville.com/visit"
   },
   {
-    name: 'Margot',
+    name: "Margot",
     logo: MargotLogo,
     image: MargotBanner,
-    blurb: 'Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.',
-    phone: '(615) 228-4864',
-    web: 'margotcafe.com',
-    map: '1017 Woodland Street',
-    offering: '',
-    res: ''
+    blurb:
+      "Margot café & bar is a French inspired restaurant with southern influence located at the Five Points in the heart of East Nashville. The menu changes daily, features locally sourced products and hinges upon seasonality, freshness and simplicity. It is owned and operated by chef Margot McCormack. The building itself dates back to the 1930’s and was originally Fluty’s service station. The space was transformed in 2001 into a cozy neighborhood gathering place. Brick walls are simply adorned with copper pots, Italian plates and antique mirrors. A playful use of color creates a vibrant yet warm and comfortable interior. The restaurant also features a covered brick patio, flower filled gardens, a marble bar, an open kitchen and a mezzanine dining area.",
+    phone: "(615) 228-4864",
+    web: "margotcafe.com",
+    map: "1017 Woodland Street",
+    offering: "",
+    res: ""
   },
   {
     name: "Nicoletto's",
     logo: NicolettosLogo,
     image: NicolettosBanner,
-    blurb: "We love pasta. Fresh pasta, dried pasta, you name it. We love it so much that we founded Nicoletto's Pasta Co. to handcraft small batch pasta in fresh and dried varieties using traditional pasta making techniques. Nicoletto's pasta is bronze cut, slow dried, and packaged in Nashville, TN.",
-    phone: '(629) 202-8102',
-    web: 'nicolettos.com',
-    map: '2905A Gallatin Pike',
-    offering: '',
-    res: ''
+    blurb:
+      "We love pasta. Fresh pasta, dried pasta, you name it. We love it so much that we founded Nicoletto's Pasta Co. to handcraft small batch pasta in fresh and dried varieties using traditional pasta making techniques. Nicoletto's pasta is bronze cut, slow dried, and packaged in Nashville, TN.",
+    phone: "(629) 202-8102",
+    web: "nicolettos.com",
+    map: "2905A Gallatin Pike",
+    offering: "",
+    res: ""
   },
   {
-    name: 'Peninsula',
+    name: "Peninsula",
     logo: PeninsulaLogo,
     image: PeninsulaBanner,
-    blurb: 'Peninsula serves up shareable plates, old world wines, and Spanish style gin and tonics in an inviting and intimate space. Focusing on sustainable, local ingredients, Peninsula features seasonal and creative dishes influenced by the flavors and techniques of the Iberian Peninsula. The atmosphere is rustic yet modern, and encourages guests to sample the flavors of Spain, Portugal and France while maintaining a familiarity of local ingredients.',
-    phone: '(615) 679-0377',
-    web: 'peninsulanashville.com',
-    map: '1035 W Eastland Ave',
-    offering: '10% off of your food bill',
-    res: 'https://resy.com/cities/bna/peninsula'
+    blurb:
+      "Peninsula serves up shareable plates, old world wines, and Spanish style gin and tonics in an inviting and intimate space. Focusing on sustainable, local ingredients, Peninsula features seasonal and creative dishes influenced by the flavors and techniques of the Iberian Peninsula. The atmosphere is rustic yet modern, and encourages guests to sample the flavors of Spain, Portugal and France while maintaining a familiarity of local ingredients.",
+    phone: "(615) 679-0377",
+    web: "peninsulanashville.com",
+    map: "1035 W Eastland Ave",
+    offering: "10% off of your food bill",
+    res: "https://resy.com/cities/bna/peninsula"
   },
   {
-    name: 'Pelican & Pig',
+    name: "Pelican & Pig",
     logo: PelicanLogo,
     image: PelicanBanner,
-    blurb: 'Located in a converted mid-century auto upholstery shop in East Nashville, Pelican & Pig is a purveyor of seasonal and creative fare cooked in a wood-burning hearth. Owned and operated by husband and wife team Nick & Audra Guidry, Pelican & Pig operates with creativity and service in mind, drawing inspiration from places they have lived and from their many travels.',
-    phone: '(615) 730-6887',
-    web: 'pelicanandpig.com/',
-    map: '1010 Gallatin Avee',
-    offering: '',
-    res: 'https://resy.com/cities/bna/pelican-and-pig'
+    blurb:
+      "Located in a converted mid-century auto upholstery shop in East Nashville, Pelican & Pig is a purveyor of seasonal and creative fare cooked in a wood-burning hearth. Owned and operated by husband and wife team Nick & Audra Guidry, Pelican & Pig operates with creativity and service in mind, drawing inspiration from places they have lived and from their many travels.",
+    phone: "(615) 730-6887",
+    web: "pelicanandpig.com/",
+    map: "1010 Gallatin Avee",
+    offering: "",
+    res: "https://resy.com/cities/bna/pelican-and-pig"
   },
   {
-    name: 'Red Headed Stranger',
+    name: "Red Headed Stranger",
     logo: RedLogo,
     image: RedBanner,
-    blurb: 'We’re a neighborhood taco shop in East Nashville. If you like fresh and delicious tacos, brisket, Hatch green chiles and other southwestern inspired foods, you’re in the right place.',
-    phone: '(615) 544-TACO',
-    web: 'redheadedstrangertacos.com/',
-    map: '305 Arrington St.',
-    offering: '',
-    res: ''
+    blurb:
+      "We’re a neighborhood taco shop in East Nashville. If you like fresh and delicious tacos, brisket, Hatch green chiles and other southwestern inspired foods, you’re in the right place.",
+    phone: "(615) 544-TACO",
+    web: "redheadedstrangertacos.com/",
+    map: "305 Arrington St.",
+    offering: "",
+    res: ""
   },
   {
-    name: 'Setsun',
+    name: "Setsun",
     logo: SetsunLogo,
     image: SetsunBanner,
-    blurb: 'A pop-up wine bar in the heart of East Nashville’s Historic Edgefield neighborhood. Chef Jason Zygmont and Ray Melendi bring a casually delicious menu of small plates that is paired with a concise, ever-rotating wine list.',
-    phone: '(615) 326-4866',
-    web: 'setsuneast.com/',
-    map: '700 Fatherland Street',
-    offering: '',
-    res: ''
+    blurb:
+      "A pop-up wine bar in the heart of East Nashville’s Historic Edgefield neighborhood. Chef Jason Zygmont and Ray Melendi bring a casually delicious menu of small plates that is paired with a concise, ever-rotating wine list.",
+    phone: "(615) 326-4866",
+    web: "setsuneast.com/",
+    map: "700 Fatherland Street",
+    offering: "",
+    res: ""
   },
   {
-    name: 'Lakeside Lounge',
+    name: "Lakeside Lounge",
     logo: LakesideLogo,
     image: LakesideBanner,
-    blurb: 'Easy going sports bar with awesome food served till late!',
-    phone: '1-833-LAKESDE',
-    web: '',
-    map: '921 Woodland St',
-    offering: '',
-    res: ''
+    blurb: "Easy going sports bar with awesome food served till late!",
+    phone: "1-833-LAKESDE",
+    web: "",
+    map: "921 Woodland St",
+    offering: "",
+    res: ""
   }
   // {
   //   name: 'Lyra',
@@ -295,8 +309,8 @@ const partners = [
   //   menu: JackMenu,
   //   res: null
   // },
-]
+];
 
-const orderedParnters = sortBy(partners, ['name']);
+const orderedParnters = sortBy(partners, ["name"]);
 
-export default orderedParnters
+export default orderedParnters;
