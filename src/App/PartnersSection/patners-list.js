@@ -121,7 +121,7 @@ const partners = [
     phone: "(615) 499-4495",
     web: "lounashville.com/",
     map: "1304 McGavock Pk",
-    offering: "",
+    offering: "$35 - Pour la table - 1 Market Vegetable + 1 Protein- choice of either the 'mussels, fermented shrimp broth, chili & tamarind with charred bread' or our 'skirt steak with cumin butter, candied coriander & lime'",
     res: "https://resy.com/cities/bna/lou?date=2020-01-04&seats=2"
   },
   {
